@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+* {
+	font-family: 'Noto Sans CJK KR';
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code,
+	form, fieldset, legend, textarea, p, blockquote, th, td, input, select,
+	textarea, button {
+	margin: 0;
+	padding: 0;
+}
+
+dl, ul, ol, menu {
+	list-style: none;
+}
+
+/* -------------------------------------------------- */
+
+
+/* header ----------------------------------------------- */
+.header {
+	width: 100%;
+	height: 45px;
+	background: #eeeeee;
+	border-bottom: 1px solid #dddddd;
+}
+
+
+/* 헤더 안에 컨텐츠 영역 */
+.headerInner {
+	max-width: 1300px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+
+/* 최상단 메뉴 왼쪽부분 영역 */
+.innerLeft {
+	width: 50%;
+	float: left;
+	vertical-align: middle;
+}
+
+/* 텍스트 영역 */
+li.siteMore a {
+	font-size: 14px;
+	line-height: 45px; /* 겉에 div 길이만큼 */
+	color: #555;
+}
+
+
+/* 관리자에서 가져옴 더 공부할것!*/
+li.siteMore a:after {
+	content: "";
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border: 2px solid #333;
+	border-width: 1px 1px 0 0;
+	transform: rotate(135deg);
+	margin-left: 10px;
+	margin-bottom: 4px;
+}
+
+
+/* 최상단 메뉴 오른쪽부분 */
+ul.innerRight {
+	float: right;
+	height: 45px;
+	text-align: right;
+	width: 70%;
+	max-width: 50%;
+	box-sizing: border-box;
+}
+
+ul.innerRight li {
+	line-height: 45px;
+	font-size: 14px;
+	text-align: right;
+	display: inline-block;
+}
+
+ul.innerRight li a {
+	color: #666;
+	padding: 0px 10px;
+	float: right;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+/*  end header ----------------------------------------------- */
+
+
+/*	start menu ----------------------------------------------- */
+
+.menu {
+	width: 100%;
+	height: 100px;
+	background: #fff;
+	position: relative;
+}
+
+
+/* inner 메뉴 */
+.menuinner {
+	max-width: 1300px;
+	width: 100%;
+	margin: 0 auto;
+	line-height: 100px;
+}
+
+/* --------------------------------- */
+
+/* 로고 부분 */
+.logo {
+	width: 20%;
+	float: left;
+	height: 100px;
+	line-height: 90px;
+	text-align: left;
+	box-sizing: border-box;
+}
+
+.menu .logo a img {
+	vertical-align: middle;
+}
+
+
+/* lnb부분 */
+.lnb {
+	width: 80%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	line-height: normal;
+	vertical-align: middle;
+	text-align: right;
+	padding-right: 150px;
+	display: inline-block;
+	position: relative; 
+}
+
+/* li  */
+.lnb>li {
+	width: auto !important;
+	vertical-align: middle;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+/* 텍스트에다가만 패딩 주기 */
+.bigMenu {
+	padding-left: 60px;
+}
+
+
+/* lnb 안에 li 안에 a 태그 텍스트들 */
+.lnb li a {
+	width: 100%;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 23px;
+	font-weight: 700;
+	display: inline-block;
+}
+
+/* inb 안 돋보기 img */
+.search {
+	height: 40px;
+	position: absolute;
+	right: 70px;
+} 
+
+.searchBtn {
+	width: 25px;
+	height: 25px;
+	background: url(image/headIcon.png); ;
+	background-position: -148px -1px;
+	position: absolute;
+	top: 6px;
+}
+
+/* inb 안 전체메뉴 img */
+.allmenu {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 28px;	
+}
+
+.allmn {
+	width: 25px;
+	height: 25px;
+	background: url(image/headIcon.png);
+	background-position: -85px -1px;
+	position: absolute;
+	top: 6px;
+}
+
+
+/* 버튼 부분 투명하게 ex) 그래야 위의 before만 도출된다 */
+button {
+	border: 0 none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+
+/*	end menu ----------------------------------------------- */
+
+/* 헤더 전체 끝! */
+
+/* --------------------------------------------------------------------------------------- */
+
+/* 바디 시작 */
+
+#body{
+	width: 100%;
+}
+
+
+/* 서브 메뉴 시작~~*/
+
+.sbMenu {
+	width: 100%;
+	height: 50px;
+	background-color: #f4f5f9;
+	display: block;
+}
+
+.innerSbMenu {
+	max-width: 1300px;
+	width: 100%; 
+	margin: 0 auto;
+}
+
+.innerSbMenu li {
+	height: 50px;
+	float: left;
+	border-right: 1px solid #ddd;
+	padding: 0 30px 0 20px;
+	min-width: 140px;
+	position: relative;
+} 
+
+
+/* 관리자에서 가져옴 더 공부할것!*/
+li.liMenu a:after {
+	content: "";
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    border: 1px solid #7b7e97; 
+    border-width: 0 1px 1px 0;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    margin-top: -2px;
+    color: #333;
+}
+
+
+
+/* HOME 메뉴 */
+li.homemn {
+	height: 50px;
+	border-left: 1px solid #ddd;
+	padding: 0 10px;
+	min-width: auto; 
+}
+ 
+
+.innerSbMenu li a {
+	float: left;
+	line-height: 50px;
+	color: #333;
+	font-size: 14px;
+	text-align: center;
+}
+
+
+/* 하늘색 부분! */
+
+.blueBg {
+	width: 100%;
+	height: 500px;
+	
+	background-color: #b2c9f3;
+}
+
+.blueInner {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding-top: 38px;
+}
+
+
+/* 제일 왼쪽 박스 title */
+.leftBox {
+	padding-right: 40px;
+	width: 220px;
+	float: left;
+}
+
+.blueInner p {
+	font-size: 24px;
+	color: #333;
+	font-weight: 500;
+	padding-bottom: 18px;
+}
+
+.blueButton {
+	width: 220px;
+	height: 53px;
+	background-color: #004A98;
+	border-radius: 6px;
+	position: relative;
+}
+
+.blueButton a {
+	font-size: 16px;
+	color: white;
+	font-weight: bold;
+	padding: 15px 40px 13px 20px;
+	position: absolute;
+}
+
+/* 제일 왼쪽 박스 title 끝 */
+
+/* 센터 박스 */
+
+.centerBox {
+	width: 676px;
+	float: left;
+}
+
+/* 젤 위 타이틀 버튼 */
+.topBtn {
+	border-bottom: 2px solid #014a99;
+	height: 60px;
+}
+
+.topBtn a.onClick{
+	font-size: 29px;
+	color: #333;
+	padding-bottom: 14px;
+	font-weight: bold;
+	border-bottom: 4px solid #333;
+	margin-right: 40px;
+}
+
+.topBtn a.nonClick{
+	font-size: 29px;
+	color: #666;
+	padding-bottom: 14px;
+	font-weight: bold;
+	margin-right: 40px;
+}
+
+/* 미니 타이틀 텍스트 */
+
+.minTit {
+	width: 100%;
+	height: 30px;
+	padding: 20px 0 20px;
+}
+.minTit>p:first-child{
+	font-size: 20px;
+	color: #004A98;
+	font-weight: bold;	
+	float: left;
+}
+
+.minTit>p:last-child{
+	font-size: 16px;
+	color: #333;
+	margin-left: 10px;
+	float: left;
+	line-height: 30px;
+}
+
+/* 사업명 검색 박스 */
+
+.binSearchDv {
+	width: 100%;
+	height: 40px;
+}
+
+.binSearchDv label {
+	font-size: 20px;
+	color: #333;
+	width: 100px;
+	height: 40px;
+}
+
+/* 하늘색 부분 끝! */
+
+</style>
+
+
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
+
+</head>
+<body>
+
+<!-- 헤더 시작! -->
+<div class="header">
+	<div class="headerInner">
+		<!-- inner 왼쪽 부분 -->
+			
+		<ul class="innerLeft">
+			<li class="siteMore"><a id="moreBtn">KOTRA 사이트더보기</a></li>
+		</ul>
+			
+		<!-- inner 오른쪽 부분 -->
+		<ul class="innerRight">
+			<li><a href="주소 써야함"><span>로그인</span></a></li>
+			<li><a href="주소 써야함"><span>회원가입</span></a></li>
+			<li><a href="주소 써야함"><span>사이트맵</span></a></li>
+			<li><a href="주소 써야함"><span>ENGLISH</span></a></li>
+		</ul>
+
+	</div> <!-- headerInner end  -->
+</div> <!-- header end -->
+
+<!-- 헤더 끝! -->
+
+
+<!-- 메뉴 시작 -->
+
+<div class="menu">
+
+	<div class="menuinner">
+
+		<!-- 로고 -->
+		<h1 class="logo">
+			<a href="메인페이지 주소" title="로고"> <img src="image/logo.png" alt="KOTRA무역투자24"></a>
+		</h1>
+
+		<!-- 큰 텍스트 메뉴들 -->
+		<ul class="lnb">
+			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">사업신청</a></li>
+
+			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">문의·상담</a></li>
+
+			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">해외정보</a></li>
+
+			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">사업소개</a></li>
+
+			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">공사안내</a></li>
+
+			<li class="search">
+				<button class="searchBtn" type="button" title="검색하기"></button>
+			</li>
+
+			<li class="allmenu">
+				<button class="allmn" type="button" title="전체메뉴"></button>
+			</li>
+
+		</ul>
+
+	</div> <!-- inner end -->
+		
+</div> <!-- manu end -->
+	
+<!-- 메뉴 끝! -->
+<!-- 헤더 전체 끝 -->
+
+<!--  ----------------------------------------------------------------------------------------------  -->
+
+<!-- body부분 시작! -->
+
+<!-- sub menu 시작~ -->
+
+<div class="sbMenu">
+
+		<ul class="innerSbMenu">
+			<li class="homemn"><a href="링크">HOME</a></li>
+			<li class="liMenu"><a href="링크">사업신청</a></li>
+			<li class="liMenu"><a href="링크">사업신청 홈</a></li>
+		</ul>
+
+</div>
+
+
+<!-- sub menu end-->
+
+
+<!-- 바디 하늘색 부분 시작! -->
+
+
+<div class="blueBg">
+	
+	<div class="blueInner">
+	
+		<div class="leftBox"> <!-- leftBox start -->
+			<p>사업신청</p>
+			
+			<!-- 사업신청 홈 파란버튼 -->
+			<ul>
+				<li class="blueButton"><a href="링크">사업신청 홈</a></li>
+			</ul>
+		</div>	<!-- leftBox end -->
+
+		<div class="centerBox"> <!-- centerBox start -->
+			
+			<div class="topBtn">
+				<a href="링크" class="onClick">상세검색</a>	
+				<a href="링크" class="nonClick">간편검색</a>	
+			</div>
+			
+			<div class="minTit">
+				<p>KOTRA 온라인 사업신청</p>
+				<p>(하단의 화살표를 클릭하시면 상세조건으로 검색할 수 있습니다.)</p>
+			</div>
+			
+			<div class="binSearchDv">
+				<label for="binSearch">사업명</label>
+				<input type="text" id="bonSearch">
+			</div>
+		
+		</div>	<!-- centerBox end -->
+			
+	</div> <!-- blueInner end -->
+
+</div> <!-- blueBg end -->
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

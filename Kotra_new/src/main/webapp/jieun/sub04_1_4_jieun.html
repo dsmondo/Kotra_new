@@ -8,24 +8,83 @@
 <title>Insert title here</title>
 <style type="text/css">
 
+/* -------- 하늘색 배경 메뉴들 --------------- */	
+table { 	
+	background-color: white; 
+	height: 100px;
+} 
+
+table, tr, td {
+	border: 1px solid #ccc;
+ 	border-collapse: collapse;  
+/*   	display:inline-block;   */
+	text-align : initial;
+	padding-left:1em;
+	padding-right: 2em;
+}
+	
+.menuSection {
+	position: relative; /* 해당 요소가 배치되어야 할 곳을 기준으로 상하좌우로 지정한 값 만큼 떨어진다.*/
+	background-color: aliceblue;
+ 	padding-left: 50px;
+ 	height: 350px; 
+/*  	text-align: center; */ /* 인라인 요소들을 가운데로 정렬 */
+/* 	float: left; */  /* 적용하지말기 */
+}
+
+div.menuSection {
+	width: 100%;
+}
+	
+#leftMenu {
+ 	margin-left: 20px;
+	width: 15%;
+/* 	height: 200px; */ /* 적용하지말기 */
+	float: left;
+	box-sizing: border-box;
+}
+
+
+#rightMenu {
+	margin-left: -20px;
+	width: 80%;
+	float: right;
+	box-sizing: border-box;
+}
+
+#rightMenu a, img {
+/*  	left: 100px;  */
+	background-color: white;
+	box-sizing: border-box; 
+	border-radius: 50%;
+}
+
+/* #bottomRight { */
+/* 	float: right; */
+/* 	padding: 0px; */
+/* 	margin-right: 100px; */
+/* /* 	background-color: none; */ */
+/* } */
+
+
+ul.main3 > li > a {
+/* 	text-decoration:none; */ /* a태그의 모든 밑줄,색상없애기 */
+	color: black;
+}
+	
+/* 하늘색 배경 메뉴들  */	
+/* ---------------------------------------------------------- */
+/* 본문 */
+
 ul, li {
 	list-style: none;
 	padding-left:0px;  }
 
-table, tr, td {
-	border: 1px solid #ccc;
-	border-collapse: collapse;  }
-
 hr { height: 2px; background-color: black; }
 a { text-decoration:none } 
-strong { font-size: 18px; } 
+strong { font-size: 18px; width: 10px; } 
 
 
-.menuSection {
-	position: relative; /* 해당 요소가 배치되어야 할 곳을 기준으로 상하좌우로 지정한 값 만큼 떨어진다.*/
-	background-color: aliceblue;
-/* 	left: 100px; */
-}
 
 
 .secondsection { /* 두번째 구역 - 제목+본문 */
@@ -33,7 +92,7 @@ strong { font-size: 18px; }
 	
 	/* 최대화할때 없애야함!!-그럼 포지션:앱솔루트? */
 	top: 10px;
-	left: 200px;
+	left: 300px;
 /* 	bottom: 500px; */  /* 동작안함... */
  	background-color: antiquewhi; 
 /*  	background-color: red;  */
@@ -76,8 +135,8 @@ ul div  { /* 10개메뉴 전체설정 */
 	box-sizing: border-box;
 	position: relative;
 /* 	padding-top: -40px; *//* 내부여백 */ 
-	margin-top: -30px; /* 외부여백 */
-	margin-left: -50px; 
+	margin-top: -30px; /* 외부여백 */ 
+	margin-left: -50px;
 } 
 
 .main2 > li > p {  /* 파랑색 동그라미 */
@@ -96,7 +155,7 @@ ul div  { /* 10개메뉴 전체설정 */
 }  
 
 .main2 >li> ul > li {	 /* 흰동그라미 */ 
-/* 	background-color: yellow; */
+/*  	background-color: yellow;  */
  	border: 2px solid #ccc; 
 	border-radius: 40px;
 	padding-top: 0px;
@@ -108,19 +167,100 @@ ul div  { /* 10개메뉴 전체설정 */
 	text-align : initial;
 	padding-left:1em;
 	padding-right: 1em;
+/* 	font-style: red; */
+	color: red;
 	font-weight: bold;
-}   
+} 
 
+/* ---------- 버튼 - 각 메뉴 밑에 있는 것 START ------ */  
+/* https://codepen.io/greensohee/pen/qpVVOb */
 
-ul.main3 > li > a {
-/* 	text-decoration:none; */ /* a태그의 모든 밑줄,색상없애기 */
-	color: black;
-}
+button {
+	background: 0;
+	border: 0;
+	padding: 0;
+	cursor: pointer; }
+
+button:focus {
+	outline: 0;  }
+
+.totop{ 	/* 동그라미 부분 */
+  width:30px;
+  height:30px;
+  position:relative;
+  left: 500px;
+  bottom: -70px;
+/*   background: #000; */
+  border: 1px solid black; 
+  border-radius:50%; 
+  text-indent:-9999px; }
+  
+.totop:before,.totop:after { /* 안쪽-방향가르키는 화살표 */
+  content:'';
+  width:13px;
+  height:4px;
+  position:absolute;
+  top:48%;
+  border-radius:2px; 
+  background: black; }
+  
+.totop:before {  /* 안쪽-방향 가르키는 화살표- 왼쪽 */
+  left:12px;
+  transform:translateY(-50%) rotate(45deg);  }
+  
+.totop:after {  /* 안쪽-방향 가르키는 화살표- 오른쪽 */
+  right:12px;
+  transform:translateY(-50%) rotate(-45deg); }
+/* ---------- 버튼 - 각 메뉴 밑에 있는 것 END ------ */   
+ 
 
 
 </style>
 </head>
 <body>
+
+<!-- 첫번째 구역 -->
+<div id="menuSection" name="menuSection" class="menuSection">
+
+<div id="leftMenu" >
+	<h3>사업소개</h3>
+	
+	<table>
+		<tr><td><a href="">사업소개 홈</a></td></tr>
+			
+		<tr><td><a href="">한 눈에 보는 KOTRA 서비스</a></td></tr>
+	</table>
+</div>
+
+<div id="rightMenu">
+	<h2>KOTRA에서 지원하는 수출입, 투자 사업 안내</h2>
+	
+	
+	<a href=""><img alt="1st" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/subhome_supbiz_ESP.png" width="50" height="50">수출지원</a> 
+	
+	<a href=""><img alt="2nd" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/subhome_supbiz_OAS.png" width="50" height="50">해외진출지원</a> 
+	
+	<a href=""><img alt="3rd" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/subhome_supbiz_GCO.png" width="50" height="50">경제협력 및 일자리 지원</a> 
+	
+	<a href=""><img alt="4th" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/subhome_supbiz_FIN.png" width="50" height="50">외국인투자유치</a> 
+
+
+<!-- 메뉴선택시 발생되는 화살표 주소 -->
+<!-- https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/downArrow.png -->
+
+<!-- <div id="bottomRight"> -->
+	<img alt="menu_bottomRight" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/supBizRImg.png" width="100px" height="100px" style="overflow: visible;" >
+<!-- </div>	 -->
+
+</div>	
+
+
+
+
+
+</div><!-- 첫번째 구역 끝-->
+
+
 
 
 <div class="secondsection"><!-- 두번째 구역-본문 -->
@@ -192,6 +332,7 @@ ul.main3 > li > a {
 			
 		</ul>	
 	</li>
+	<button type="button" class="totop">내용 숨기기</button>
 	</div>
 	
 	
@@ -207,6 +348,7 @@ ul.main3 > li > a {
 			</li>
 		</ul>	
 	</li>
+	<button type="button" class="totop">내용 숨기기</button>
 	</div>
 	
 	<div id="menu">
@@ -229,6 +371,7 @@ ul.main3 > li > a {
 			</li>
 		</ul>	
 	</li>
+	<button type="button" class="totop">내용 숨기기</button>
 	</div>
 </ul>
 

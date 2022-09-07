@@ -1,6 +1,5 @@
-
 <!-- mySection:사업소개 - 사업소개 홈 -수출지원-->
-
+<!-- http://localhost:8888/Kotra_new/jieun/sub04_1_1_jieun.html -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +8,9 @@
 
 <style type="text/css">
 
-table { 	/* zzzzz */
+
+/* -------- 하늘색 배경 메뉴들 --------------- */	
+table { 	
 	background-color: white; 
 	height: 100px;
 } 
@@ -72,7 +73,7 @@ ul.main3 > li > a {
 	color: black;
 }
 	
-/* 위쪽 메뉴들 */	
+/* 하늘색 배경 메뉴들  */	
 /* ---------------------------------------------------------- */
 /* 본문 */
 
@@ -170,10 +171,49 @@ ul div  { /* 10개메뉴 전체설정 */
 /* 	font-style: red; */
 	color: red;
 	font-weight: bold;
-}   
+} 
 
+/* ---------- 버튼 - 각 메뉴 밑에 있는 것 START ------ */  
+/* https://codepen.io/greensohee/pen/qpVVOb */
 
+button {
+	background: 0;
+	border: 0;
+	padding: 0;
+	cursor: pointer; }
 
+button:focus {
+	outline: 0;  }
+
+.totop{ 	/* 동그라미 부분 */
+  width:30px;
+  height:30px;
+  position:relative;
+  left: 500px;
+  bottom: -70px;
+/*   background: #000; */
+  border: 1px solid black; 
+  border-radius:50%; 
+  text-indent:-9999px; }
+  
+.totop:before,.totop:after { /* 안쪽-방향가르키는 화살표 */
+  content:'';
+  width:13px;
+  height:4px;
+  position:absolute;
+  top:48%;
+  border-radius:2px; 
+  background: black; }
+  
+.totop:before {  /* 안쪽-방향 가르키는 화살표- 왼쪽 */
+  left:12px;
+  transform:translateY(-50%) rotate(45deg);  }
+  
+.totop:after {  /* 안쪽-방향 가르키는 화살표- 오른쪽 */
+  right:12px;
+  transform:translateY(-50%) rotate(-45deg); }
+/* ---------- 버튼 - 각 메뉴 밑에 있는 것 END ------ */   
+ 
 </style>
 </head>
 <body>
@@ -208,7 +248,6 @@ ul div  { /* 10개메뉴 전체설정 */
 <!-- https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/downArrow.png -->
 
 <!-- <div id="bottomRight"> -->
-	<!-- <img alt="menu_bottomRight" src="/HtmlTest/src/main/webapp/imgs/menu-bottomRight.png" width="100px" height="50px"> -->
 	<img alt="menu_bottomRight" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/supBizRImg.png" width="100px" height="100px" style="overflow: visible;" >
 <!-- </div>	 -->
 
@@ -218,7 +257,7 @@ ul div  { /* 10개메뉴 전체설정 */
 
 
 
-</div><!-- 첫번째 구역 -->
+</div><!-- 첫번째 구역 끝-->
 
 
 
@@ -231,7 +270,7 @@ ul div  { /* 10개메뉴 전체설정 */
 </div>
 
 
-<ul class="main1"><!-- 세번째 구역-본문 -->
+<ul class="main1"><!-- 두번째 구역-본문 -->
 	<div id="menu">
 		<li id="menu1" class="menu1"><!-- 1번 -->
 			<strong>수출상담 및 포럼1</strong>
@@ -269,11 +308,11 @@ ul div  { /* 10개메뉴 전체설정 */
 				</li>
 			</ul>	
 			
-	<!-- 	<button type="button" >내용 숨기기</button> -->
+<!-- 		<button type="button" >내용 숨기기1</button> -->
 		
 		</li>
 		
-	<!-- 	<button type="button2" >내용 숨기기</button> -->
+		<button type="button" class="totop">내용 숨기기</button>
 	
 	</div>
 	
@@ -289,6 +328,7 @@ ul div  { /* 10개메뉴 전체설정 */
 			</li>
 		</ul>	
 	</li>
+	<button type="button"  class="totop">내용 숨기기</button>
 	</div>
 	
 	
@@ -324,6 +364,7 @@ ul div  { /* 10개메뉴 전체설정 */
 			</li>						
 		</ul>		
 	</li>
+	<button type="button" class="totop" >내용 숨기기</button>
 	</div>
 	
 	
@@ -352,6 +393,7 @@ ul div  { /* 10개메뉴 전체설정 */
 			</li>
 		</ul>	
 	</li>
+	<button type="button" class="totop" >내용 숨기기</button>
 	</div>
 	
 	
@@ -384,6 +426,7 @@ ul div  { /* 10개메뉴 전체설정 */
 			</li>
 		</ul>	
 	</li>	
+	<button type="button"  class="totop">내용 숨기기</button>
 	</div>
 	
 	
@@ -428,6 +471,7 @@ ul div  { /* 10개메뉴 전체설정 */
 			</li>
 		</ul>	
 	</li>
+	<button type="button"  class="totop">내용 숨기기</button>
 	</div>
 	
 	
@@ -467,8 +511,11 @@ ul div  { /* 10개메뉴 전체설정 */
 				</ul>
 			</li>			
 		</ul>	
-	</li>	
+	</li>
+	<button type="button"  class="totop">내용 숨기기</button>	
 	</div>
+	
+	
 	
 	<div id="menu">
 	<li><!-- 8번 -->
@@ -489,6 +536,7 @@ ul div  { /* 10개메뉴 전체설정 */
 			</ul>
 		</ul>	
 	</li>
+	<button type="button"  class="totop">내용 숨기기</button>
 	</div>
 	
 	<div id="menu">
@@ -522,18 +570,23 @@ ul div  { /* 10개메뉴 전체설정 */
 			</li>			
 		</ul>		
 	</li>
+	<button type="button" class="totop" >내용 숨기기</button>
 	</div>
 	
+	
+	
+	
 	<div id="menu">
-	<li><!-- 10번 -->
-		<strong>교포무역인(OKTA) 협업10</strong>
-	</li>
+		<li><!-- 10번 -->
+			<strong>교포무역인(OKTA) 협업10</strong>
+		</li>
+		<button type="button" class="totop" >내용 숨기기</button>
 	</div>
 
 </ul>
 
 
-</div><!-- 두번째 구역 -->
+</div><!-- 두번째 구역(제목+본문) 끝 -->
 
 
 </body>

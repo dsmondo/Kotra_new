@@ -47,21 +47,29 @@ div.menuSection {
 /* ----------------------------------- */
 /* 하늘색 - 오른쪽 메뉴 */
 
+#manuA {
+	height: 300px; 
+}
+
 #menuA a {
 	display: inline-block;
 	width: 120px;
 	height: 120px; 
 	top: 20px;
 	margin-bottom: 0;
+	position: relative;
+/* 	position: absolute; */ /* 적용하지 말기! 하나로 합쳐짐 */
 
 }
 
- #menuA a {  
+ #menuA a {  /* 기본으로 무색 이미지가 각각 따로 보이고!!! 나중에 클릭이벤트 넣기 */
    	background-image: url( "../image/sub04_1st.png" ), url( "../image/sub04_2nd.png" )  
     					, url( "../image/sub04_3rd.png" ), url( "../image/sub04_4th.png" );  
   	background-repeat: no-repeat;  
 /*  	background-position:  center -25%, center -25%, center -25%, center -25%;    */  
-   	background-position:  center top, center -20%, center -15%, center -10%;     
+/*    	background-position:  center top, center -20%, center -15%, center -10%;      */
+   	background-position:  center;   
+   	background-size: 100% -700%;   
     border: 2px solid red;  
     margin-left: 50px;    
    	background-color: white;   
@@ -73,10 +81,10 @@ div.menuSection {
 
 /* background : ①배경색 ②배경 이미지 주소 ③배경 반복 ④배경 위치 고정 ⑤배경 위치 */
 /*  #menuA a {  */
-/*  	background: url( "../image/sub04_1st.png" ) white no-repeat fixed center top;    */
-/*  	background: url( "../image/sub04_2nd.png" ) white no-repeat fixed center top;    */
-/*  	background: url( "../image/sub04_3rd.png" ) white no-repeat fixed center top;    */
-/*  	background: url( "../image/sub04_4th.png" ) white no-repeat fixed center top;    */
+/*  	background: url( "../image/sub04_1st.png" ) white no-repeat fixed center;    */
+/*  	background: url( "../image/sub04_2nd.png" ) white no-repeat fixed center;    */
+/*  	background: url( "../image/sub04_3rd.png" ) white no-repeat fixed center;    */
+/*  	background: url( "../image/sub04_4th.png" ) white no-repeat fixed center;    */
 /*  }  */
 
 
@@ -89,17 +97,22 @@ div.menuSection {
 /* 	box-sizing: border-box; */
 } 
 
-#menuArrow {
-	position: absolute;
+#menuArrow {  /* 나중에 위쪽 메뉴 클릭시 화살표도 이동해야해 */
+/*  	position: relative; */
+/*  	top: 80px; */
+/*  	left: -50px;  */
+
+ 	position: absolute; 
 	bottom: 0;
 	left: 410px;
+	background: 0;
 
 }
 
 
-.menu_bottomRight { /* 하늘색바탕 오른쪽 바닥 */
+.menu_bottomRight { /* 하늘색바탕 오른쪽 바닥 img */
 	position: absolute;
-	right: 0;
+	right: 300px;
 	bottom: 0;
 	display: inline-block;
 }
@@ -125,7 +138,7 @@ ul.main3 > li > a {
 	color: black;
 }
 	
-/* 하늘색 배경 메뉴들  */	
+/* 하늘색 배경 메뉴들 end */	
 /* ---------------------------------------------------------- */
 /* 본문 */
 
@@ -225,13 +238,13 @@ ul div  { /* 10개메뉴 전체설정 */
 	font-weight: bold;
 } 
 
-/* ---------- 버튼 - 각 메뉴 밑에 있는 것 START ------ */  
+/* ---------- 버튼 - 10개 섹션?메뉴 밑에 있는 것 START ------ */  
 /* https://codepen.io/greensohee/pen/qpVVOb */
 
 button {
-	background: 0;
+	background: white;
 	border: 0;
-	padding: 0;
+	padding: 0; 
 	cursor: pointer; }
 
 button:focus {
@@ -275,56 +288,63 @@ button:focus {
 <!-- 첫번째 구역 -->
 <div id="menuSection" name="menuSection" class="menuSection">
 
-<div id="leftMenu" >
-	<h3>사업소개</h3>
-	
-	<table>
-		<tr><td><a href="">사업소개 홈</a></td></tr>
-			
-		<tr><td><a href="">한 눈에 보는 KOTRA 서비스</a></td></tr>
-	</table>
-</div>
+	<div id="leftMenu" >
+		<h3>사업소개</h3>
+		
+		<table>
+			<tr><td><a href="">사업소개 홈</a></td></tr>
+				
+			<tr><td><a href="">한 눈에 보는 KOTRA 서비스</a></td></tr>
+		</table>
+	</div><!-- leftMenu end -->
 
-<div id="rightMenu">
-	<br><h2>KOTRA에서 지원하는 수출입, 투자 사업 안내</h2>
+
+	<div id="rightMenu">
+		<br><h2>KOTRA에서 지원하는 수출입, 투자 사업 안내</h2>
+		
+		<div id="menuA">
+	<!-- 	<a href=""><img alt="1st" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/subhome_supbiz_ESP.png" width="50" height="50">수출지원</a>  -->
+	<!-- 	<a href=""><img alt="1st" src="../image/sub04_1st.png" width="100" height="100">수출지원</a>  -->
+		<a href="">수출지원</a> 
+		
+	<!-- 	<a href=""><img alt="2nd" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/subhome_supbiz_OAS.png" width="50" height="50">해외진출지원</a>  -->
+	<!-- 	<a href=""><img alt="2nd" src="../image/sub04_2nd.png" width="100" height="100">해외진출지원</a>  -->
+		<a href="">해외진출지원</a> 
+		
+	<!-- 	<a href=""><img alt="3rd" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/subhome_supbiz_GCO.png" width="50" height="50">경제협력 및 일자리 지원</a>  -->
+	<!-- 	<a href=""><img alt="3rd" src="../image/sub04_3rd.png" width="100" height="100">경제협력 및 일자리 지원</a>  -->
+		<a href="">경제협력 및 일자리 지원</a> 
+		
+	<!-- 	<a href=""><img alt="4th" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/subhome_supbiz_FIN.png" width="50" height="50">외국인투자유치</a>  -->
+	<!-- 	<a href=""><img alt="4th" src="../image/sub04_4th.png" width="100" height="100">외국인투자유치</a>  -->
+		<a href="">외국인투자유치</a> 
+		</div>
 	
-	<div id="menuA">
-<!-- 	<a href=""><img alt="1st" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/subhome_supbiz_ESP.png" width="50" height="50">수출지원</a>  -->
-<!-- 	<a href=""><img alt="1st" src="../image/sub04_1st.png" width="100" height="100">수출지원</a>  -->
-	<a href="">수출지원</a> 
 	
-<!-- 	<a href=""><img alt="2nd" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/subhome_supbiz_OAS.png" width="50" height="50">해외진출지원</a>  -->
-<!-- 	<a href=""><img alt="2nd" src="../image/sub04_2nd.png" width="100" height="100">해외진출지원</a>  -->
-	<a href="">해외진출지원</a> 
 	
-<!-- 	<a href=""><img alt="3rd" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/subhome_supbiz_GCO.png" width="50" height="50">경제협력 및 일자리 지원</a>  -->
-<!-- 	<a href=""><img alt="3rd" src="../image/sub04_3rd.png" width="100" height="100">경제협력 및 일자리 지원</a>  -->
-	<a href="">경제협력 및 일자리 지원</a> 
-	
-<!-- 	<a href=""><img alt="4th" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/subhome_supbiz_FIN.png" width="50" height="50">외국인투자유치</a>  -->
-<!-- 	<a href=""><img alt="4th" src="../image/sub04_4th.png" width="100" height="100">외국인투자유치</a>  -->
-	<a href="">외국인투자유치</a> 
+	<div id="menuArrow">
+	<!-- 메뉴선택시 발생되는 화살표 주소 -->
+	<!-- https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/downArrow.png -->
+	<a href="">
+	<img alt="" src="../image/sub04_Arrow.png" width="50px" height="30px" style=" margin: 0;">
+	</a>
+	<!-- margin-left: 55px; margin-top: 10px -->
 	</div>
-
-<div id="menuArrow">
-<!-- 메뉴선택시 발생되는 화살표 주소 -->
-<!-- https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/downArrow.png -->
-<img alt="" src="../image/sub04_Arrow.png" width="50px" height="30px" style=" margin: 0;">
-<!-- margin-left: 55px; margin-top: 10px -->
-</div>
-
-
-<!-- <div id="bottomRight"> -->
-<!-- 	<img alt="menu_bottomRight" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/supBizRImg.png" width="100px" height="100px" style="overflow: visible;" > -->
-	<img alt="menu_bottomRight" src="../image/sub04_menuRight.png" width="200px" height="190px" style="overflow: visible; margin: 0;" class="menu_bottomRight">
-<!--  margin-top: 60px; margin-left: 800px; -->
-<!-- </div>	 -->
+	
+	
+	
+	
+	<!-- <div id="bottomRight"> -->
+	<!-- 	<img alt="menu_bottomRight" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/supBizRImg.png" width="100px" height="100px" style="overflow: visible;" > -->
+		<img alt="menu_bottomRight" src="../image/sub04_menuRight.png" width="200px" height="190px" style="overflow: visible; margin: 0;" class="menu_bottomRight">
+	<!--  margin-top: 60px; margin-left: 800px; -->
+	<!-- </div>	 -->
+	
+	
+	
 
 
-
-
-
-</div>	
+	</div><!-- rightMenu end -->	
 
 
 
@@ -335,14 +355,14 @@ button:focus {
 
 
 
-<div class="secondsection"><!-- 두번째 구역-본문 -->
+<div class="secondsection"><!-- 두번째 구역-제목+본문 -->
 
 <div class="middlesection"><!-- 두번째 구역-제목 -->
 	<h3>외국인 투자유치</h3>
 	<hr>
 </div>
 
-<ul class="main1">
+<ul class="main1"><!-- 두번째 구역-본문 -->
 	<div id="menu">
 	<li id="menu1" class="menu1"><!-- 1번 -->
 		<strong>투자유치 지원</strong>

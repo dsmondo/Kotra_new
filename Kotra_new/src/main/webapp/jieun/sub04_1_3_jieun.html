@@ -59,6 +59,19 @@ div.menuSection {
 	border-radius: 50%;
 }
 
+
+#menuArrow {  /* 나중에 위쪽 메뉴 클릭시 화살표도 이동해야해 */
+/*  	position: relative; */
+/*  	top: 80px; */
+/*  	left: -50px;  */
+
+ 	position: absolute; 
+	bottom: 0;
+	left: 410px;
+	background: 0;
+
+}
+
 /* #bottomRight { */
 /* 	float: right; */
 /* 	padding: 0px; */
@@ -176,7 +189,7 @@ ul div  { /* 10개메뉴 전체설정 */
 /* https://codepen.io/greensohee/pen/qpVVOb */
 
 button {
-	background: 0;
+	background: white;
 	border: 0;
 	padding: 0;
 	cursor: pointer; }
@@ -245,8 +258,20 @@ button:focus {
 	<a href=""><img alt="4th" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/subhome_supbiz_FIN.png" width="50" height="50">외국인투자유치</a> 
 
 
-<!-- 메뉴선택시 발생되는 화살표 주소 -->
-<!-- https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/downArrow.png -->
+	
+	
+	<div id="menuArrow">
+	<!-- 메뉴선택시 발생되는 화살표 주소 -->
+	<!-- https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/downArrow.png -->
+	<a href="">
+	<img alt="" src="../image/sub04_Arrow.png" width="50px" height="30px" style=" margin: 0;">
+	</a>
+	<!-- margin-left: 55px; margin-top: 10px -->
+	</div>
+	
+	
+	
+	
 
 <!-- <div id="bottomRight"> -->
 	<img alt="menu_bottomRight" src="https://www.kotra.or.kr/images/wzwg/site/kotra/subhome/supBizRImg.png" width="100px" height="100px" style="overflow: visible;" >

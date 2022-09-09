@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
 <title>공사안내 홈</title>
 
+<!-- 폰트 link -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
 <style type="text/css">
 
-* { font-family: 'Noto Sans KR'; }
+* { font-family: 'Noto Sans KR', sans-serif; }
 
  * { 
      margin: 0; 
      padding: 0; 
  }	
-/* 전체 동일하게 적용 */
 	
 /* 리스트에 동그라미 삭제 */	
 ul > li {
 	list-style: none;
 }
 
+/* a href 밑줄 제거 */
+a {
+	text-decoration-line: none;
+}
+
 /* header / 사이트 더보기, 로그인 창*/
-header {
-    width: 100%;
+
+.header {
+	width: 100%;
     height: 45px;
-    background: #eeeeee;
-    border-bottom: 1px solid #dddddd;
+    position: absolute;
+    z-index: 990;
+    background: #424951;
+    background: #efefef;
+    border-bottom: 1px solid #e5e7ee !important;
+    box-sizing: border-box;
 }
 
 .inner {
@@ -36,20 +51,25 @@ header {
 
 .sitemore {
 	margin: 3px 0px;
-	padding: 8px 0px;
+	padding: 0 20px 0 0;
 	text-align: left;
 	float: left;
 }
+.sitemore > a {
+	font-size: 14px;
+    padding: 0 0;
+    line-height: 40px;
+    color: #555;
+}
 
 .hdmenu {
-	float: right;
-	text-align: right;
-	width: 70%;
-	text-align: right;
-	max-width: 30% !important;
-	box-sizing: border-box;
-	margin: 5px -16px;
-    padding: 5px 19px;
+    float: right;
+    width: 70%;
+    text-align: right;
+    max-width: 30% !important;
+    box-sizing: border-box;
+    margin: 5px -45px;
+    padding: 5px 39px;
 }
 
 .hdmenu > ul > li {
@@ -58,8 +78,7 @@ header {
 }
 
 .hdmenu > ul {
-	color: #666;
-    font-weight: 400;
+
     padding: 0px 20px;
     width: 100%;
     height: 100%;
@@ -67,86 +86,179 @@ header {
     position: relative;
 }
 
-/* 코트라로고 */
+.hdmenu > ul > li > a {
+	padding: 0 10px;
+}
+.hdmenu > ul > li > a > span {
+	color: #666;
+    font-weight: 400;
+    font-size: 14px;
+	
+}
 
-.menuLogo {
+.header .menuLogo {
+	height: 100px;
+    box-sizing: border-box;
+    margin-top: 45px;
+}
+
+/* /코트라로고 리스트 버튼 시작/*/
+
+.menuGroup {
+	height: 100px;
     width: 100%;
     background: #fff;
     float: left;
     position: relative;
     z-index: 1;
-    transition: heigt 0.5s;
-    height: 75px;
+    transition: height 0.5s;
     box-sizing: border-box;
-    margin-top: 25px;
+    margin-top: 45px;
+}
+
+.menuInner {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    line-height: 100px;
+    vertical-align: middle;
+    text-align: right;
+    vertical-align: middle;
+    position: relative;
 }
 
 .menuimg { 
-	width: 20%;
     float: left;
     height: 100px;
-    padding: 0px 110px; 
     text-align: center;
-    vertical-align: middle;
 	box-sizing: border-box;
-    transition: padding 0.1s;
+	margin-top: 22px;
+	z-index:0;
  }
 
 
-
-/* 문의,사업신청 버튼 */
-
-.menulist {
-    width: 80%;
-    /* height: 100px; */
-    /* float: left; */
-    /* max-width: 1300px; */
-    margin: 0 auto;
+.menuUl {
+	width: 80%;
+    margin: -11px -109px 0px 0px;
     box-sizing: border-box;
     line-height: normal;
     display: inline-block;
     vertical-align: middle;
     text-align: right;
-    padding-right: 150px;
-    margin-top: -5px;
 }
 
-
-.menulist > li > a {
-    width: auto !important;
-    display: inline-block;
-    vertical-align: middle;
-    box-sizing: border-box;
-    /* line-height: 100px; */
-    /* height: 100px; */
-    padding-left: 60px;
-    overflow: hidden;
-    /* background: #fff; */
-    margin-top: -6px;
-}
-
-.menulist > ul > li > a {
-	width: 100%;
-    line-height: 22px;
-    display: inline-block;
-    box-sizing: border-box;
-    vertical-align: middle;
-    text-align: center;
+.mlistcontent > a {
     font-size: 23px;
-    color: #000;
     font-weight: 600;
+    color: #000;
+	width: auto !important;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-align: right;
     overflow: hidden;
     transition: font-size 0.5s;
     letter-spacing: -0.5px;
+    position: relative;
 }
 
-
 .mlistcontent { 
+	width: auto !important;
  	float: left;
+ 	padding-left: 70px;
+ 	position: relative;
+ 	
+ 	
  }
+/* /코트라로고 리스트 버튼 끝/*/
 
 
-/* 7대 대국민 약속 문구 */
+/* HOME / 공사안내 / 공사안내 홈  */
+.menuCon {
+	text-align: left;
+    max-width: 100%;
+    padding: 0px 110px;
+    background: #f4f5f9;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+}
+
+.menuCon > ul {
+ 	background: #eeeeee;
+	width: 100%;
+	height: 10%;
+	background: #f4f5f9;
+}
+
+.menuCon > ul > li {
+	float: left;
+    padding: 0px 30px 0 20px;
+    min-width: 190px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    border-right: 1px solid #dcdde2;
+    max-width: calc(33% - 20px);
+    font-size: 14px;
+    background-size: 10px;
+    box-sizing: border-box;
+}
+
+.listCon > a {
+	width: 100%;
+	height: 50px;
+    float: left;
+    color: #333;
+    line-height: 50px;
+}
+
+.listHome {
+	height: 50px;
+    padding: 0 10px !important;
+    text-align: center;
+    float: left;
+    border-left: 1px solid #dcdde2;
+    box-sizing: border-box;
+    min-width: auto !important;
+}
+
+.listHome > a {
+	height: 50px;
+	color: #333;
+	line-height: 50px;
+}
+/* HOME / 공사안내 / 공사안내 홈 끝 */
+
+
+/* 7대 대국민 약속 문구 + 전경사진 */
+.topbox {
+    width: 100%;
+    height: 600px;
+    float: left;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.introbg {
+	padding-top: 0;
+	z-index: 0;
+	background: transparent;
+	overflow: hidden;
+	width: 100% !important;
+	position: relative;
+	
+}
+
+.introbg img {
+	max-height: 750px;
+	width: 100% !important;	
+}
+
 .phr {
 	position: absolute;
 	top: 46%;
@@ -158,27 +270,6 @@ header {
 	background: rgba(0, 0, 0, 0.5);
 	margin-top: -100px;
 }
-
-.topbox {
-    width: 100%;
-    float: left;
-    padding: 0;
-    margin: 0 auto;
-    box-sizing: border-box;
-    overflow: hidden;
-    position: relative;
-    
-}
-.introbg {
-	padding-top: 0;
-	z-index: 0;
-	background: transparent;
-	overflow: hidden;
-	width: 100% !important;
-	position: relative;
-	
-}
-
 
 .introphr {
 	font-size: 53px;
@@ -194,19 +285,6 @@ header {
 	text-align: left;
 	padding-left: 280px;
 }
-
-/* HOME / 공사안내 / 공사안내 홈  */
-
-.menuCon {
-	text-align: left;
-    max-width: 100%;
-    padding: 0px 90px;
-    background: #f4f5f9;
-    overflow: hidden;
-    position: relative;
-	
-}
-
 
 /* 공사안내 리스트  */
 .menuBox {
@@ -245,27 +323,7 @@ header {
     padding-bottom: 13px;
 }
 
-.menuCon > ul {
- 	background: #eeeeee;
-	width: 100%;
-	height: 10%;
-	background: #f4f5f9;
-}
 
-.menuCon > ul > li {
-	float: left;
-    padding: 0px 30px 0 20px;
-    min-width: 190px;
-    height: 50px;
-    overflow: hidden;
-    position: relative;
-    border-right: 1px solid #dcdde2;
-    border-left: 1px solid #dcdde2;
-    max-width: calc(33% - 20px);
-    font-size: 14px;
-    background-size: 10px;
-    box-sizing: border-box;
-}
 
 .listcon > a {
 	text-align: center; 
@@ -281,7 +339,6 @@ header {
 }
 
 /* kotra 소개 */
-
 .title {
     font-size: 46px;
     line-height: 110%;
@@ -505,42 +562,42 @@ header {
 <body>
 
 <!-- header 시작 사이트 더보기, 로그인 창 -->
-<header>
+<div class= "header">
 	<div class="inner">
 		<div class="sitemore" style= "width: 30%;">
-			<span>KOTRA 사이트</span>
+			<a href="">KOTRA 사이트</a>
 		</div>
 
 		<div class="hdmenu">
 			<ul>
-				<li><a href=""><span>로그인</span> </a></li>
-				<li><a href=""><span>회원가입</span> </a></li>
-				<li><a href=""><span>사이트맵</span> </a></li>
-				<li><a href=""><span>ENGLISH</span> </a></li>
+				<li><a href="https://www.kotra.or.kr/loginForm.do"><span>로그인</span> </a></li>
+				<li><a href="https://www.kotra.or.kr/cmm/mber/sbscrb/selectSbscrbUsrTy.do"><span>회원가입</span> </a></li>
+				<li><a href="https://www.kotra.or.kr/sitemap.do"><span>사이트맵</span> </a></li>
+				<li><a href="https://www.kotra.or.kr/english/index.do"><span>ENGLISH</span> </a></li>
 			</ul>
 		</div>
 	</div>
-</header>
+</div>
 <!-- header 끝 -->
 
 
 <!-- 로고, 메뉴안내 시작 -->
-<div class="menuLogo">
+<div class="menuGroup">
+	<div class="menuInner">
 	<div class="menuimg">
-			<a href=""> <img alt="kotra로고" src="..	/image/selectImageView (1).png"> </a>
+			<a href=""> <img alt="kotra로고" src="../image/selectImageView (1).png"> </a>
 <!-- 				<a href=""> <img alt="kotra로고" src="/Kotra_new/image/selectImageView.png"> </a> -->
 	</div>
 
-	<div class="menulist">
 		<ul class="menuUl">
-			<li class="mlistcontent" style="width: 20%;"><a href="">사업신청</a></li>
-			<li class="mlistcontent" style="width: 20%;"><a href="">문의·상담</a></li>
-			<li class="mlistcontent" style="width: 20%;"><a href="">해외정보</a></li>
-			<li class="mlistcontent" style="width: 20%;"><a href="">사업소개</a></li>
-			<li class="mlistcontent" style="width: 20%;"><a href="">공사안내 </a></li>
+			<li class="mlistcontent" style="width: 20%;"><a href="https://www.kotra.or.kr/subList/20000020753">사업신청</a></li>
+			<li class="mlistcontent" style="width: 20%;"><a href="https://www.kotra.or.kr/subList/20000006014">문의·상담</a></li>
+			<li class="mlistcontent" style="width: 20%;"><a href="https://www.kotra.or.kr/subList/20000006759">해외정보</a></li>
+			<li class="mlistcontent" style="width: 20%;"><a href="https://www.kotra.or.kr/subList/20000005984">사업소개</a></li>
+			<li class="mlistcontent" style="width: 20%;"><a href="https://www.kotra.or.kr/subList/20000006012">공사 안내 </a></li>
 		</ul>
-	</div>
 
+	</div>
 </div>
 <!-- 로고, 메뉴안내 끝 -->
 
@@ -548,9 +605,9 @@ header {
 <!-- 로고 아래 HOME공사 안내공사안내 홈 시작 -->
 	<div class="menuCon">
 		<ul>
-			<li class="listCon"><a href="" id="menuCon1">HOME</a></li>
-			<li class="listCon"><a href="" id="menuCon2">공사안내</a></li>
-			<li class="listCon"><a href="" id="menuCon3">공사안내 홈</a></li>
+			<li class="listHome"><a href="https://www.kotra.or.kr/" id="menuCon1">HOME</a></li>
+			<li class="listCon"><a href="https://www.kotra.or.kr/subList/20000006012" id="menuCon2">공사 안내</a></li>
+			<li class="listCon"><a href="https://www.kotra.or.kr/subList/20000006012" id="menuCon3">공사안내 홈</a></li>
 		</ul>
 	</div>
 <!-- 로고 아래 HOME공사 안내공사안내 홈 끝 -->
@@ -561,45 +618,23 @@ header {
 <div class="menuBox">
 	<div class="infoKotra">
 		<h3 id="info">공사 안내</h3>
-	</div>
-	
-	<div class="listBox">
-		<div class="infolist1">		<!-- 펼치면 리스트 나오는 효과 적용하기 -->
-			<ul>
-				<li><a href="">공사안내 홈</a></li>
-				<li>KOTRA 소개</li>
+		<ul class="listslider">
+			<li><a href="https://www.kotra.or.kr/subList/20000006012">공사안내 홈</a></li>
+			<li>KOTRA 소개</li>
 				<li><a href="">CEO 인사말</a></li>
 				<li><a href="">경영전략체계</a></li>
 				<li><a href="">인권.윤리 경영</a></li>
 				<li><a href="">지속가능경영</a></li>
-				<li><a href="">60주년 디지털<br> 아카이브
-				</a></li>
-			</ul>
-		</div>
+				<li><a href="">60주년 디지털<br> 아카이브</a></li>
 		
-		<div>
-			<ul>
-				<li><a href="">조직안내 및 오시는 길</a></li>
-			</ul>
-		</div>
+			<li><a href="">조직안내 및 오시는 길</a></li>
 		
-		<div>
-			<ul>
-				<li><a href="">채용정보</a></li>
-			</ul>
-		</div>
+			<li><a href="">채용정보</a></li>
 		
-		<div>
-			<ul>
-				<li><a href="">고객의 소리</a></li>
-			</ul>
-		</div>
+			<li><a href="">고객의 소리</a></li>
 		
-		<div>
-			<ul>
-				<li><a href="">알림.홍보</a></li>
-			</ul>
-		</div>
+			<li><a href="">알림.홍보</a></li>
+		</ul>
 	</div>
 </div>
 <!-- 공사 안내 홈 메뉴박스 끝 -->
@@ -700,7 +735,6 @@ header {
 		</div>	
 		
 	</div>	<!-- infoButton 끝-->
-	
 </div>
 <!-- 조직안내 및 찾아오시는 길 끝 -->
 
@@ -819,11 +853,11 @@ header {
 		
 		<div class="qbox">
 			<p>
-				"정보공개란 공공기관이 관리하고 있는 정보를 수요자인 국민의 청구에 의하여 공개 (청구공개)하거나, 공공기관이
+				정보공개란 공공기관이 관리하고 있는 정보를 수요자인 국민의 청구에 의하여 공개 (청구공개)하거나, 공공기관이
 				자발적으로 또는 법령 등의 규정에 의하여 보유하고 있는 정보를 배포 또는 공표 등의 형태로 제공(정보제공)하는 제도를
-				말합니다." <br>
-				"KOTRA에서는 '공공기관의 정보공개에 관한 법률 시행령' 제11조의 2에 따라 정보 공개사무를 처리하고
-				있습니다."
+				말합니다. <br>
+				KOTRA에서는 '공공기관의 정보공개에 관한 법률 시행령' 제11조의 2에 따라 정보 공개사무를 처리하고
+				있습니다.
 			</p>
 		</div>
 		</div>

@@ -87,10 +87,18 @@ ul.innerRight li {
 	display: inline-block;
 }
 
+
 ul.innerRight li a {
 	color: #666;
 	padding: 0px 10px;
 	float: right;
+}
+
+
+
+/* English 부분 오른쪽은 padding 0 */
+#Eng {
+	padding: 0 0 0 10px;
 }
 
 a {
@@ -568,9 +576,14 @@ button.bt10{ color: #227a71; }
 	float: right;
 }
 
-/* more */
+/* moreBtn 감싸는 div 박스 버튼을 가운데로 보내고싶어서 만듬 */
 .moreBtnDiv {
-
+	height: 30px;
+	width: 1300px;
+	margin: 0 auto;
+	text-align: center;
+	position: absolute;
+	bottom: -15px;
 }
 
 /* more 버튼 */
@@ -582,19 +595,81 @@ button.bt10{ color: #227a71; }
 	color:#fff;
 	font-weight: bold;
 	position: absolute;
-	
-	bottom: -15px;
-	
+	display: inline-block;
 }
-
-
-
- /* -----------------------지금작업중------------------------------------------- */
-
-
 
 /* 하늘색 부분 끝! */
 
+/* --------------------------------------------------------------------------------------- */
+
+/* 화이트 테이블 부분 */
+
+.whiteTableBg {
+	width: 100%;
+	padding-top: 30px;
+	height: 1400px;
+}
+
+.whiteInner {
+	max-width: 1300px;
+	margin: 0 auto;
+	height: 1400px;
+}
+
+.whiteInner2 {
+	min-width: 1040px;
+	height: 1400px;
+	margin-left: 260px;
+	display: inline-block;
+}
+
+/* 전체 개수 */
+.all {
+	margin-top: 10px;
+	font-size: 18px;
+	color: #666;
+	display: inline-block; 
+	letter-spacing: -2px;
+}
+
+.all b {
+	font-weight: bold;
+	color: #c72f00;
+}
+
+/* 셀렉 + 버튼 */
+.selectLookup {
+	height: 40px;
+	float: right;
+}
+
+/* 셀렉트 */
+#Lookup {
+	font-size: 16px;
+	color: #666;
+	height: 40px;
+	padding: 0 8px 0 5px;
+	vertical-align: middle;
+}
+
+/* 조회 버튼 */
+
+.selectLookup>button {
+	height: 40px;
+	border: solid 1px #004a98;
+	padding: 8px 17px;
+	color: #004a98;
+	font-size: 14px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+
+/* 테이블 시작! */
+
+
+
+/* -----------------------------------지금 작업중---------------------------------------- */
 
 </style>
 
@@ -622,7 +697,7 @@ button.bt10{ color: #227a71; }
 			<li><a href="주소 써야함"><span>로그인</span></a></li>
 			<li><a href="주소 써야함"><span>회원가입</span></a></li>
 			<li><a href="주소 써야함"><span>사이트맵</span></a></li>
-			<li><a href="주소 써야함"><span>ENGLISH</span></a></li>
+			<li><a href="주소 써야함" id="Eng"><span>ENGLISH</span></a></li>
 		</ul>
 
 	</div> <!-- headerInner end  -->
@@ -800,6 +875,41 @@ button.bt10{ color: #227a71; }
 </div> <!-- blueBg end -->
 
 
+<!-- 바디 흰색 부분 시작! -->
+
+
+<div class="whiteTableBg">
+	<div class="whiteInner">
+		<div class="whiteInner2">
+			
+			<span class="all">총
+				<b>474</b>
+				건
+			</span>
+			
+			<div class="selectLookup">
+				<select name="Lookup" id="Lookup">
+					<option value="1">전체</option>
+					<option value="2">예정사업</option>
+					<option value="3">신청중</option>
+					<option value="4">신청마감</option>
+					<option value="5">진행중</option>
+					<option value="6">종료</option>
+				</select>
+				
+				<button>조회</button>
+			</div>
+			
+			<ul class="table">
+				<li>
+					<div class="tableLeft"></div>
+					<div class="tableRight"></div>
+				</li>
+			</ul><!-- ul table end -->
+		
+		</div> <!-- whiteInner2 end -->
+	</div> <!-- whiteInner end -->
+</div> <!-- whiteTableBg end -->
 
 
 

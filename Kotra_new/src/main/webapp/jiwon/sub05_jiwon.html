@@ -10,6 +10,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
+<!-- ui base theme cdn -->
+<link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+	//메뉴 리스트 함수
+	$( function() {
+	    $( ".listSlider, .slideHome" ).accordion({
+	        collapsible: true
+	    });
+	  } );
+	
+	$( ".listSlider" ).accordion({
+		  icons: { "header": "ui-icon-caret-1-s", "activeHeader": "ui-icon-caret-1-n" }    
+		});
+	$(".slideHome").accordion({
+		icons: {"header": "ui-icon-blank", "activeHeader": "ui-icon-blank"}
+	})
+})
+
+</script>
+  
 <style type="text/css">
 
 * { font-family: 'Noto Sans KR', sans-serif; }
@@ -27,6 +53,7 @@ ul > li {
 /* a href 밑줄 제거 */
 a {
 	text-decoration-line: none;
+	cursor: pointer;
 }
 
 /* header / 사이트 더보기, 로그인 창*/
@@ -93,6 +120,7 @@ a {
 	color: #666;
     font-weight: 400;
     font-size: 14px;
+    letter-spacing: -0.5px;
 	
 }
 
@@ -159,7 +187,7 @@ a {
     text-align: right;
     overflow: hidden;
     transition: font-size 0.5s;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
     position: relative;
 }
 
@@ -212,6 +240,7 @@ a {
     float: left;
     color: #333;
     line-height: 50px;
+    letter-spacing: -1px;
 }
 
 .listHome {
@@ -228,6 +257,7 @@ a {
 	height: 50px;
 	color: #333;
 	line-height: 50px;
+	letter-spacing: -1px;
 }
 /* HOME / 공사안내 / 공사안내 홈 끝 */
 
@@ -269,6 +299,7 @@ a {
 	padding: 50px 0;
 	background: rgba(0, 0, 0, 0.5);
 	margin-top: -100px;
+	letter-spacing: -1px;
 }
 
 .introphr {
@@ -286,67 +317,40 @@ a {
 	padding-left: 280px;
 }
 
-/* 공사안내 리스트  */
+
+/* 파란색하얀색 메뉴박스 시작 */
 .menuBox {
-	position: absolute;
-	z-index: 100;
+    width: 250px;
+    z-index: 100;
+    /* border: 1px solid #333; */
+    position: absolute;
+    margin: 8px 0 0 110px;
+    padding: 32px 29px 0 0;
 }
-
-.menuBox .infoKotra {
+.infoKotra > h3 {
+	font-size:24px;
+	font-weight: 470;
 	color: #333;
-    font-size: 24px;
-    padding: 0 0 18px;
-    box-sizing: border-box;
-    text-align: left;
-    width: 100%;
-    border-bottom: none;
-    position: relative;
-    font-weight: 500;
-    padding-top:32px;
+	padding: 0 0 18px;
+	letter-spacing: -0.5px;
+	box-sizing: border-box;
+	position: relative;
 }
 
-.listBox {
-	font-size: 12px;
-    padding: 0;
-    box-sizing: border-box;
-     -moz-box-sizing: border-box;
-    position: relative;
-     -webkit-box-sizing: border-box;
-    overflow: hidden;
-}
+ .listSlider > li > ul > li { 
+ 	list-style: square !important; 
+ }
 
-
-.listBox > ul > li > a{
-	color: #fff !important;
-    background: #004a98;
-    /* font-weight: 600; */
-    padding-bottom: 13px;
-}
-
-
-
-.listcon > a {
-	text-align: center; 
- 	margin: 10px; 
- 	padding: 10px;
-    width: 100%;
-    float: left;
-    color: #333;
-    letter-spacing: -0.5px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 
 /* kotra 소개 */
 .title {
     font-size: 46px;
     line-height: 110%;
     padding-bottom: 25px;
+/*     padding-top: 15px; */
     font-weight: 700;
     color: #000;
     width: 100%;
-    word-break: keep-all;
     overflow: hidden;
     display: block;
     letter-spacing: -1px;
@@ -355,28 +359,92 @@ a {
 
 
 /* 이미지+버튼 */
+
+.titleInner {
+    width: 100%;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    padding: 65px 0px 45px 0px;
+}
+.infoLinkBox {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    padding: 20px 5px;
+    padding-bottom: 65px;
+    position: relative;
+    margin: 0 auto;
+    vertical-align: middle;
+    justify-content: center;
+}
 .infoLink {
-	float: right;
-	width: 25%;
-	text-align:center;
+    float: left;
+    width: 20%;
+    max-width: 260px;
+    text-align: center;
+    display: block;
+}
 	
+
+.infoLink a {
+	font-size: 18px;
+    font-weight: 500;
+    display: inline-block;
+    letter-spacing: -1px;
+    padding: 10px 0;
+    line-height: 20px;
+    color: #000;
+    vertical-align: middle;
 }
 
-.infoButton .buttonImg {
-	float: right;
-	width: 25%;
-	text-align:center;
+.infoLink img {
+	width: 100%;
+    position: relative;
+    box-sizing: border-box;
 }
 
-
-.whitebold {
-	font-weight: bold;
+.infoSpan:after {
+     content: "";
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    border: 1px solid #333;
+    transform: rotate(45deg);
+    border-width: 1px 1px 0 0;
+    vertical-align: middle;
+    margin-left: 6px;
+    margin-top: -3px;
 }
+/* KOTRA 소개 + 버튼 끝 */
+
+
+hr {
+	width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #cbcbcb;
+    border: none;
+    height: 1px;
+}
+
 
 /* 조직안내 및 오시는 길 */
 
 .infoIconBox {
 	width: 100%;
+    float: left;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    box-sizing: border-box;
+    display: block;
+    padding-top: 50px;
+}
+
+.titleContent {
+    width: 100%;
     height: 100%;
     float: left;
     padding: 15px;
@@ -386,16 +454,9 @@ a {
     position: relative;
 }
 
-.titleContent {
-	text-align: center;
-    width: 100%;
-    display: inline-block;
-    vertical-align: middle;
-}
-
 .content {
     font-size: 18px;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
     line-height: 22px;
     color: #666;
     width: 100%;
@@ -406,23 +467,11 @@ a {
 
 /* 이미지 부분 */
 
-.infoIconBox .infoButton {
-	width: 100%;
-    float: left;
-    position: relative;
-    text-align: center;
-    font-size: 18px;
-    box-sizing: border-box;
-    display: block;
-}
 
-
-.infoIconBox {
-	width: 100%;
-    float: left;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 10px;
+.infoButton .buttonImg {
+	float: left;
+	width: 25%;
+	text-align:center;
 }
 
 .infoButton {
@@ -431,13 +480,77 @@ a {
     height: 100%;
     background: #fff;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
-.buttonImg {
-	float: left;
-	width: 100%;
-	height: 100%;
+.buttonImg{
+    width: 30% !important;
+    max-width: 340px;
+    height: 100%;
+    padding: 70px 0px 75px 0px;
 }
+
+.buttonImg ul {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 36%;
+    padding-top: 13px;
+}
+
+.buttonImg a{
+    width: 100%;
+    float: left;
+    line-height: 35px;
+    font-size: 15.5px;
+    color: #767676;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+
+.buttonTitle {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top:10px;
+}
+
+/* 개발자도구 참고 */
+.tit {
+	width: 100%;
+    display: block;
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+    word-break: keep-all;
+    float: left;
+    line-height: 130%;
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 6px;
+ }
+
+.tit:before {
+    content: "\b7";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+ }
+ 
+ .tit:after {
+ 	content: "";
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    border: 1px solid #333;
+    transform: rotate(45deg);
+    border-width: 1px 1px 0 0;
+    vertical-align: middle;
+    margin-left: 6px;
+    margin-top: -3px;
+ }
+/* 개발자도구 참고 */
 
 /* 바다 시작 */
 .footbox {
@@ -487,11 +600,99 @@ a {
 /* 바다 끝 */
 
 
-/* 공지사항 추가하기 */
+/* 게시판 4개 시작 */
+
+.boardBox {
+	width: 100%;
+	float: left;
+}
+
+.boardInner {
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.boardtitleBox {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.boardTitle {
+	height: 100%;
+	float: left;
+	text-align: left;
+}
+
+.boardP {
+	padding: 0 50px 0 0;
+
+}
+
+/* 게시판 제목 글씨 */
+.boardP a {
+	font-size: 26px;
+	font-weight: 600;
+	color: #333333;
+	width: 20%;
+	margin: 0 0 3px 3px;
+	vertical-align: middle;
+}
+
+.contentList {
+	overflow: hidden;
+}
+
+.contentList > li {
+	width: 23%;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	margin-right: 25px;
+	box-sizing: border-box;
+	
+}
+.contentList > li > a {
+	width: 100%;
+	height: 206px;
+	overflow: hidden;
+	text-align: left;
+    float: left;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.contentList > li > a > span {
+	font-size: 16px;
+    line-height: 150%;
+    word-break: keep-all;
+    letter-spacing: -0.5px;
+    overflow: hidden;
+    width: 100%;
+    height: 78px;
+    float: left;
+    color: #666;
+    box-sizing: border-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    white-space: normal;
+    padding-top: 30px;
+    position: relative;
+}
+.contentList > li > a > p {
+	color: #004a98;
+	font-size: 22px;
+	font-weight: 600;
+}
+
+
 
 /* 홍보영상 */
-
-
 .footer {
 	width: 100%;
 	overflow: hidden;
@@ -503,12 +704,9 @@ a {
 
 .footerList {
 	width: 100%;
-	font-size: 12px;
-	box-sizing: border-box;
-	margin: 0 auto;
-	text-align: left;
-	padding-top: 20px;
-	padding-bottom: 5px;
+    font-size: 12px;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .footerList > ul > li {
@@ -618,24 +816,67 @@ a {
 <div class="menuBox">
 	<div class="infoKotra">
 		<h3 id="info">공사 안내</h3>
-		<ul class="listslider">
-			<li><a href="https://www.kotra.or.kr/subList/20000006012">공사안내 홈</a></li>
-			<li>KOTRA 소개</li>
-				<li><a href="">CEO 인사말</a></li>
-				<li><a href="">경영전략체계</a></li>
-				<li><a href="">인권.윤리 경영</a></li>
-				<li><a href="">지속가능경영</a></li>
-				<li><a href="">60주년 디지털<br> 아카이브</a></li>
-		
-			<li><a href="">조직안내 및 오시는 길</a></li>
-		
-			<li><a href="">채용정보</a></li>
-		
-			<li><a href="">고객의 소리</a></li>
-		
-			<li><a href="">알림.홍보</a></li>
-		</ul>
 	</div>
+		<ul class="slideHome" style="width: 220px;">
+			<li><a href="">공사안내 홈</a></li>
+		</ul>
+			
+		<ul class="listSlider" style="width: 220px;">
+			<li><a href="">KOTRA 소개</a>
+				<ul>
+				<li><a href="https://www.kotra.or.kr/subList/20000005812">CEO 인사말</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005814">경영전략체계</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005815">인권·윤리 경영</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005816">지속가능경영</a></li>
+				<li><a href="https://www.kotra.or.kr/60th_archive/index.html">60주년 디지털<br> 아카이브</a></li>
+				</ul>
+			</li>
+		
+			<li><a href="">조직안내 및 오시는 길</a>
+				<ul>
+				<li><a href="https://www.kotra.or.kr/subList/20000005824">본사</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005899">지방지원단</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005998">해외무역관</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005907">직원 검색</a></li>
+				</ul>
+			</li>
+				
+			<li><a href="">채용정보</a>
+				<ul>
+				<li><a href="https://www.kotra.or.kr/subList/20000005817">채용 공고</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005818">인재상</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005819">KOTRA인턴십</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005820">인사제도</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005821">복지제도</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000006021">채용상담</a></li>
+				</ul>
+			</li>
+				
+			<li><a href="">고객의 소리</a>
+				<ul>
+				<li><a href="https://www.kotra.or.kr/subList/20000006017">웹사이트문의</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000006018">기업규제 애로신고</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000006019">칭찬/불만/제안</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005926">FAQ</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005831">고객과의 약속</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000006020">민원 신고</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000006141">공공데이터 제공<br>신청</a></li>
+				</ul>
+			</li>
+				
+			<li><a href="">알림.홍보</a>
+				<ul>
+				<li><a href="https://www.kotra.or.kr/subList/20000005961">공지사항</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005958">입찰공고</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005962">보도자료</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005964">홍보영상</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005978">KOTRA 뉴스레터</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005965">KOTRA 디자인</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005966">시설임대</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005857">정보공개</a></li>
+				</ul>
+			</li>
+		</ul>
 </div>
 <!-- 공사 안내 홈 메뉴박스 끝 -->
 
@@ -649,12 +890,13 @@ a {
 		
 		<div class="phr">
 			<h4 class="introphr">
-				<b>7대 대국민 약속,</b> 국가와 고객에게<br>도움이 되는 <b>KOTRA</b>
+				<b>7대 대국민 약속,</b> 국가와 고객에게<br>도움이되는 <b>KOTRA</b>
 			</h4>
 		</div>
 		
 	</div>
 <!-- 사진+문구 인트로 끝 -->
+
 
 
 <!-- 코트라 소개 시작 -->
@@ -671,22 +913,22 @@ a {
 	<div class="infoLinkBox">
 		<div class="infoLink" id="infob1">
 			<a href=""><img alt="ceo인사말" src="../image/icon01.png"></a><br>
-			<a href="">ceo인사말 ></a>
+			<a class="linkAfter" href=""><span class="infoSpan">CEO 인사말</span></a>
 		</div>
 	
 		<div class="infoLink" id="infob2">
 			<a href=""><img alt="경영전략체계" src="../image/icon02.png"></a><br>
-			<a href="">경영전략체계 ></a>
+			<a class="linkAfter" href=""><span class="infoSpan">경영전략체계</span></a>
 		</div>
 	
 		<div class="infoLink" id="infob3">
 			<a href=""><img alt="인권윤리 경영" src="../image/icon03.png"></a><br>
-			<a href="">인권윤리 경영 ></a>
+			<a class="linkAfter" href=""><span class="infoSpan">인권·윤리 경영</span></a>
 		</div>
 	
 		<div class="infoLink" id="infob4">
 			<a href=""><img alt="지속가능경영" src="../image/icon04.png"></a><br>
-			<a href="">지속가능경영 ></a>
+			<a class="linkAfter" href=""><span class="infoSpan">지속가능경영</span></a>
 		</div>
 	</div>
 	
@@ -709,28 +951,34 @@ a {
 	
 		<div class="buttonImg" id="button1">
 			<p><img alt="KOTRA본사" src="../image/kotrainfoIcon01.png"></p>
-				<b>KOTRA본사</b>
+				<span class="buttonTitle">KOTRA본사</span>
 			<ul>
-				<li><a href="https://www.kotra.or.kr/subList/20000005824">조직 안내 ></a></li>
-				<li><a href="https://www.kotra.or.kr/subList/20000005824?tabid=35">찾아오시는 길 ></a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005824">
+					<span class="tit">조직 안내</span></a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005824?tabid=35">
+					<span class="tit">찾아오시는 길</span></a></li>
 			</ul>
 		</div>
 
 		<div class="buttonImg" id="button2">
 			<p><img alt="지방지원단" src="../image/kotrainfoIcon02.png"></p>
-				<b>지방지원단</b>
+				<span class="buttonTitle">지방지원단</span>
 			<ul>
-				<li><a href="https://www.kotra.or.kr/subList/20000005899">조직 안내 ></a></li>
-				<li><a href="https://www.kotra.or.kr/subList/20000005899">찾아오시는 길 ></a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005899">
+					<span class="tit">조직 안내</span></a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005899">
+					<span class="tit">찾아오시는 길</span></a></li>
 			</ul>
 		</div>
 
 		<div class="buttonImg" id="button3">
 			<p><img alt="해외무역관" src="../image/kotrainfoIcon03.png"></p>
-				<b>해외무역관</b>
+				<span class="buttonTitle">해외무역관</span>
 			<ul>
-				<li><a href="https://www.kotra.or.kr/subList/20000005998">조직 안내 ></a></li>
-				<li><a href="https://www.kotra.or.kr/subList/20000005998">찾아오시는 길 ></a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005998">
+					<span class="tit">조직 안내</span></a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005998">
+					<span class="tit">찾아오시는 길</span></a></li>
 			</ul>
 		</div>	
 		
@@ -751,8 +999,7 @@ a {
 				<img alt="bi" src="../image/kotraBI.png"> 
 				<span class="footphr">무역투자 진흥 & 일자리 창출로 국민경제 발전에 이바지하겠습니다.<br>
 					사회적 가치 실현으로 더 나은 사회, 더 밝은 내일을 함께합니다.<br> 
-					경제통상협력으로 우리 기업의 진출을 지원합니다.
-				</span>
+					경제통상협력으로 우리 기업의 진출을 지원합니다. </span>
 			</div>
 			</div>
 			
@@ -763,17 +1010,59 @@ a {
 
 
 <!-- 공지 게시판 시작 -->
-<div class="rhdwl">
-	<div>
-		<p><a href="">공지사항</a></p>
-		<ul>
-			<li><a href=""></a>
-				<p>홈페이지 서비스 일시중지 안내(8.27. 10:00~18:00)</p>
-				<span>시스템 정기점검 및 안정적인 정보시스템 운영작업으로 로그인 및</span>
+
+<div class="boardBox" style= "height: 400px;  padding-top: 50px;
+	background: url(../image/kotrainfoBrdBg.jpg) no-repeat;	background-size: 100%;" >
+	<div class="boardInner">
+		<ul class="boardtitleBox">
+		
+			<!-- 공지사항 게시판 시작 -->	
+			<li class="boardTitle">	
+				<div class="boarDiv">
+					<p class="boardP"><a href="">공지사항</a></p>
+					<ul class="contentList">
+						<li><a href="">
+							<p>홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)</p>
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a>
+							<span>2022-09-08</span></li>
+							
+						<li><a href="">
+							<p>홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)</p>
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a>
+							<span>2022-09-08</span></li>
+							
+						<li><a href="">
+							<p>홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)</p>
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a>
+							<span>2022-09-08</span></li>
+							
+						<li><a href="">
+							<p>홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)</p>
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a>
+							<span>2022-09-08</span></li>
+					</ul>
+					<div class="moreBtn"><a href="" title="공지사항 더보기">+</a></div>
+				</div>
 			</li>
+			<!-- 공지사항 게시판 끝 -->	
+		
+<!-- 여기에 Front/WebContent/portfolio/subCode.html 파일 넣기 -->
+
 		</ul>
 	</div>
-
+</div>
 
 <!-- 공지 게시판 끝 -->
 
@@ -782,10 +1071,6 @@ a {
 
 <div class="videoBoxOuter">
 	<div class="videoBoxinner">
-		<div class="quickmenu">
-			"+"
-			<span class="help">퀵 메뉴 아이템 추가</span>
-		</div>	<!-- 퀵 메뉴 추가 끝 -->
 	
 		<div class="qTitlebox">
 			<h5>KOTRA 홍보영상</h5>
@@ -895,8 +1180,7 @@ a {
 
 
 <!-- footer 시작 -->
-	<footer>
-		<div class="footer">
+<div class="footer">
 		<div class="footerTop">
 			<div class=footerList>
 				<ul>
@@ -948,11 +1232,10 @@ a {
 					</a></li>
 				</ul>
 	
-				</div>
 			</div>
 		</div>
-		</div>
-	</footer>
+	</div>
+</div>
 <!-- footer 끝 -->
 
 </body>

@@ -42,7 +42,7 @@ $(document).ready(function() {
 
  * { 
      margin: 0; 
-     padding: 0; 
+     padding: 0;
  }	
 	
 /* 리스트에 동그라미 삭제 */	
@@ -462,7 +462,6 @@ hr {
     width: 100%;
     display: block;
     overflow: hidden;
-/*     word-break: keep-all; */
 }
 
 /* 이미지 부분 */
@@ -653,6 +652,10 @@ hr {
 	box-sizing: border-box;
 	
 }
+
+.contentList > li > span {
+	float: right;
+}
 .contentList > li > a {
 	width: 100%;
 	height: 206px;
@@ -665,6 +668,10 @@ hr {
     padding: 25px;
     box-sizing: border-box;
 }
+.contentList > li > a:hover {
+	border-color: #0b70b9;
+}
+
 
 .contentList > li > a > span {
 	font-size: 16px;
@@ -691,8 +698,245 @@ hr {
 }
 
 
+/* + 버튼 */
+.moreBtn {
+	top: -300px;
+    position: relative;
+    right: 40px;
+    width: 22px;
+    height: 59px;
+    float: right;
+}
+
+.moreBtn > a {
+	font-weight: 400;
+	font-size: 40px;
+	color: #333;
+}
+
 
 /* 홍보영상 */
+
+.titlebox {
+	padding: 20px 0 15px;
+}
+
+.titlebox > h5 > b{
+	font-size: 26px;
+	color: #333;
+	line-height: 120%;
+}
+
+.innerBoxZone {
+	padding-right: 15px;
+	width: 100%;
+	float: left;
+	box-sizing: border-box;
+}
+
+/* 동영상 사진 로고 부분 */
+.bgImgbox {
+	width: 100%;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 160px;
+    margin-bottom: 15px;
+}
+
+.bgImgbox > a {
+	width: 100%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.bgImgbox > a > img {
+	width: 100%;
+    display: inline-block;
+    position: relative;
+    margin: auto;
+}
+
+.videoLogo {
+	width: 100%;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 80px;
+}
+
+.videoLogo > a {
+	width: 100%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+.videoLogo > a > img {
+	width: 100%;
+    display: inline-block;
+    position: relative;
+    margin: auto;
+}
+
+/* ㄷㅐ국민 약속 */
+.promiseInner {
+	padding-right: 15px;
+    width: 100%;
+    float: left;
+    clear: both;
+    box-sizing: border-box;
+}
+.alinkBox {
+	width: 100%;
+    float: left;
+    background: #484848;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 257px;
+}
+
+.prmsImgBox {
+	width: 100%;
+    float: left;
+    background: #fff;
+    position: relative;
+    padding: 80px 0px 0px 0px;
+    box-sizing: border-box;
+    margin-bottom: 65px;
+}
+.prmsImg {
+	width: 30%;
+    right: 15px !important;
+    display: inline-block;
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    top: 16px;
+}
+
+.subContent {
+	color: #014a97;
+	font-size: 29px;
+	padding: 0 20px;
+	width: 100%;
+	font-weight: 600;
+	box-sizing: border-box;
+	letter-spacing: -1px;
+}
+.bIcon {
+	display: inline-block;
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.subPhr {
+	width: 100%;
+	color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -1px;
+    box-sizing: border-box;
+    display: block;
+    padding: 0 20px 20px;
+}
+
+.conBox {
+	width: 100%;
+	float: left;
+}
+
+.iicon {
+	width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    line-height: 90px;
+    background: #f1f1f1;
+    text-align: center;
+    position: relative;
+    float: left;
+}
+
+.iicon > img {
+    vertical-align: middle;
+    max-width: 65%;
+    max-height: 65%;
+    display: inline-block;
+    position: absolute;
+    left: 27.5%;
+    top: 23.5%;
+}
+
+.qbox {
+	text-align: left;
+	float: right;
+	width: calc(100% - 100px);
+}
+
+.qbox > p {
+    font-size: 16px;
+    color: #666;
+    line-height: 140%;
+    word-break: keep-all;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+.infohr {
+    width: 85%;
+    margin-left: 99px;
+    margin-bottom: 20px;
+}
+
+.bannerZone {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-left: 100px;
+}
+
+.bannerBtn {
+	width: 32%;
+	max-width: 169.75px;
+    margin-right: 2%;
+    float: left;
+    border: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    line-height: 30px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.bannerSpn {
+	float: left;
+    width: 100%;
+    color: #666;
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    padding: 5px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* footer */
 .footer {
 	width: 100%;
 	overflow: hidden;
@@ -1064,120 +1308,125 @@ hr {
 	</div>
 </div>
 
-<!-- 공지 게시판 끝 -->
+<!-- 게시판 4개 끝 -->
 
+<!-- 동영상, 윤리약속, 정보공개 그룹 -->
+<div class="boxGroup" style="width: 1300px; margin: 0 auto;">
 
 <!-- 동영상 시작 -->
-
-<div class="videoBoxOuter">
-	<div class="videoBoxinner">
-	
-		<div class="qTitlebox">
-			<h5>KOTRA 홍보영상</h5>
-		</div>	<!-- 홍보영상 끝 -->
-	
-		<div class="innerBoxZone">
-			<div class="bgImgbox">
-				<a href="https://www.kotra.or.kr/kp/subList/20000005964">
-				<img class="bgImg" alt="국가무역투자진흥기관" src="../image/kotravideo.jpg">
-				</a>
-			</div>
+	<div class="videoBoxOuter" style="width: 22.75%; float: left;">
+		<div class="videoBoxinner">
 		
-			<div class="videoLogo">
-				<a href="https://www.kotra.or.kr/kp/subList/20000005965?tabid=21">
-				<img class="bgImg" alt="코트라디자인" src="../image/kotradesign.jpg">
-				</a>
+			<div class="titlebox">
+				<h5> <b>KOTRA 홍보영상</b> </h5>
+			</div>	<!-- 홍보영상 끝 -->
+		
+			<div class="innerBoxZone">
+				<div class="bgImgbox">
+					<a href="https://www.kotra.or.kr/kp/subList/20000005964">
+					<img class="bgImg" alt="국가무역투자진흥기관" src="../image/kotravideo.jpg">
+					</a>
+				</div>
+			
+				<div class="videoLogo">
+					<a href="https://www.kotra.or.kr/kp/subList/20000005965?tabid=21">
+					<img class="bgImg" alt="코트라디자인" src="../image/kotradesign.jpg">
+					</a>
+				</div>
+				
+	<!-- 			<div class="videoImg"></div> -->
+			</div>
+		</div>
+	</div>
+	<!-- 동영상 끝 -->
+	
+	
+	<!-- 대국민 7대 윤리약속 시작 -->
+	
+	<div class="promiseBox" style="width: 22.75%; float: left; margin: 0 3%;">
+		<div class="promiseInner">
+		
+			<div class="titlebox">
+				<h5> <b>대국민 7대 윤리약속</b> </h5>
 			</div>
 			
-<!-- 			<div class="videoImg"></div> -->
-		</div>
-	</div>
-</div>
-<!-- 동영상 끝 -->
-
-
-<!-- 대국민 7대 윤리약속 시작 -->
-
-<div class="promiseBox">
-	<div class="promiseInner">
-		<div class="titlebox">
-			<h5 class="titleCon">
-				<b>대국민 7대 윤리약속</b>
-			</h5>
-		</div>
-
-		<a href="https://www.kotra.or.kr/subList/20000005831?tabid=51" title="고객과의 약속">
-		
-		<div class="prmsImgBox">
-			<div class="prmsImg">
-				<img class="bIcon" src="../image/iconBI.png" alt="중소중견">
+			<div class="alinkBox">
+			<a href="https://www.kotra.or.kr/subList/20000005831?tabid=51" title="고객과의 약속"></a>
+			
+			<div class="prmsImgBox">
+				<div class="prmsImg">
+					<img class="bIcon" src="../image/iconBI.png" alt="중소중견">
+				</div>
+			<p class="subContent">대국민 7대 윤리약속</p>
 			</div>
-		<p class="tit bSubContent">대국민 7대 윤리약속</p>
+		
+			<span class="subPhr">KOTRA는 최고의 윤리적인 기관으로<br>
+				도약하고자 국민 여러분과 약속합니다</span>
+			</div>
+			
 		</div>
-	
-		<span class="subtit bContent"> "KOTRA는 최고의 윤리적인 기관으로<br>
-			도약하고자 국민 여러분과 약속합니다"
-		</span>
-		</a>
 	</div>
-</div>
-<!-- 대국민 7대 윤리약속 끝 -->
+	<!-- 대국민 7대 윤리약속 끝 -->
+	
+	
+	<!-- 정보공개 시작 -->
+	
+	<div class="infoIicon" style="width: 48.5%; float: left;">
 
-
-<!-- 정보공개 시작 -->
-
-<div class="infoIicon">
-	<div class="infoBox">
-		<h5 class="infomation">
-			<b>정보공개</b>
-		</h5>
+		<div class="titlebox">
+			<h5> <b>정보공개</b> </h5>
+		</div>
+			
 		<div class="conBox">
-		<div class="iicon">
-			<img alt="정보공개" src="../image/iicon01.png">
+			<div class="iicon">
+				
+				<img alt="정보공개" src="../image/iicon01.png">
+			</div>
+			
+			<div class="qbox">
+				<p>
+					정보공개란 공공기관이 관리하고 있는 정보를 수요자인 국민의 청구에 의하여 공개 (청구공개)하거나, 공공기관이
+					자발적으로 또는 법령 등의 규정에 의하여 보유하고 있는 정보를 배포 또는 공표 등의 형태로 제공(정보제공)하는 제도를
+					말합니다. <br>
+					KOTRA에서는 '공공기관의 정보공개에 관한 법률 시행령' 제11조의 2에 따라 정보 공개사무를 처리하고
+					있습니다.
+				</p>
+			</div>
 		</div>
 		
-		<div class="qbox">
-			<p>
-				정보공개란 공공기관이 관리하고 있는 정보를 수요자인 국민의 청구에 의하여 공개 (청구공개)하거나, 공공기관이
-				자발적으로 또는 법령 등의 규정에 의하여 보유하고 있는 정보를 배포 또는 공표 등의 형태로 제공(정보제공)하는 제도를
-				말합니다. <br>
-				KOTRA에서는 '공공기관의 정보공개에 관한 법률 시행령' 제11조의 2에 따라 정보 공개사무를 처리하고
-				있습니다.
-			</p>
-		</div>
-		</div>
-	</div>
-	
-	<hr>
-	
-	<div class="bannerZone">
-		<div class="bannerBtn">
-			<a href="https://www.kotra.or.kr/subList/20000005857"> <span class="bannerSpn">정보공개 제도</span></a>
-		</div>
-	
-		<div class="bannerBtn">
-			<a href="https://www.kotra.or.kr/subList/20000005794"> <span class="bannerSpn">비공개대상 정보</span></a>
-		</div>
-	
-		<div class="bannerBtn">
-			<a href="https://www.kotra.or.kr/subList/20000005795"> <span class="bannerSpn">정보목록</span></a>
-		</div>
-	
-		<div class="bannerBtn">
-			<a href="https://www.kotra.or.kr/subList/20000005796"> <span class="bannerSpn">사전정보</span></a>
-		</div>
-	
-		<div class="bannerBtn">
-			<a href="https://www.kotra.or.kr/subList/20000005801"> <span class="bannerSpn">공공데이터 제공</span></a>
-		</div>
-	
-		<div class="bannerBtn">
-			<a href="https://www.kotra.or.kr/subList/20000005804"> <span class="bannerSpn">사업실명제</span></a>
+		<hr class="infohr">
+		
+		<div class="bannerZone">
+			<div class="bannerBtn">
+				<a href="https://www.kotra.or.kr/subList/20000005857"> <span class="bannerSpn">정보공개 제도</span></a>
+			</div>
+		
+			<div class="bannerBtn">
+				<a href="https://www.kotra.or.kr/subList/20000005794"> <span class="bannerSpn">비공개대상 정보</span></a>
+			</div>
+		
+			<div class="bannerBtn">
+				<a href="https://www.kotra.or.kr/subList/20000005795"> <span class="bannerSpn">정보목록</span></a>
+			</div>
+		
+			<div class="bannerBtn">
+				<a href="https://www.kotra.or.kr/subList/20000005796"> <span class="bannerSpn">사전정보</span></a>
+			</div>
+		
+			<div class="bannerBtn">
+				<a href="https://www.kotra.or.kr/subList/20000005801"> <span class="bannerSpn">공공데이터 제공</span></a>
+			</div>
+		
+			<div class="bannerBtn">
+				<a href="https://www.kotra.or.kr/subList/20000005804"> <span class="bannerSpn">사업실명제</span></a>
+			</div>
 		</div>
 	</div>
-</div>
 <!-- 정보공개 끝 -->
+</div>
+<!-- 그룹 세개 끝 -->
 
+<div style=" width:100%; height:630px;"></div>
 
 <!-- footer 시작 -->
 <div class="footer">

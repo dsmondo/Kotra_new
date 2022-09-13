@@ -667,6 +667,88 @@ button.bt10{ color: #227a71; }
 
 /* 테이블 시작! */
 
+.tableList {
+	width: 100%;
+	border-top: 2px solid #000;
+	margin-top: 14px;
+}
+
+.tableList li {
+	padding: 20px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+/* 테이블 왼쪽부분 */
+.tableLeft {
+	width: 170px;
+	display: inline-block;
+	font-size: 22px;
+	text-align: center;
+	color: #c72F00;
+	font-weight: bold;
+	line-height: 25px;
+	vertical-align: middle;
+}
+
+/* 테이블 왼쪽 p태그 */
+.tableLeft>p:first-child {
+	height: 48px;
+}
+
+
+/* 테이블 오른쪽부분 */
+.tableRight {
+	width: 832px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* 테이블 오른쪽 버튼부분 */
+.tableRight button {
+	font-size:14px;
+	color: #fff;
+	background-color: #0e8572;
+	padding: 5px 10px;
+	margin: 0 10px 8px 0; 
+	float: left;
+}
+
+/* 테이블 오른쪽 타이틀 부분 */
+.tableTit {
+	line-height: 30px;
+	font-weight: bold;
+}
+
+/* 테이블 오른쪽 밑 컨텐츠 부분 */
+
+.tableRightBottom p {
+	font-size: 14px;
+	color: #666;
+	float: left;
+}
+.tableRightBottom b {
+	margin: 0 6px;
+	font-size: 14px;
+	color: #bbb;
+	font-weight: 60;
+}
+
+/* li deadline D-1 부분 */
+.deadline_Done>b:first-child {
+	font-size: 27px;
+	color: #014a99;
+}
+.deadline_Done>b:last-child {
+	font-size: 16px;
+	color: #014a99;
+	font-weight: normal;
+	display: block;
+}
+
+
+
+
+
 
 
 /* -----------------------------------지금 작업중---------------------------------------- */
@@ -900,11 +982,63 @@ button.bt10{ color: #227a71; }
 				<button>조회</button>
 			</div>
 			
-			<ul class="table">
+			<ul class="tableList">
+				
+				<!-- -------------------------- li set ---------------------------- -->
 				<li>
-					<div class="tableLeft"></div>
-					<div class="tableRight"></div>
+					<div class="tableLeft">
+					<p class="deadline">오늘<br>마감</p>
+					</div>
+					
+					<div class="tableRight">
+						<div class="tableRightTop">
+							<button>그린뉴딜 분야 해외진출지원</button>
+							<p class="tableTit">Wind Energy 전시회 연계 수소 파트너쉽 플라자</p>
+						</div>
+						
+						<div class="tableRightBottom">
+							<p class="Contents">개최장소 : 독일 함부르크 Messe <b>I</b> 개최기간 : 2022-09-27 ~ 2022-09-30 <b>I</b> 신청기간 : 2022-06-30 ~ 2022-09-12</p>
+						</div>
+					</div>
 				</li>
+				
+				<!-- -------------------------- li set ---------------------------- -->
+				<li>
+					<div class="tableLeft">
+					<p class="deadline_Done"><b>D-1</b><br><b>신청가능</b></p>
+					</div>
+					
+					<div class="tableRight">
+						<div class="tableRightTop">
+							<button>해외유통망 협업사업</button>
+							<p class="tableTit">2022 극동러 온오프라인 유통망 소비재 판촉전</p>
+						</div>
+						
+						<div class="tableRightBottom">
+							<p class="Contents">개최장소 : 러시아 블라디보스톡 및 온라인 <b>I</b> 개최기간 : 2022-09-01 ~ 2022-12-31 <b>I</b> 신청기간 : 2022-08-17 ~ 2022-09-13</p>
+						</div>
+					</div>
+				</li>
+				
+				<!-- -------------------------- li set ---------------------------- -->
+				<li>
+					<div class="tableLeft">
+					<p class="deadline_Done"><b>D-1</b><br><b>신청가능</b></p>
+					</div>
+					
+					<div class="tableRight">
+						<div class="tableRightTop">
+							<button>CVC 투자유치 사업 운영</button>
+							<p class="tableTit">Web Summit 2022 한국관 참가 기업 모집</p>
+						</div>
+						
+						<div class="tableRightBottom">
+							<p class="Contents">개최장소 : 포르투갈 리스본 및 온라인 <b>I</b> 개최기간 : 2022-09-01 ~ 2022-12-31 <b>I</b> 신청기간 : 2022-08-17 ~ 2022-09-13</p>
+						</div>
+					</div>
+				</li>
+			
+			
 			</ul><!-- ul table end -->
 		
 		</div> <!-- whiteInner2 end -->

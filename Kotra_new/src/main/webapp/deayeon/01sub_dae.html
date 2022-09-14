@@ -87,10 +87,18 @@ ul.innerRight li {
 	display: inline-block;
 }
 
+
 ul.innerRight li a {
 	color: #666;
 	padding: 0px 10px;
 	float: right;
+}
+
+
+
+/* English 부분 오른쪽은 padding 0 */
+#Eng {
+	padding: 0 0 0 10px;
 }
 
 a {
@@ -183,7 +191,7 @@ a {
 .searchBtn {
 	width: 25px;
 	height: 25px;
-	background: url(https://www.kotra.or.kr/images/wzwg/site/kotra/headIcon.png); ;
+	background: url(../image/headIcon.png); 
 	background-position: -148px -1px;
 	position: absolute;
 	top: 6px;
@@ -200,7 +208,7 @@ a {
 .allmn {
 	width: 25px;
 	height: 25px;
-	background: url(https://www.kotra.or.kr/images/wzwg/site/kotra/headIcon.png);
+	background: url(../image/headIcon.png);
 	background-position: -85px -1px;
 	position: absolute;
 	top: 6px;
@@ -293,9 +301,9 @@ li.homemn {
 
 .blueBg {
 	width: 100%;
-	height: 500px;
-	
+	height: 470px;
 	background-color: #b2c9f3;
+	position: relative;
 }
 
 .blueInner {
@@ -305,14 +313,14 @@ li.homemn {
 }
 
 
-/* 제일 왼쪽 박스 title */
+/* --- 제일 왼쪽 박스 title --- */
 .leftBox {
 	padding-right: 40px;
 	width: 220px;
 	float: left;
 }
 
-.blueInner p {
+#subTit {
 	font-size: 24px;
 	color: #333;
 	font-weight: 500;
@@ -335,9 +343,9 @@ li.homemn {
 	position: absolute;
 }
 
-/* 제일 왼쪽 박스 title 끝 */
+/* --- 제일 왼쪽 박스 title 끝 --- */
 
-/* 센터 박스 */
+/* --- 센터 박스 --- */
 
 .centerBox {
 	width: 676px;
@@ -399,11 +407,474 @@ li.homemn {
 .binSearchDv label {
 	font-size: 20px;
 	color: #333;
-	width: 100px;
+	width: 100px ;
 	height: 40px;
+	float: left;
+	line-height: 40px;
+}
+
+/* input부분 스타일 */
+#bonSearch {
+	width: 457px;
+	height: 38px;
+	border: 1px solid #ccc;
+	float: left;
+	border-radius: 8px;
+	padding-left: 20px;
+	margin-right: 5px;
+}
+
+
+
+/* 검색버튼 스타일 영역 */
+
+.searchBtn2 {
+	background-color: #707070;
+	padding: 8px 17px 8px 17px;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+}
+
+/* 검색 아이콘 */
+.searchBtn2:before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin-right: 5px;
+    background: url(../image/kotraSrchBtnSet.png);
+    vertical-align: bottom;
+}
+
+
+/* 추천 키워드 div 영역 */
+.keyWord > p { 
+	width: 676px;
+	height: 32px;
+	padding: 20px 0 10px;
+}
+ 
+ /* 추천 키워드 텍스트 */
+.keyWord > p {
+	font-size: 20px;
+	color: #004A98;
+	font-weight: bold;	
+	float: left;
+}
+
+/* 추천 키워드 버튼 */
+
+.allButton {
+	width: 100%;
+}
+
+.allButton button {
+	float: left; 
+	font-size: 15px;
+	width: 124px;
+	height: 40px;
+	margin-right: 14px;
+	margin-bottom: 10px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 50px;
+	font-weight: bold;
+}
+
+/* 5번 10번은 오른쪽 마진 없어야함 */
+.bt5 { margin-right: 0px !important; }
+.bt10 { margin-right: 0px !important; }
+
+/* 추천 키워드 버튼 안에 텍스트 색상 */
+button.bt1{ color: #014a99; }
+button.bt2{ color: #5a189e; }
+button.bt3{ color: #227a71; }
+button.bt4{ color: #7a4822; }
+button.bt5{ color: #5a189e; }
+button.bt6{ color: #5a189e; }
+button.bt7{ color: #227a71; }
+button.bt8{ color: #014a99; }
+button.bt9{ color: #7a4822; }
+button.bt10{ color: #227a71; }
+
+/* --- 센터 박스 끝 --- */
+
+/* 우측박스 시작 !!@@~!@ */
+
+.rightBox {
+	width: 240px;
+	height: 314px;
+	float: right;
+}
+
+/* 우측박스 타이틀 */
+.rightBox>p:first-child {
+	font-size: 19px;
+	font-weight: bold;
+	color: #000;
+	padding: 15px 0 15px;
+	border-bottom: 2px solid #014a99;
+}
+
+/* 우측박스 <ul> padding top */
+
+.rightUl{
+	padding-top: 15px;
+}
+
+
+/* 우측박스 <li> */
+.rightUl li {
+	width: 100%;
+	float: left;
+	line-height: 100%;
+	margin-bottom: 16px;
+	position: relative;
+	letter-spacing: -1px;
+}
+
+
+/* 우측박스 텍스트 left */
+.rightTit>p:first-child {
+	font-size: 16px;
+	color: #333;
+	margin: 15px 0 0; 
+	float: left;
+}
+
+/* 우측박스 텍스트 right mini */
+.rightSpan {
+	font-size: 16px;
+	color: #333;
+	vertical-align: bottom;
+	position: absolute;
+	right: 0px;
+	top: 6px;
+}
+
+/* 우측박스 텍스트 right big */
+.rightSpan b {
+	font-size: 36px;
+	color: #014A99;
+	font-weight: bold;
+}
+
+/* 우측박스 하단 텍스트 */
+
+.rightBottomTxt {
+	font-size: 15px;
+	margin-top: 20px;
+	border-top: 1px solid #fff;
+	padding-top: 30px;
+	float: left;
+}
+
+/* 비행기 사진 */
+.airplaneImg {
+	float: right;
+}
+
+/* moreBtn 감싸는 div 박스 버튼을 가운데로 보내고싶어서 만듬 */
+.moreBtnDiv {
+	height: 30px;
+	width: 1300px;
+	margin: 0 auto;
+	text-align: center;
+	position: absolute;
+	bottom: -15px;
+}
+
+/* more 버튼 */
+.moreBtn{
+	background-color: #004A98;
+	width: 30px;
+	height: 30px;
+	border-radius: 50px;
+	color:#fff;
+	font-weight: bold;
+	position: absolute;
+	display: inline-block;
 }
 
 /* 하늘색 부분 끝! */
+
+/* --------------------------------------------------------------------------------------- */
+
+/* 화이트 테이블 부분 */
+
+.whiteTableBg {
+	width: 100%;
+	padding-top: 30px;
+	height: 1300px;
+}
+
+.whiteInner {
+	max-width: 1300px;
+	margin: 0 auto;
+	height: 1300px;
+	position: relative;
+}
+
+.whiteInner2 {
+	min-width: 1040px;
+	height: 1300px;
+	margin-left: 260px;
+	display: inline-block;
+	position: absolute;
+}
+
+/* 전체 개수 */
+.all {
+	margin-top: 10px;
+	font-size: 18px;
+	color: #666;
+	display: inline-block; 
+	letter-spacing: -2px;
+}
+
+.all b {
+	font-weight: bold;
+	color: #c72f00;
+}
+
+/* 셀렉 + 버튼 */
+.selectLookup {
+	height: 40px;
+	float: right;
+}
+
+/* 셀렉트 */
+#Lookup {
+	font-size: 16px;
+	color: #666;
+	height: 40px;
+	padding: 0 8px 0 5px;
+	vertical-align: middle;
+}
+
+/* 조회 버튼 */
+
+.selectLookup>button {
+	height: 40px;
+	border: solid 1px #004a98;
+	padding: 8px 17px;
+	color: #004a98;
+	font-size: 14px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+
+/* 테이블 시작! -------------------------------------------------- */
+
+.tableList {
+	width: 100%;
+	border-top: 2px solid #000;
+	margin-top: 14px;
+}
+
+.tableList li {
+	padding: 20px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+/* 테이블 왼쪽부분 */
+.tableLeft {
+	width: 170px;
+	display: inline-block;
+	font-size: 22px;
+	text-align: center;
+	color: #c72F00;
+	font-weight: bold;
+	line-height: 25px;
+	vertical-align: middle;
+}
+
+/* 테이블 왼쪽 p태그 */
+.tableLeft>p:first-child {
+	height: 48px;
+}
+
+
+/* 테이블 오른쪽부분 */
+.tableRight {
+	width: 832px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* 테이블 오른쪽 버튼부분 */
+.tableRight button {
+	font-size:14px;
+	color: #fff;
+	background-color: #0e8572;
+	padding: 5px 10px;
+	margin: 0 10px 0px 0; 
+	float: left;
+}
+
+/* 테이블 오른쪽 타이틀 부분 */
+.tableTit {
+	line-height: 30px;
+	font-weight: bold;
+}
+
+/* 테이블 오른쪽 밑 컨텐츠 부분 */
+
+.tableRightBottom p {
+	font-size: 14px;
+	color: #666;
+	float: left;
+	margin-top: 9px;
+}
+.tableRightBottom b {
+	margin: 0 6px;
+	font-size: 14px;
+	color: #bbb;
+	font-weight: 60;
+}
+
+/* li deadline D-1 부분 */
+.deadline_Done>b:first-child {
+	font-size: 27px;
+	color: #014a99;
+}
+.deadline_Done>b:last-child {
+	font-size: 16px;
+	color: #014a99;
+	font-weight: normal;
+	display: block;
+} 
+
+/* 테이블 끝! -------------------------------------------------- */
+
+/* 페이징 버튼 시작! -------------------------------------------------- */
+
+.pagingBtn {
+	width: 100%;
+	height: 90px;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.pagingBtnInner {
+	display: inline-block;
+	font-size: 0;
+	width: 100%;
+	margin: 50px 200px 0 200px;
+}
+
+/* 버튼들 */
+
+.pagingBtnInner button {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	color: #666;
+	float: left;
+}
+
+.num {
+	margin: 0 2px;
+}
+.on {
+	background-color: #004a98;
+	border: none;
+	color: #fff !important;
+	font-weight: bold;
+	margin: 0 2px;
+}
+
+.prev1, .prev2, .next1, .next2 {
+	width: 40px;
+	height: 40px;
+	background-color: #f4f6f6;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 0 2px;
+}
+
+.prev2 { margin: 0 15px 0 2px; }
+.next1 { margin: 0 2px 0 15px; }
+
+/* 페이징 버튼 끝! -------------------------------------------------- */
+
+
+/* footer 시작!! */
+
+.footer {
+	width: 100%;
+	background-color: #efefef;
+	border: 1px solid #ddd;
+	height: 200px;
+}
+
+.ftInner {
+	width: 1300px;
+	margin: 0 auto;
+	margin-top: 24px;
+}
+
+/* 서버 로고 */
+.ftLogo {
+	width: 260px;
+	height: 46px;
+	float: left;
+}
+
+/* 이용약관 등 버튼 */
+.ftBtn button {
+	font-size: 16px;
+	color: #333;
+}
+.ftBtn {
+	float: left;
+}
+
+.ftBtn button:first-child {
+	font-weight: bold;
+}
+
+.ftBtn button:nth-child(5) {
+	font-weight: bold;
+	color: #ca2f01;
+}
+
+.ftBtn b {
+	margin: 0 6px;
+	font-size: 14px;
+	color: #bbb;
+	font-weight: 60;
+}
+
+.ftBottom {
+	float: left;
+	padding-top: 20px;
+	line-height: 26px;
+}
+
+.ftBottom p {
+	font-size: 15px;
+	color: #555;
+}
+
+.ftBottom p>b {
+	font-size: 17px;
+	color: #004a98;
+	margin-left: 10px;
+}
+
+.footerImg {
+	float: right;
+}
+/* -----------------------------------지금 작업중---------------------------------------- */
+
+
+
 
 </style>
 
@@ -431,7 +902,7 @@ li.homemn {
 			<li><a href="주소 써야함"><span>로그인</span></a></li>
 			<li><a href="주소 써야함"><span>회원가입</span></a></li>
 			<li><a href="주소 써야함"><span>사이트맵</span></a></li>
-			<li><a href="주소 써야함"><span>ENGLISH</span></a></li>
+			<li><a href="주소 써야함" id="Eng"><span>ENGLISH</span></a></li>
 		</ul>
 
 	</div> <!-- headerInner end  -->
@@ -448,20 +919,20 @@ li.homemn {
 
 		<!-- 로고 -->
 		<h1 class="logo">
-			<a href="메인페이지 주소" title="로고"> <img src="https://www.kotra.or.kr/module/upload/file/selectImageView.do?atchFileId=20000012146&fileSn=0" alt="KOTRA무역투자24"></a>
+			<a href="../hyunkyung/sub00_hyunkyung.html" title="로고"> <img src="../image/logo.png" alt="KOTRA무역투자24"></a>
 		</h1>
 
 		<!-- 큰 텍스트 메뉴들 -->
 		<ul class="lnb">
-			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">사업신청</a></li>
+			<li class="bigMenu"><a href="../deayeon/01sub_dae.html" id="gnb">사업신청</a></li>
 
-			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">문의·상담</a></li>
+			<li class="bigMenu"><a href="../wook/sub02_wook.html" id="gnb">문의·상담</a></li>
 
-			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">해외정보</a></li>
+			<li class="bigMenu"><a href="../yewon/sub03_yewon.html" id="gnb">해외정보</a></li>
 
-			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">사업소개</a></li>
+			<li class="bigMenu"><a href="../jieun/sub04_1_1_jieun.html" id="gnb">사업소개</a></li>
 
-			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">공사안내</a></li>
+			<li class="bigMenu"><a href="../jiwon/sub05_jiwon.html" id="gnb">공사안내</a></li>
 
 			<li class="search">
 				<button class="searchBtn" type="button" title="검색하기"></button>
@@ -508,13 +979,15 @@ li.homemn {
 	<div class="blueInner">
 	
 		<div class="leftBox"> <!-- leftBox start -->
-			<p>사업신청</p>
+			<p id="subTit">사업신청</p>
 			
 			<!-- 사업신청 홈 파란버튼 -->
 			<ul>
-				<li class="blueButton"><a href="링크">사업신청 홈</a></li>
+				<li class="blueButton"><a href="../deayeon/01sub_dae.html">사업신청 홈</a></li>
 			</ul>
 		</div>	<!-- leftBox end -->
+
+
 
 		<div class="centerBox"> <!-- centerBox start -->
 			
@@ -530,18 +1003,354 @@ li.homemn {
 			
 			<div class="binSearchDv">
 				<label for="binSearch">사업명</label>
-				<input type="text" id="bonSearch">
+				<input type="text" id="bonSearch" placeholder="검색어를 입력하세요">
+				<button class="searchBtn2">검색</button>
+			</div>
+			
+			<div class="keyWord">
+				<p>추천 키워드</p>
+			</div>
+			
+			<div class ="allButton">
+				<button class="bt1">#물류/통관</button>
+				<button class="bt2">#중견수출기업</button>
+				<button class="bt3">#유망수출기업</button>
+				<button class="bt4">#수출초보기업</button>
+				<button class="bt5">#내수기업</button>
+				<button class="bt6">#스타트업</button>
+				<button class="bt7">#지식서비스</button>
+				<button class="bt8">#방역용품</button>
+				<button class="bt9">#의료/바이오</button>
+				<button class="bt10">#환경/에너지</button>
 			</div>
 		
 		</div>	<!-- centerBox end -->
 			
+			
+			
+		<div class="rightBox"> <!-- rightBox start -->
+			
+			<p>KOTRA 전체 지원사업</p>
+			
+			<ul class="rightUl">
+				<li>
+					<div class="rightTit">
+						<p>총 신청가능사업</p>
+						<span class="rightSpan">총
+						<b>138</b>
+						건
+						</span>
+					</div>
+				</li>
+				
+				<li>
+					<div class="rightTit">
+						<p>예정사업</p>
+						<span class="rightSpan">총
+						<b>0</b>
+						건
+						</span>
+					</div>
+				</li>
+				
+				<li>
+					<div class="rightTit">
+						<p>완료사업</p>
+						<span class="rightSpan">총
+						<b>194</b>
+						건
+						</span>
+					</div>
+				</li>
+			</ul> <!-- rightUl end  -->
+			
+			<p class="rightBottomTxt">로그인 하시면 개인별 신청사업 내역을 보실 수 있습니다.</p>
+			
+		</div> <!-- rightBox end -->
+		
+		<div class="airplaneImg"> <!-- rightBox airplane img -->
+			<img alt="비행기사진" src="../image/submainIMG.png">
+		</div> <!-- rightBox airplane img end -->
+		
+		<div class="moreBtnDiv">
+			<button class="moreBtn">∨</button>
+		</div>
 	</div> <!-- blueInner end -->
-
+	
 </div> <!-- blueBg end -->
 
 
+<!-- 바디 흰색 부분 시작! -->
+
+<div class="whiteTableBg">
+	<div class="whiteInner">
+		<div class="whiteInner2">
+			
+			<span class="all">총
+				<b>474</b>
+				건
+			</span>
+			
+			<div class="selectLookup">
+				<select name="Lookup" id="Lookup">
+					<option value="1">전체</option>
+					<option value="2">예정사업</option>
+					<option value="3">신청중</option>
+					<option value="4">신청마감</option>
+					<option value="5">진행중</option>
+					<option value="6">종료</option>
+				</select>
+				
+				<button>조회</button>
+			</div>
+			
+			<ul class="tableList">
+				
+				<!-- -------------------------- li set ---------------------------- -->
+				<li>
+					<div class="tableLeft">
+					<p class="deadline">오늘<br>마감</p>
+					</div>
+					
+					<div class="tableRight">
+						<div class="tableRightTop">
+							<button type="button" onclick="location.href='https://www.kotra.or.kr/subList/20000020753/subhome/bizAply/selectBizMntInfoDetail.do?pageIndex=2&searchKeyword=&searchSvcIemCdArr=&searchPrgrSttus=%EC%8B%A0%EC%B2%AD%EB%A7%88%EA%B0%90&searchCondition=&bizNo=PP0106220016&scrnSe=bizAply&opmtNatCd=&searchOpmtStrDe=&searchOpmtEndDe=&searchIndustClCd='">그린뉴딜 분야 해외진출지원</button>
+							<p class="tableTit">Wind Energy 전시회 연계 수소 파트너쉽 플라자</p>
+						</div>
+						
+						<div class="tableRightBottom">
+							<p class="Contents">개최장소 : 독일 함부르크 Messe <b>I</b> 개최기간 : 2022-09-27 ~ 2022-09-30 <b>I</b> 신청기간 : 2022-06-30 ~ 2022-09-12</p>
+						</div>
+					</div>
+				</li>
+				
+				<!-- -------------------------- li set ---------------------------- -->
+				<li>
+					<div class="tableLeft">
+					<p class="deadline">오늘<br>마감</p>
+					</div>
+					
+					<div class="tableRight">
+						<div class="tableRightTop">
+							<button type="button" onclick="location.href='https://www.kotra.or.kr/subList/20000020753/subhome/bizAply/selectBizMntInfoDetail.do?pageIndex=1&searchKeyword=&searchSvcIemCdArr=&searchPrgrSttus=&searchCondition=&bizNo=GC0901220074&scrnSe=bizAply&opmtNatCd=&searchOpmtStrDe=&searchOpmtEndDe=&searchIndustClCd='">KOTRA아카데미 교육과정</button>
+							<p class="tableTit">[KOTRA대전/SLI] 베트남 시장진출 실무과정 (9.15)</p>
+						</div>
+						
+						<div class="tableRightBottom">
+							<p class="Contents">개최장소 : 독일 함부르크 Messe <b>I</b> 개최기간 : 2022-09-27 ~ 2022-09-30 <b>I</b> 신청기간 : 2022-06-30 ~ 2022-09-12</p>
+						</div>
+					</div>
+				</li>
+				
+				<!-- -------------------------- li set ---------------------------- -->
+				<li>
+					<div class="tableLeft">
+					<p class="deadline_Done"><b>D-1</b><br><b>신청가능</b></p>
+					</div>
+					
+					<div class="tableRight">
+						<div class="tableRightTop">
+							<button>해외유통망 협업사업</button>
+							<p class="tableTit">2022 극동러 온오프라인 유통망 소비재 판촉전</p>
+						</div>
+						
+						<div class="tableRightBottom">
+							<p class="Contents">개최장소 : 러시아 블라디보스톡 및 온라인 <b>I</b> 개최기간 : 2022-09-01 ~ 2022-12-31 <b>I</b> 신청기간 : 2022-08-17 ~ 2022-09-13</p>
+						</div>
+					</div>
+				</li>
+				
+				<!-- -------------------------- li set ---------------------------- -->
+				<li>
+					<div class="tableLeft">
+					<p class="deadline_Done"><b>D-1</b><br><b>신청가능</b></p>
+					</div>
+					
+					<div class="tableRight">
+						<div class="tableRightTop">
+							<button>CVC 투자유치 사업 운영</button>
+							<p class="tableTit">Web Summit 2022 한국관 참가 기업 모집</p>
+						</div>
+						
+						<div class="tableRightBottom">
+							<p class="Contents">개최장소 : 포르투갈 리스본 및 온라인 <b>I</b> 개최기간 : 2022-09-01 ~ 2022-12-31 <b>I</b> 신청기간 : 2022-08-17 ~ 2022-09-13</p>
+						</div>
+					</div>
+				</li>
+				
+				<!-- -------------------------- li set ---------------------------- -->
+				<li>
+					<div class="tableLeft">
+					<p class="deadline_Done"><b>D-1</b><br><b>신청가능</b></p>
+					</div>
+					
+					<div class="tableRight">
+						<div class="tableRightTop">
+							<button>KOTRA아카데미 교육과정</button>
+							<p class="tableTit">[KOTRA/KMA] 글로벌 비즈니스 컨설턴트(GBC) 12기 모집</p>
+						</div>
+						
+						<div class="tableRightBottom">
+							<p class="Contents"> 개최기간 : 2022-09-17 ~ 2022-12-31 <b>I</b> 신청기간 : 2022-08-17 ~ 2022-09-13</p>
+						</div>
+					</div>
+				</li>
+				
+				<!-- -------------------------- li set ---------------------------- -->
+				<li>
+					<div class="tableLeft">
+					<p class="deadline_Done"><b>D-1</b><br><b>신청가능</b></p>
+					</div>
+					
+					<div class="tableRight">
+						<div class="tableRightTop">
+							<button>해외물류네트워크</button>
+							<p class="tableTit">[물류지원] KOTRA-CJ대한통운 중소기업 전용선복 지원 안내</p>
+						</div>
+						
+						<div class="tableRightBottom">
+							<p class="Contents"> 개최기간 : 2022-05-23 ~ 2022-12-30 <b>I</b> 신청기간 : 2022-05-23 ~ 2022-09-13</p>
+						</div>
+					</div>
+				</li>
+				
+				<!-- -------------------------- li set ---------------------------- -->
+				<li>
+					<div class="tableLeft">
+					<p class="deadline_Done"><b>D-1</b><br><b>신청가능</b></p>
+					</div>
+					
+					<div class="tableRight">
+						<div class="tableRightTop">
+							<button>해외물류네트워크</button>
+							<p class="tableTit">[물류지원] KOTRA-CJ대한통운 중소기업 전용선복 지원 안내</p>
+						</div>
+						
+						<div class="tableRightBottom">
+							<p class="Contents"> 개최기간 : 2022-05-23 ~ 2022-12-30 <b>I</b> 신청기간 : 2022-05-23 ~ 2022-09-13</p>
+						</div>
+					</div>
+				</li>
+				
+				<!-- -------------------------- li set ---------------------------- -->
+				<li>
+					<div class="tableLeft">
+					<p class="deadline_Done"><b>D-2</b><br><b>신청가능</b></p>
+					</div>
+					
+					<div class="tableRight">
+						<div class="tableRightTop">
+							<button>국내 수출상담회</button>
+							<p class="tableTit">2022 인천 중고자동차-부품 수출상담회 (1차 모집)</p>
+						</div>
+						
+						<div class="tableRightBottom">
+							<p class="Contents">개최장소 : 인천 센트럴파크 호텔(미정) <b>I</b> 개최기간 : 2022-11-23 ~ 2022-11-23 <b>I</b> 신청기간 : 2022-09-07 ~ 2022-09-14</p>
+						</div>
+					</div>
+				</li>
+				
+				<!-- -------------------------- li set ---------------------------- -->
+				<li>
+					<div class="tableLeft">
+					<p class="deadline_Done"><b>D-2</b><br><b>신청가능</b></p>
+					</div>
+					
+					<div class="tableRight">
+						<div class="tableRightTop">
+							<button>무역사절단 외부협력사업</button>
+							<p class="tableTit">2022 울산 베트남 종합 무역사절단</p>
+						</div>
+						
+						<div class="tableRightBottom">
+							<p class="Contents">개최기간 : 2022-06-07 ~ 2022-06-10 <b>I</b> 신청기간 :  2022-02-21 ~ 2022-09-14</p>
+						</div>
+					</div>
+				</li>
+				
+				<!-- -------------------------- li set ---------------------------- -->
+				<li>
+					<div class="tableLeft">
+					<p class="deadline_Done"><b>D-2</b><br><b>신청가능</b></p>
+					</div>
+					
+					<div class="tableRight">
+						<div class="tableRightTop">
+							<button>무역사절단 외부협력사업</button>
+							<p class="tableTit">2022 울산 인도네시아 무역사절단</p>
+						</div>
+						
+						<div class="tableRightBottom">
+							<p class="Contents">개최기간 : 2022-04-19 ~ 2022-04-26 <b>I</b> 신청기간 :  2022-02-18 ~ 2022-09-14</p>
+						</div>
+					</div>
+				</li>
+			
+			
+			
+			</ul><!-- ul table end -->
+		
+			<div class="pagingBtn">
+				<div class="pagingBtnInner">
+					
+					<button class="prev1">《</button>
+					<button class="prev2">〈</button>
+					<button class="num on">1</button>
+					<button class="num">2</button>
+					<button class="num">3</button>
+					<button class="num">4</button>
+					<button class="num">5</button>
+					<button class="num">6</button>
+					<button class="num">7</button>
+					<button class="num">8</button>
+					<button class="num">9</button>
+					<button class="num">10</button>
+					<button class="next1">〉</button>
+					<button class="next2">》</button>
+				
+				</div>
+			</div>
+			
+		</div> <!-- whiteInner2 end -->
+	</div> <!-- whiteInner end -->
+</div> <!-- whiteTableBg end -->
 
 
+<!-- footer 시작! -->
+
+<div class="footer">
+	<div class="ftInner">
+		
+		<div class="ftLogo">
+			<img src="../image/logo.png" alt="KOTRA무역투자24">
+		</div>
+		
+		<div class="ftBtn">
+			<button>이용약관</button>
+			<b>I</b>
+			<button>저작권정책</button>
+			<b>I</b>
+			<button>개인정보처리방침</button>
+			<b>I</b>
+			<button>정보공개</button>
+			<b>I</b>
+			<button>사이트맵</button>
+			<b>I</b>
+			<button>관련사이트</button>
+		</div>
+		
+		<div class="ftBottom">
+			<p>서울시 서초구 헌릉로13 | 사업자등록번호 : 120-82-00275 | 대표자명 : 유정열 <b>TEL. 1600-7119</b></p>
+			<p>COPYRIGHT(c)2021 KOTRA. ALL RIGHTS RESERVED 대한무역투자진흥공사</p>
+		</div>
+		
+		<div class="footerImg">
+			<a href="http://www.wa.or.kr/board/list.asp?BoardID=0006">
+				<img src="../image/wamark_20220608.png">
+			</a>
+		</div>
+	</div>
+</div> <!-- footer end -->
 
 </body>
 </html>

@@ -816,14 +816,61 @@ button.bt10{ color: #227a71; }
 .ftInner {
 	width: 1300px;
 	margin: 0 auto;
-	margin-top: 40px;
+	margin-top: 24px;
 }
 
 /* 서버 로고 */
 .ftLogo {
-	
+	width: 260px;
+	height: 46px;
+	float: left;
 }
 
+/* 이용약관 등 버튼 */
+.ftBtn button {
+	font-size: 16px;
+	color: #333;
+}
+.ftBtn {
+	float: left;
+}
+
+.ftBtn button:first-child {
+	font-weight: bold;
+}
+
+.ftBtn button:nth-child(5) {
+	font-weight: bold;
+	color: #ca2f01;
+}
+
+.ftBtn b {
+	margin: 0 6px;
+	font-size: 14px;
+	color: #bbb;
+	font-weight: 60;
+}
+
+.ftBottom {
+	float: left;
+	padding-top: 20px;
+	line-height: 26px;
+}
+
+.ftBottom p {
+	font-size: 15px;
+	color: #555;
+}
+
+.ftBottom p>b {
+	font-size: 17px;
+	color: #004a98;
+	margin-left: 10px;
+}
+
+.footerImg {
+	float: right;
+}
 /* -----------------------------------지금 작업중---------------------------------------- */
 
 
@@ -872,20 +919,20 @@ button.bt10{ color: #227a71; }
 
 		<!-- 로고 -->
 		<h1 class="logo">
-			<a href="메인페이지 주소" title="로고"> <img src="../image/logo.png" alt="KOTRA무역투자24"></a>
+			<a href="../hyunkyung/sub00_hyunkyung.html" title="로고"> <img src="../image/logo.png" alt="KOTRA무역투자24"></a>
 		</h1>
 
 		<!-- 큰 텍스트 메뉴들 -->
 		<ul class="lnb">
-			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">사업신청</a></li>
+			<li class="bigMenu"><a href="../deayeon/01sub_dae.html" id="gnb">사업신청</a></li>
 
-			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">문의·상담</a></li>
+			<li class="bigMenu"><a href="../wook/sub02_wook.html" id="gnb">문의·상담</a></li>
 
-			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">해외정보</a></li>
+			<li class="bigMenu"><a href="../yewon/sub03_yewon.html" id="gnb">해외정보</a></li>
 
-			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">사업소개</a></li>
+			<li class="bigMenu"><a href="../jieun/sub04_1_1_jieun.html" id="gnb">사업소개</a></li>
 
-			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">공사안내</a></li>
+			<li class="bigMenu"><a href="../jiwon/sub05_jiwon.html" id="gnb">공사안내</a></li>
 
 			<li class="search">
 				<button class="searchBtn" type="button" title="검색하기"></button>
@@ -936,7 +983,7 @@ button.bt10{ color: #227a71; }
 			
 			<!-- 사업신청 홈 파란버튼 -->
 			<ul>
-				<li class="blueButton"><a href="링크">사업신청 홈</a></li>
+				<li class="blueButton"><a href="../deayeon/01sub_dae.html">사업신청 홈</a></li>
 			</ul>
 		</div>	<!-- leftBox end -->
 
@@ -1067,7 +1114,7 @@ button.bt10{ color: #227a71; }
 					
 					<div class="tableRight">
 						<div class="tableRightTop">
-							<button>그린뉴딜 분야 해외진출지원</button>
+							<button type="button" onclick="location.href='https://www.kotra.or.kr/subList/20000020753/subhome/bizAply/selectBizMntInfoDetail.do?pageIndex=2&searchKeyword=&searchSvcIemCdArr=&searchPrgrSttus=%EC%8B%A0%EC%B2%AD%EB%A7%88%EA%B0%90&searchCondition=&bizNo=PP0106220016&scrnSe=bizAply&opmtNatCd=&searchOpmtStrDe=&searchOpmtEndDe=&searchIndustClCd='">그린뉴딜 분야 해외진출지원</button>
 							<p class="tableTit">Wind Energy 전시회 연계 수소 파트너쉽 플라자</p>
 						</div>
 						
@@ -1085,7 +1132,7 @@ button.bt10{ color: #227a71; }
 					
 					<div class="tableRight">
 						<div class="tableRightTop">
-							<button>KOTRA아카데미 교육과정</button>
+							<button type="button" onclick="location.href='https://www.kotra.or.kr/subList/20000020753/subhome/bizAply/selectBizMntInfoDetail.do?pageIndex=1&searchKeyword=&searchSvcIemCdArr=&searchPrgrSttus=&searchCondition=&bizNo=GC0901220074&scrnSe=bizAply&opmtNatCd=&searchOpmtStrDe=&searchOpmtEndDe=&searchIndustClCd='">KOTRA아카데미 교육과정</button>
 							<p class="tableTit">[KOTRA대전/SLI] 베트남 시장진출 실무과정 (9.15)</p>
 						</div>
 						
@@ -1278,6 +1325,30 @@ button.bt10{ color: #227a71; }
 			<img src="../image/logo.png" alt="KOTRA무역투자24">
 		</div>
 		
+		<div class="ftBtn">
+			<button>이용약관</button>
+			<b>I</b>
+			<button>저작권정책</button>
+			<b>I</b>
+			<button>개인정보처리방침</button>
+			<b>I</b>
+			<button>정보공개</button>
+			<b>I</b>
+			<button>사이트맵</button>
+			<b>I</b>
+			<button>관련사이트</button>
+		</div>
+		
+		<div class="ftBottom">
+			<p>서울시 서초구 헌릉로13 | 사업자등록번호 : 120-82-00275 | 대표자명 : 유정열 <b>TEL. 1600-7119</b></p>
+			<p>COPYRIGHT(c)2021 KOTRA. ALL RIGHTS RESERVED 대한무역투자진흥공사</p>
+		</div>
+		
+		<div class="footerImg">
+			<a href="http://www.wa.or.kr/board/list.asp?BoardID=0006">
+				<img src="../image/wamark_20220608.png">
+			</a>
+		</div>
 	</div>
 </div> <!-- footer end -->
 

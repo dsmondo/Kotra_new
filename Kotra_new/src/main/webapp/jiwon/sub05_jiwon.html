@@ -4,645 +4,754 @@
 <meta charset="UTF-8">
 <title>공사안내 홈</title>
 
-<style type="text/css">
+<!-- 폰트 link -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-* { font-family: 'Noto Sans KR'; }
+<!-- CSS 링크 -->
+<link rel="stylesheet" type="text/css" href="sub05_css_jiwon.css">
 
- * { 
-     margin: 0; 
-     padding: 0; 
- }
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
-ul li {
-	list-style: none;
-}
+<script type="text/javascript">
+$(document).ready(function() {
 
-header {
-    width: 100%;
-    height: 45px;
-    background: #eeeeee;
-    border-bottom: 1px solid #dddddd;
-}
-
-.header .inner {
-    max-width: 1300px;	
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.hdmenu {
-	float: right;
-	text-align: right;
-	width: 70%;
-	text-align: right;
-	max-width: 30% !important;
-	box-sizing: border-box;
-}
-
-.hdmenu ul li {
-	padding-left: 5px;
-	float: left;
-}
-
-.hdmenu ul {
-	color: #666;
-    font-weight: 400;
-    padding: 0px 20px;
-    width: 100%;
-    height: 100%;
-    float: left;
-    position: relative;
-}
-
-/* 코트라로고 */
-.menuimg { 
-	width: 20%;
-    float: left;
-    height: 100px;
-    padding: 21px 109px;
-    text-align: center;
-    vertical-align: middle;
-	box-sizing: border-box;
-    transition: padding 0.1s;
- }
-
-
-.menu {
-    width: 100%;
-    height: 80px;
-    background: #fff;
-    float: left;
-    position: relative;
-    z-index: 1;
-    transition: heigt 0.5s;
-}
-
-.menulist {
-	width: 80%;
-/*     height: 100px; */
-    margin: 0 auto;
-    box-sizing: border-box;
-    line-height: normal;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: right;
-    padding-right: 150px;
-    margin-top: -5px;
-    
-}
-.menu {
-	width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    line-height: 100px;
-    vertical-align: middle;
-    text-align: right;
-	display: table;
-    vertical-align: middle;
-    position: relative;
-}
-
-.mlistcontent{
-	float: left;
-}
-
-
-/* 7대 대국민 약속 문구 */
-.phr {
-	position: absolute;
-	top: 46%;
-	left: 0;
-	z-index: 1;
-	width: 100%;
-	text-align: center;
-	padding: 50px 0;
-	background: rgba(0, 0, 0, 0.5);
-	margin-top: -100px;
-}
-
-.topbox {
-    width: 100%;
-    float: left;
-    padding: 0;
-    margin: 0 auto;
-    box-sizing: border-box;
-    overflow: hidden;
-    position: relative;
-    
-}
-.introbg {
-	padding-top: 0;
-	z-index: 0;
-	background: transparent;
-	overflow: hidden;
-	width: 100% !important;
+	//메뉴 리스트 함수
+	$(".listGroup").click(function(){
+         $(".innerList").slideUp();
+         if ($(this).children(".innerList").is(":hidden")){
+            $(this).children(".innerList").slideDown();
+         } else{
+            $(this).children(".innerList").slideUp();
+         }
+ });
 	
-}
-
-
-.introphr {
-	font-size: 53px;
-	letter-spacing: -1px;
-	color: #fff;
-	line-height: 130%;
-	font-weight: 200;
-	width: 100%;
-	max-width: 1300px;
-	display: inline-block;
-	margin: 0 auto;
-	box-sizing: border-box;
-	text-align: left;
-	padding-left: 280px;
-}
-
-/* HOME / 공사안내 / 공사안내 홈  */
-.menuCon {
-	text-align: left;
-	max-width: 1300px;
-	margin: 20px 34px;
-	padding: 72px 67px;
-}
- .menuCon a {
- 	text-align: center; 
- 	margin: 10px; 
- 	padding: 10px;
-
-}
-
-.menuCon ul {
- 	background: #eeeeee;
-	width: 100%;
-	height: 10%; 	
-}
-
-.listCon {
-	height: 40px;
-    box-sizing: border-box;
-    text-align: center;
-	max-width: 1300px;
-	margin: 10px;
-    padding: 0 10px !important;
-    min-width: auto;
-    border-left: 1px solid #dcdde2;
-    float: left;
-}
-
-/* kotra 소개 */
-
-.title {
-    font-size: 46px;
-    line-height: 110%;
-    padding-bottom: 25px;
-    font-weight: 700;
-    color: #000;
-    width: 100%;
-    word-break: keep-all;
-    overflow: hidden;
-    display: block;
-    letter-spacing: -1px;
-    text-align: center;
-}
-
-
-/* 이미지+버튼 */
-.infoLink {
-	float: right;
-	width: 25%;
-	text-align:center;
+	//사이트 더보기 누르면 팝업창 띄우기
+	$("#moreB").click(function() {
+		$(".morePopup").css("display");
+		$(".morePopup").css("display","block");
+		
+		$(".morePopup").show();
+	});
 	
-}
+	//누르면 돋보기가 위로 튀어나오는데 이거 고쳐야 함..
+	
+	//메뉴 클릭하면 색깔 바뀌게
+})
 
-.infoButton .buttonImg {
-	float: right;
-	width: 25%;
-	text-align:center;
-}
-
-
-.whitebold {
-	font-weight: bold;
-}
-
-.footbox {
-	width: 100%;
-	height: 100%;
-	float: left;
-	box-sizing: border-box;
-	position: relative;
-	overflow: hidden;
-}
-
-.footimgbox {
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: -1;
-	width: 100%;
-	height: auto;
-	min-width: 100%;
-	min-height: 100%;
-}
-
-.footbox .footphr {
-	width: 100%;
-	color: #fff;
-	overflow: hidden;
-	word-break: keep-all;
-	display: inline-block;
-	padding: 0 15px;
-	font-size: 30px;
-	font-weight: 200;
-	letter-spacing: -1px;
-	box-sizing: border-box;
-	line-height: 160%;
-	margin-top: 35px;
-	transition: font-size 0.5s;
-}
-
-.footer {
-	width: 100%;
-	overflow: hidden;
-	position: relative;
-	clear: both;
-	background: #efefef;
-	border-top: 1px solid #d3d6e1;
-}
-
-.footerlist {
-	width: 100%;
-	font-size: 12px;
-	box-sizing: border-box;
-	margin: 0 auto;
-}
-
-.footerlist.footlist1 {
-	width: 100%;
-	margin: 0 auto;
-	text-align: left;
-	padding-top: 20px;
-	padding-bottom: 5px;
-}
-
-.footerlist ul li {
-	display: inline-block;
-	color: #333333;
-	line-height: 28px;
-}
-
-.footerarea {
-	margin: 0px 0px 50px;
-	width: auto;
-	max-width: 900px;
-	float: left;
-	text-align: left;
-	box-sizing: border-box;
-}
-</style>
-
+</script>
+  
 </head>
 <body>
 
-	<header>
-		<div class="inner">
+<!-- header 시작 사이트 더보기, 로그인 창 -->
+<div class= "header">
+	<div class="inner">
 		<div class="sitemore" style= "width: 30%;">
-			<span>KOTRA 사이트</span>
+			<a  class="sitemoreBtn" href="#morePopup"><span id="moreB">KOTRA 사이트더보기</span></a>
+			
+			<div class="morePopup" style="display: none;">
+				<div class="morePopupInner">
+					<p>KOTRA 사이트</p>
+					<ul class="moreList">
+						<li>
+							<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=kn" target="_blank" title="새창열림">
+							<img alt="해외경제 정보 Dream" src="../image/selectImageView (2).png">
+							</a>
+						</li>
+						
+						<li><a href="https://www.exportvoucher.com" target="_blank" title="새창열림">
+						<img alt="수출지원기반활용사업" src="../image/selectImageView (3).png">
+						</a>
+						</li>
+						
+						<li>
+							<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=gep" target="_blank" title="새창열림">
+							<img alt="GEP 글로벌 전시 플랫폼" src="../image/selectImageView (4).png">
+							</a>
+						</li>
+						
+						<li>
+							<a href="http://contactkorea.kotra.or.kr/index.do" target="_blank" title="새창열림">
+							<img alt="contact KOREA kotra 해외전문인력유치센터" src="../image/selectImageView (5).png">
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=ik" target="_blank" title="새창열림">
+							<img alt="INVEST KOREA" src="../image/selectImageView (6).png">
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=bk" target="_blank" title="새창열림">
+							<img alt="buy KOREA" src="../image/selectImageView (7).png">
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://www.kotra.or.kr/bigdata/guide" target="_blank" title="새창열림">
+							<img alt="빅데이터 플랫폼 트라이빅" src="../image/selectImageView (8).png">
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=gw" target="_blank" title="새창열림">
+							<img alt="경제외교 활용포털" src="../image/selectImageView (9).png">
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=kd" target="_blank" title="새창열림">
+							<img alt="Kodits 방자물자교역지원센터" src="../image/selectImageView (10).png">
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=ob" target="_blank" title="새창열림">
+							<img alt="OMBUDMAN" src="../image/selectImageView (11).png">
+							</a>
+						</li>
+						</ul>
+					<a href="" class="Close" style="color: #000;">닫기</a>
+				</div>
+			</div>
+			
 		</div>
 
 		<div class="hdmenu">
 			<ul>
-				<li><a href=""><span>로그인</span> </a></li>
-
-				<li><a href=""><span>회원가입</span> </a></li>
-
-				<li><a href=""><span>사이트맵</span> </a></li>
-
-				<li><a href=""><span>ENGLISH</span> </a></li>
+				<li><a href="https://www.kotra.or.kr/loginForm.do"><span>로그인</span> </a></li>
+				<li><a href="https://www.kotra.or.kr/cmm/mber/sbscrb/selectSbscrbUsrTy.do"><span>회원가입</span> </a></li>
+				<li><a href="https://www.kotra.or.kr/sitemap.do"><span>사이트맵</span> </a></li>
+				<li><a href="https://www.kotra.or.kr/english/index.do"><span>ENGLISH</span> </a></li>
 			</ul>
 		</div>
-		</div>
-	</header>
-
-	<div class="menu">
-		<div class="menuimg">
-				<a href=""> <img alt="kotra로고"
-					src="resources/image/selectImageView (1).png">
-				</a>
-		</div>
-
-		<div class="menulist">
-			<ul>
-
-				<li class="mlistcontent" style="width: 20%;"><a href="">사업신청
-				</a></li>
-
-				<li class="mlistcontent" style="width: 20%;"><a href="">문의·상담
-				</a></li>
-
-				<li class="mlistcontent" style="width: 20%;"><a href="">해외정보
-				</a></li>
-				<li class="mlistcontent" style="width: 20%;"><a href="">사업소개
-				</a></li>
-				<li class="mlistcontent" style="width: 20%;"><a href="">공사안내 </a></li>
-
-
-			</ul>
-		</div>
+		
 
 	</div>
+</div>
+<!-- header 끝 -->
+
+<!-- 사이트 더보기 팝업 -->
+<div class="morePopup">
+
+</div>
 
 
-	<nav>
-		<div class="menuCon">
-			<ul>
-			<li class="listCon"><a href="" id="menuCon1">HOME</a></li>
-			<li class="listCon"><a href="" id="menuCon2">공사안내</a></li>
-			<li class="listCon"><a href="" id="menuCon3">공사안내 홈</a></li>
-			</ul>
-		</div>
-	</nav>
+<!-- 로고, 메뉴안내 시작 -->
+<div class="menuGroup">
+	<div class="menuInner">
+	<div class="menuimg">
+			<a href=""> <img alt="kotra로고" src="../image/selectImageView (1).png"> </a>
+<!-- 				<a href=""> <img alt="kotra로고" src="/Kotra_new/image/selectImageView.png"> </a> -->
+	</div>
+
+		<ul class="menuUl">
+			<li class="mlistcontent" style="width: 20%;"><a href="https://www.kotra.or.kr/subList/20000020753">사업신청</a></li>
+			<li class="mlistcontent" style="width: 20%;"><a href="https://www.kotra.or.kr/subList/20000006014">문의·상담</a></li>
+			<li class="mlistcontent" style="width: 20%;"><a href="https://www.kotra.or.kr/subList/20000006759">해외정보</a></li>
+			<li class="mlistcontent" style="width: 20%;"><a href="https://www.kotra.or.kr/subList/20000005984">사업소개</a></li>
+			<li class="mlistcontent" style="width: 20%;"><a href="https://www.kotra.or.kr/subList/20000006012">공사 안내 </a></li>
+		</ul>
+
+	</div>
+</div>
+<!-- 로고, 메뉴안내 끝 -->
+
+<!-- 돋보기 -->
+<div class="searchBox">
+	<div class="search">
+		<button class="btnSearch" type="button" title="검색하기">검색</button>
+		<button class="btnSearchClose" type="button" title="검색창 닫기">X</button>
+	</div>
+</div>
+
+<!-- 전체 메뉴 보기 -->
+<div class="allMenu">
+ <button id="allmenuBtn" class="allmenuBtn" type="button" title="전체메뉴">전체메뉴</button>
+</div>
+
+<!-- 로고 아래 HOME공사 안내공사안내 홈 시작 -->
+	<div class="menuCon">
+		<ul>
+			<li class="listHome"><a href="https://www.kotra.or.kr/" id="menuCon1">HOME</a></li>
+			<li class="listCon"><a href="https://www.kotra.or.kr/subList/20000006012" id="menuCon2">공사 안내</a></li>
+			<li class="listCon"><a href="https://www.kotra.or.kr/subList/20000006012" id="menuCon3">공사안내 홈</a></li>
+		</ul>
+	</div>
+<!-- 로고 아래 HOME공사 안내공사안내 홈 끝 -->
 
 
+<!-- 공사 안내 홈 메뉴박스 시작 -->
+
+<div class="menuBox">
 	<div class="infoKotra">
 		<h3 id="info">공사 안내</h3>
 	</div>
+			
+		<div class="sliderGroup" style="height:100vh;">
+		<ul class="listSlider" style="width: 220px;">
+			<li class="sliderHome" style=" background-color: #004a98 !important; border-radius: 5px 5px 0 0; border-top-color: #ccc;
+				 margin-top: 0 !important;">
+				<a href="" style="color: #fff!important">공사안내 홈</a></li>
+
+			<li class="listGroup"><a href="#listGroup"><span>KOTRA 소개</span></a>
+				<ul class="innerList" style="display: none;">
+				<li><a href="https://www.kotra.or.kr/subList/20000005812"><span class="bull">•</span>CEO 인사말</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005814"><span class="bull">•</span>경영전략체계</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005815"><span class="bull">•</span>인권·윤리 경영</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005816"><span class="bull">•</span>지속가능경영</a></li>
+				<li><a href="https://www.kotra.or.kr/60th_archive/index.html"><span class="bull">•</span>60주년 디지털<br> 아카이브</a></li>
+				</ul>
+			</li>
+		
+			<li class="listGroup"><a href="#listGroup"><span>조직안내 및 오시는 길</span></a>
+				<ul class="innerList" style="display: none;">
+				<li><a href="https://www.kotra.or.kr/subList/20000005824"><span class="bull">•</span>본사</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005899"><span class="bull">•</span>지방지원단</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005998"><span class="bull">•</span>해외무역관</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005907"><span class="bull">•</span>직원 검색</a></li>
+				</ul>
+			</li>
+				
+			<li class="listGroup"><a href="#listGroup"><span>채용정보</span></a>
+				<ul class="innerList" style="display: none;">
+				<li><a href="https://www.kotra.or.kr/subList/20000005817"><span class="bull">•</span>채용 공고</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005818"><span class="bull">•</span>인재상</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005819"><span class="bull">•</span>KOTRA인턴십</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005820"><span class="bull">•</span>인사제도</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005821"><span class="bull">•</span>복지제도</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000006021"><span class="bull">•</span>채용상담</a></li>
+				</ul>
+			</li>
+				
+			<li class="listGroup"><a href="#listGroup"><span>고객의 소리</span></a>
+				<ul class="innerList" style="display: none;">
+				<li><a href="https://www.kotra.or.kr/subList/20000006017"><span class="bull">•</span>웹사이트문의</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000006018"><span class="bull">•</span>기업규제 애로신고</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000006019"><span class="bull">•</span>칭찬/불만/제안</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005926"><span class="bull">•</span>FAQ</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005831"><span class="bull">•</span>고객과의 약속</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000006020"><span class="bull">•</span>민원 신고</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000006141"><span class="bull">•</span>공공데이터 제공<br>신청</a></li>
+				</ul>
+			</li>
+				
+			<li class="listGroup"><a href="#listGroup"><span>알림·홍보</span></a>
+				<ul class="innerList" style="display: none;">
+				<li><a href="https://www.kotra.or.kr/subList/20000005961"><span class="bull">•</span>공지사항</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005958"><span class="bull">•</span>입찰공고</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005962"><span class="bull">•</span>보도자료</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005964"><span class="bull">•</span>홍보영상</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005978"><span class="bull">•</span>KOTRA 뉴스레터</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005965"><span class="bull">•</span>KOTRA 디자인</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005966"><span class="bull">•</span>시설임대</a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005857"><span class="bull">•</span>정보공개</a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>	
+</div>
+<!-- 공사 안내 홈 메뉴박스 끝 -->
 
 
-	<nav class="infoList">
-
-		<div class="infolisthome">
-			<ul>
-				<li><a href="">공사안내 홈</a></li>
-			</ul>
-		</div>
-
-		<div class="infolist1">
-			<ul>
-				<li>KOTRA 소개</li>
-				<li><a href="">CEO 인사말</a></li>
-				<li><a href="">경영전략체계</a></li>
-				<li><a href="">인권.윤리 경영</a></li>
-				<li><a href="">지속가능경영</a></li>
-				<li><a href="">60주년 디지털<br> 아카이브
-				</a></li>
-			</ul>
-		</div>
-
-		<div>
-			<ul>
-				<li><a href="">조직안내 및 오시는 길</a></li>
-			</ul>
-		</div>
-
-		<div>
-			<ul>
-				<li><a href="">채용정보</a></li>
-			</ul>
-		</div>
-
-		<div>
-			<ul>
-				<li><a href="">고객의 소리</a></li>
-			</ul>
-		</div>
-
-		<div>
-			<ul>
-				<li><a href="">알림.홍보</a></li>
-			</ul>
-		</div>
-	</nav>
-	<!-- infoList END -->
-
-
+<!-- 사진+문구 인트로 시작 -->
 	<div class="topbox">
+	
 		<div class="introbg">
-			<img alt="인트로" src="resources/image/introBG.jpg">
+			<img alt="인트로" src="../image/introBG.jpg">
 		</div>
+		
 		<div class="phr">
 			<h4 class="introphr">
-				<b>7대 대국민 약속,</b> 국가와 고객에게<br>도움이 되는 <b>KOTRA</b>
+				<b>7대 대국민 약속,</b> 국가와 고객에게<br>도움이되는 <b>KOTRA</b>
 			</h4>
+		</div>
+		
+	</div>
+<!-- 사진+문구 인트로 끝 -->
+
+
+
+<!-- 코트라 소개 시작 -->
+
+<div class="kotraTitleBox">
+	<div class="titleInner">
+		<div class="title">KOTRA 소개</div>
+	
+		<div class="content" style="text-align: center;">
+			<p>국내 기업의 수출 및 해외 투자유치를 지원하는 KOTRA의 비전과 목표를 소개합니다.</p>
 		</div>
 	</div>
 
-
-
-	<div class="title">KOTRA 소개</div>
-
-	<div class="content" style="text-align: center;">
-		<p>국내 기업의 수출 및 해외 투자유치를 지원하는 KOTRA의 비전과 목표를 소개합니다.</p>
+	<div class="infoLinkBox">
+		<div class="infoLink" id="infob1">
+			<a href=""><img alt="ceo인사말" src="../image/icon01.png"></a><br>
+			<a class="linkAfter" href=""><span class="infoSpan">CEO 인사말</span></a>
+		</div>
+	
+		<div class="infoLink" id="infob2">
+			<a href=""><img alt="경영전략체계" src="../image/icon02.png"></a><br>
+			<a class="linkAfter" href=""><span class="infoSpan">경영전략체계</span></a>
+		</div>
+	
+		<div class="infoLink" id="infob3">
+			<a href=""><img alt="인권윤리 경영" src="../image/icon03.png"></a><br>
+			<a class="linkAfter" href=""><span class="infoSpan">인권·윤리 경영</span></a>
+		</div>
+	
+		<div class="infoLink" id="infob4">
+			<a href=""><img alt="지속가능경영" src="../image/icon04.png"></a><br>
+			<a class="linkAfter" href=""><span class="infoSpan">지속가능경영</span></a>
+		</div>
 	</div>
-
-	<div class="infoLink" id="infob1">
-		<a href=""><img alt="ceo인사말" src="resources/image/icon01.png"></a><br>
-		<a href="">ceo인사말 ></a>
-	</div>
-
-	<div class="infoLink" id="infob2">
-		<a href=""><img alt="경영전략체계" src="resources/image/icon02.png"></a><br>
-		<a href="">경영전략체계 ></a>
-	</div>
-
-	<div class="infoLink" id="infob3">
-		<a href=""><img alt="인권윤리 경영" src="resources/image/icon03.png"></a><br>
-		<a href="">인권윤리 경영 ></a>
-	</div>
-
-	<div class="infoLink" id="infob4">
-		<a href=""><img alt="지속가능경영" src="resources/image/icon04.png"></a><br>
-		<a href="">지속가능경영 ></a>
-	</div>
+	
+</div>
+<!-- 코트라 소개 끝 -->
 
 	<hr>
 
-	<div class="title">조직안내 및 찾아오시는 길</div>
-
-	<div class="content">
-		KOTRA 본사/지사/해외무역관의 부서 및 직원 업무를 확인하실 수 있습니다. 지역별 KOTRA 주소 및 <br>
-		교통편을 안내해 드립니다.
+<!-- 조직안내 및 찾아오시는 길 시작 -->
+<div class="infoIconBox">
+	<div class="titleContent">
+		<div class="title">조직안내 및 찾아오시는 길</div>
+	
+		<div class="content">
+			KOTRA 본사/지사/해외무역관의 부서 및 직원 업무를 확인하실 수 있습니다. 지역별 KOTRA 주소 및 교통편을 안내해 드립니다.
+		</div>
 	</div>
 
 	<div class="infoButton">
-
+	
 		<div class="buttonImg" id="button1">
-			<p><img alt="KOTRA본사"
-				src="resources/image/kotrainfoIcon01.png"></p>
-				<b>KOTRA본사</b>
+			<p><img alt="KOTRA본사" src="../image/kotrainfoIcon01.png"></p>
+				<span class="buttonTitle">KOTRA본사</span>
 			<ul>
-				<li><a href="">조직 안내 ></a></li>
-				<li><a href="">찾아오시는 길 ></a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005824">
+					<span class="tit">조직 안내</span></a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005824?tabid=35">
+					<span class="tit">찾아오시는 길</span></a></li>
 			</ul>
 		</div>
 
 		<div class="buttonImg" id="button2">
-			<p><img alt="지방지원단"
-				src="resources/image/kotrainfoIcon02.png"></p>
-				<b>지방지원단</b>
+			<p><img alt="지방지원단" src="../image/kotrainfoIcon02.png"></p>
+				<span class="buttonTitle">지방지원단</span>
 			<ul>
-				<li><a href="">조직 안내 ></a></li>
-				<li><a href="">찾아오시는 길 ></a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005899">
+					<span class="tit">조직 안내</span></a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005899">
+					<span class="tit">찾아오시는 길</span></a></li>
 			</ul>
 		</div>
 
 		<div class="buttonImg" id="button3">
-			<p><img alt="해외무역관"
-				src="resources/image/kotrainfoIcon03.png"></p>
-				<b>해외무역관</b>
+			<p><img alt="해외무역관" src="../image/kotrainfoIcon03.png"></p>
+				<span class="buttonTitle">해외무역관</span>
 			<ul>
-				<li><a href="">조직 안내 ></a></li>
-				<li><a href="">찾아오시는 길 ></a></li>
-			</ul>
-		</div>
-
-	</div>
-
-
-
-	<div class="footbox">
-		<div class="footimgbox">
-			<img alt="바다" src="resources/image/bg.jpg">
-		</div>
-
-		<div class="footbi">
-			<img alt="bi" src="resources/image/kotraBI.png"> 
-			<span class="footphr">무역투자 진흥 & 일자리 창출로 국민경제 발전에 이바지하겠습니다.<br>
-				사회적 가치 실현으로 더 나은 사회, 더 밝은 내일을 함께합니다.<br> 경제통상협력으로 우리 기업의 진출을
-				지원합니다.
-			</span>
-		</div>
-	</div>
-
-<!-- 아래쪽 게시판 만들기 -->
-	<div>
-		<p><a href="">공지사항</a></p>
-				<ul>
-					<li><a href=""></a>
-						<p>홈페이지 서비스 일시중지 안내(8.27. 10:00~18:00)</p>
-						<span>시스템 정기점검 및 안정적인 정보시스템 운영작업으로 로그인 및</span>
-					</li>
-				</ul>
-	</div>
-
-
-	<div>
-		<p><a href="">공지사항</a></p>
-		<div>
-			<ul>
-				<li><a href=""></a>
-				<p>홈페이지 서비스 일시중지 안내(8.27. 10:00~18:00)</p> 
-				<span>시스템 정기점검 및 안정적인 정보시스템 운영작업으로 로그인 및</span>
-				</li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005998">
+					<span class="tit">조직 안내</span></a></li>
+				<li><a href="https://www.kotra.or.kr/subList/20000005998">
+					<span class="tit">찾아오시는 길</span></a></li>
 			</ul>
 		</div>	
-	</div>
+		
+	</div>	<!-- infoButton 끝-->
+</div>
+<!-- 조직안내 및 찾아오시는 길 끝 -->
 
-<!-- 동영상부분 -->
-	<div>
-		<h4>KOTRA 홍보영상</h4>
-	</div>
 
-	<div class="titlebox">
-		<h5 class="bnrTit bTitle">
-			<b>대국민 7대 윤리약속</b>
-		</h5>
-	</div>
+<!-- 바다사진+문구 시작 -->
+<div class="footBoxOuter">
+	<div class="footBoxIner">
+		<div class="footbox">
+			
+			<div class="footimgbox">
+				<img alt="바다" src="../image/bg.jpg">
 
-	<div>
-	<a href="/subList/20000005831?tabid=51" title="고객과의 약속">
-
-			<div class="imgbox">
-			<img class="bIcon" src="resources/image/iconBI.png" alt="">
-			<p class="tit bSubContent">대국민 7대 윤리약속</p>
+			<div class="footbi">
+				<img alt="bi" src="../image/kotraBI.png"> 
+				<span class="footphr">무역투자 진흥 &amp; 일자리 창출로 국민경제 발전에 이바지하겠습니다.<br>
+					사회적 가치 실현으로 더 나은 사회, 더 밝은 내일을 함께합니다.<br> 
+					경제통상협력으로 우리 기업의 진출을 지원합니다. </span>
 			</div>
-		 	<span class="subtit bContent"> KOTRA는 최고의 윤리적인 기관으로<br>
-			도약하고자 국민 여러분과 약속합니다
-			</span>
-	</a>
-	</div>
-
-	<div>
-		<h4>정보공개</h4>
-		<img alt="정보공개" src="resources/image/iicon01.png">
-		<p>정보공개란 공공기관이 관리하고 있는 정보를 수요자인 국민의 청구에 의하여 공개 (청구공개)하거나, 공공기관이
-			자발적으로 또는 법령 등의 규정에 의하여 보유하고 있는 정보를 배포 또는 공표 등의 형태로 제공(정보제공)하는 제도를
-			말합니다. KOTRA에서는 '공공기관의 정보공개에 관한 법률 시행령' 제11조의 2에 따라 정보 공개사무를 처리하고
-			있습니다.</p>
-	</div>
-	<hr>
-
-	<div>
-		<a href=""> <span>정보공개 제도</span>
-		</a>
-	</div>
-
-	<div>
-		<a href=""> <span>비공개대상 정보</span>
-		</a>
-	</div>
-
-	<div>
-		<a href=""> <span>정보목록사전</span>
-		</a>
-	</div>
-
-	<div>
-		<a href=""> <span>정보공공데이터</span>
-		</a>
-	</div>
-
-	<div>
-		<a href=""> <span>제공사업실명제</span>
-		</a>
-	</div>
-
-
-
-	<div class=footer>
-		<div class=footerimg>
-			<img alt="마지막로고" src="resources/image/selectImageView.png">
+			</div>
+			
 		</div>
+	</div>
+</div>
+<!-- 바다사진+문구 끝 -->
 
-		<div class=footerlist>
-			<div class=footerlist1>
+
+<!-- 공지 게시판 시작 -->
+
+<div class="boardBox" style= "height: 400px;  padding-top: 50px;
+	background: url(../image/kotrainfoBrdBg.jpg) no-repeat;	background-size: 100%;" >
+	<div class="boardInner">
+		<ul class="boardtitleBox">
+		
+			<!-- 공지사항 게시판 시작 -->	
+			<li class="boardTitle">	
+				<div class="boarDiv">
+					<p class="boardP"><a href="">공지사항</a></p>
+					<ul class="contentList">
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+							
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+							
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+							
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+					</ul>
+					<div class="moreBtn"><a href="" title="공지사항 더보기">+</a></div>
+				</div>
+			</li>
+			<!-- 공지사항 게시판 끝 -->	
+		
+<!-- 여기부터  -->
+<div style="display:none;">	
+
+			<!-- 입찰공고 게시판 시작 -->
+				<div class="boarDiv">
+					<p class="boardP"><a href="">입찰공고</a></p>
+					<ul class="contentList">
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+							
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+							
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+							
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+					</ul>
+					<div class="moreBtn"><a href="" title="입찰공고 더보기">+</a></div>
+				</div>
+			<!-- 입찰공고 게시판 끝 -->	
+		
+			<!-- 보도자료 게시판 시작 -->	
+				<div class="boarDiv">
+					<p class="boardP"><a href="">보도자료</a></p>
+					<ul class="contentList">
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+							
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+							
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+							
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+					</ul>
+					<div class="moreBtn"><a href="" title="보도자료 더보기">+</a></div>
+				</div>
+			<!-- 보도자료 게시판 끝 -->	
+		
+			<!-- 채용 공고 게시판 끝 -->	
+				<div class="boarDiv">
+					<p class="boardP"><a href="">채용 공고</a></p>
+					<ul class="contentList">
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+							
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+							
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+							
+						<li><p><a href="">
+							홈페이지 서비스 일시중지 안내(9.8. 12:00~12:10)
+							<span>시스템 정기점검으로 인해 아래와 같이 KOTRA 무역투자24 홈페이지 서비스를 일시 중지합니다.
+							일시 : 2022년 9월 8일(목), 12:00~12:10(한국시간 기준)&nbsp; 
+							* 작업상황에 따라 중지 기간이 단축 또는 연장될 수 있으니 이용 시 참고 부탁드립니다.이용에 불편을 드려 죄송합니다.1</span>
+							</a></p>
+							<span>2022-09-08</span></li>
+					</ul>
+					<div class="moreBtn"><a href="" title="채용 공고 더보기">+</a></div>
+				</div>
+			<!-- 채용 공고 게시판 끝 -->
+	</div>
+
+		</ul>
+	</div>
+</div>
+
+<!-- 게시판 4개 끝 -->
+
+<!-- 동영상, 윤리약속, 정보공개 그룹 -->
+<div class="boxGroup" >
+
+<!-- 동영상 시작 -->
+	<div class="videoBoxOuter" style="width: 22.75%; float: left;">
+		<div class="videoBoxinner">
+		
+			<div class="titlebox">
+				<h5> <b>KOTRA 홍보영상</b> </h5>
+			</div>	<!-- 홍보영상 끝 -->
+		
+			<div class="innerBoxZone">
+				<div class="bgImgbox">
+					<a href="https://www.kotra.or.kr/kp/subList/20000005964">
+					<img class="bgImg" alt="국가무역투자진흥기관" src="../image/kotravideo.jpg">
+					</a>
+				</div>
+			
+				<div class="videoLogo">
+					<a href="https://www.kotra.or.kr/kp/subList/20000005965?tabid=21">
+					<img class="bgImg" alt="코트라디자인" src="../image/kotradesign.jpg">
+					</a>
+				</div>
+				
+	<!-- 			<div class="videoImg"></div> -->
+			</div>
+		</div>
+	</div>
+	<!-- 동영상 끝 -->
+	
+	
+	<!-- 대국민 7대 윤리약속 시작 -->
+	
+	<div class="promiseBox" style="width: 22.75%; float: left; margin: 0 3%;">
+		<div class="promiseInner">
+		
+			<div class="titlebox">
+				<h5> <b>대국민 7대 윤리약속</b> </h5>
+			</div>
+			
+			<div class="alinkBox">
+			<a href="https://www.kotra.or.kr/subList/20000005831?tabid=51" title="고객과의 약속"></a>
+			
+			<div class="prmsImgBox">
+				<div class="prmsImg">
+					<img class="bIcon" src="../image/iconBI.png" alt="중소중견">
+				</div>
+			<p class="subContent">대국민 7대 윤리약속</p>
+			</div>
+		
+			<span class="subPhr">KOTRA는 최고의 윤리적인 기관으로<br>
+				도약하고자 국민 여러분과 약속합니다</span>
+			</div>
+			
+		</div>
+	</div>
+	<!-- 대국민 7대 윤리약속 끝 -->
+	
+	
+	<!-- 정보공개 시작 -->
+	
+	<div class="infoIicon" style="width: 48.5%; float: left;">
+
+		<div class="titlebox">
+			<h5> <b>정보공개</b> </h5>
+		</div>
+			
+		<div class="conBox">
+			<div class="iicon">
+				
+				<img alt="정보공개" src="../image/iicon01.png">
+			</div>
+			
+			<div class="qbox">
+				<p>
+					정보공개란 공공기관이 관리하고 있는 정보를 수요자인 국민의 청구에 의하여 공개 (청구공개)하거나, 공공기관이
+					자발적으로 또는 법령 등의 규정에 의하여 보유하고 있는 정보를 배포 또는 공표 등의 형태로 제공(정보제공)하는 제도를
+					말합니다. <br>
+					KOTRA에서는 '공공기관의 정보공개에 관한 법률 시행령' 제11조의 2에 따라 정보 공개사무를 처리하고
+					있습니다.
+				</p>
+			</div>
+		</div>
+		
+		<hr class="infohr">
+		
+		<div class="bannerZone">
+			<div class="bannerBtn">
+				<a href="https://www.kotra.or.kr/subList/20000005857"> <span class="bannerSpn">정보공개 제도</span></a>
+			</div>
+		
+			<div class="bannerBtn">
+				<a href="https://www.kotra.or.kr/subList/20000005794"> <span class="bannerSpn">비공개대상 정보</span></a>
+			</div>
+		
+			<div class="bannerBtn">
+				<a href="https://www.kotra.or.kr/subList/20000005795"> <span class="bannerSpn">정보목록</span></a>
+			</div>
+		
+			<div class="bannerBtn">
+				<a href="https://www.kotra.or.kr/subList/20000005796"> <span class="bannerSpn">사전정보</span></a>
+			</div>
+		
+			<div class="bannerBtn">
+				<a href="https://www.kotra.or.kr/subList/20000005801"> <span class="bannerSpn">공공데이터 제공</span></a>
+			</div>
+		
+			<div class="bannerBtn">
+				<a href="https://www.kotra.or.kr/subList/20000005804"> <span class="bannerSpn">사업실명제</span></a>
+			</div>
+		</div>
+	</div>
+<!-- 정보공개 끝 -->
+</div>
+<!-- 그룹 세개 끝 -->
+
+<!-- 버튼 만들기 상하이동 -->
+<div class="Btnset">
+	<div class="topBtn">
+		<a href="#" class="pageTop">TOP</a>
+	</div>
+	
+	<div class="btmBtn">
+		<a href="#footer" class="pageBottom">Bottom</a>
+	</div>
+</div>
+
+<!-- footer 시작 -->
+<div class="footer" id="footer">
+		<div class="footerTop">
+			<div class=footerList>
 				<ul>
-					<li><a href=""> <span>이용약관 |</span>
+					<li><a href="https://www.kotra.or.kr/module/stplatLog/selectStplatLogList.do?stplatSeq=20000002282">
+					<span style="font-weight: 600;">이용약관</span>
 					</a></li>
 
-					<li><a href=""> <span> 저작권정책 |</span>
+					<li><a href="https://www.kotra.or.kr/module/stplatLog/selectPolicyLogList.do?stplatSeq=20000002275">
+					<span>저작권정책</span>
 					</a></li>
 
-					<li><a href=""> <span> 개인정보처리방침 |</span>
+					<li><a href="https://www.kotra.or.kr/module/stplatLog/selectPolicyLogList.do?stplatSeq=20000002272">
+					<span style="color: #ca2f01; font-weight: 600;">개인정보처리방침</span>
 					</a></li>
 
-					<li><a href=""> <span> 정보공개 |</span>
+					<li><a href="https://www.kotra.or.kr/subList/20000005857">
+					<span>정보공개</span>
 					</a></li>
 
-					<li><a href=""> <span> 사이트맵 |</span>
+					<li><a href="https://www.kotra.or.kr/sitemap.do">
+					<span>사이트맵</span>
 					</a></li>
 
-					<li><a href=""> <span> 관련사이트</span>
+					<li><a href="https://www.kotra.or.kr/subList/20000005975">
+					<span>관련사이트</span>
 					</a></li>
 				</ul>
 			</div>
 		</div>
+		
 
-		<div class=footerarea>
-			<p>서울시 서초구 헌릉로13 | 사업자등록번호 : 120-82-00275 | 대표자명 : 유정열</p>
-			<p>
-				<span>TEL. 1600-7119</span>
-			</p>
-			<p>COPYRIGHT(c)2021 KOTRA. ALL RIGHTS RESERVED 대한무역투자진흥공사</p>
+	<div class="footerBtm">
+		<div class="footerinner">
+			<div class="inner">
+				<div class=footerimg>
+					<img alt="마지막로고" src="../image/selectImageView.png">
+				</div>
+
+				<div class=footerarea>
+					<p>서울시 서초구 헌릉로13 | 사업자등록번호 : 120-82-00275 | 대표자명 : 유정열</p>
+					<p>
+						<span>TEL. 1600-7119</span>
+					</p>
+					<p>COPYRIGHT(c)2021 KOTRA. ALL RIGHTS RESERVED 대한무역투자진흥공사</p>
+				</div>
+
+				<ul class="wamarkimg">
+					<li><a href="http://www.wa.or.kr/board/list.asp?BoardID=0006">
+						<img alt="WEB접근성" src="../image/wamark_20220608.png">
+					</a></li>
+				</ul>
+	
+			</div>
 		</div>
-
-		<div>
-			<ul>
-				<li><a href=""><img alt="WEB접근성" src="resources/image/wamark_20220608.png"></a></li>
-			</ul>
-		</div>
-
 	</div>
+</div>
+<!-- footer 끝 -->
+
+
 
 </body>
 </html>

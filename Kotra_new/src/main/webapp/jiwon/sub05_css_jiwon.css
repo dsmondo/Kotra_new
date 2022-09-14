@@ -1,0 +1,1396 @@
+@charset "UTF-8";
+
+@media(max-width:1247px){
+	.hdmenu > ul > li > a > span {display: none; }
+}
+
+* { font-family: 'Noto Sans KR', sans-serif; }
+
+ * { 
+     margin: 0; 
+     padding: 0;
+ }	
+	
+/* 리스트에 동그라미 삭제 */	
+ul > li {
+	list-style: none;
+}
+
+/* a href 밑줄 제거 */
+a {
+	text-decoration-line: none;
+	cursor: pointer;
+}
+
+/* header / 사이트 더보기, 로그인 창*/
+
+.header {
+	width: 100%;
+    height: 45px;
+    position: absolute;
+    z-index: 990;
+    background: #424951;
+    background: #efefef;
+    border-bottom: 1px solid #e5e7ee !important;
+    box-sizing: border-box;
+}
+
+.inner {
+    max-width: 1300px;	
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.sitemore {
+	margin: 3px 0px;
+	padding: 0 20px 0 0;
+	text-align: left;
+	float: left;
+}
+
+.sitemore > a {
+	font-size: 14px;
+    padding: 0 0;
+    line-height: 40px;
+    color: #555;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+ .sitemoreBtn { 
+    position: relative;
+    width: 22px;
+    height: 59px;
+ }
+ 
+ /* 팝업창 css */
+ .morePopup {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    padding: 22px 0 0 0;
+    left: 0;
+    top: 0;
+    display: block;
+    float: left;
+    margin: 0 auto;
+    z-index: 3;
+    box-sizing: border-box;
+    text-align: center;
+    background: #efefef;
+    border-bottom: 3px solid #00487f !important;
+ }
+.morePopupInner {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    /* padding: 0 70px; */
+    display: inline-block;
+    position: relative;
+}
+
+.morePopupInner > p {
+	width: 12%;
+    float: left;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.moreList {
+	width: 88%;
+    float: left;
+    position: relative;
+}
+
+.moreList > li {
+	width: 20%;
+    float: left;
+    height: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-left: 1px solid #ccc;
+}
+/* 팝업창 끝!  */
+
+
+.hdmenu {
+    float: right;
+    width: 70%;
+    text-align: right;
+    max-width: 30% !important;
+    box-sizing: border-box;
+    margin: 5px -45px;
+    padding: 5px 39px;
+}
+
+.hdmenu > ul > li {
+	padding-left: 5px;
+	float: left;
+}
+
+.hdmenu > ul {
+
+    padding: 0px 20px;
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.hdmenu > ul > li > a {
+	padding: 0 10px;
+}
+.hdmenu > ul > li > a > span {
+	color: #666;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+	
+}
+
+.header .menuLogo {
+	height: 100px;
+    box-sizing: border-box;
+    margin-top: 45px;
+}
+
+/* /코트라로고 리스트 버튼 시작/*/
+
+.menuGroup {
+	height: 100px;
+    width: 100%;
+    background: #fff;
+    float: left;
+    position: relative;
+    z-index: 1;
+    transition: height 0.5s;
+    box-sizing: border-box;
+    margin-top: 45px;
+}
+
+.menuInner {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    line-height: 100px;
+    vertical-align: middle;
+    text-align: right;
+    vertical-align: middle;
+    position: relative;
+}
+
+.menuimg { 
+    float: left;
+    height: 100px;
+    text-align: center;
+	box-sizing: border-box;
+	margin-top: 22px;
+	z-index:0;
+ }
+
+
+.menuUl {
+	width: 80%;
+    margin: -11px -109px 0px 0px;
+    box-sizing: border-box;
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.mlistcontent > a {
+    font-size: 23px;
+    font-weight: 600;
+    color: #000;
+	width: auto !important;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-align: right;
+    overflow: hidden;
+    transition: font-size 0.5s;
+    letter-spacing: -1px;
+    position: relative;
+}
+
+.mlistcontent { 
+	width: auto !important;
+ 	float: left;
+ 	padding-left: 70px;
+ 	position: relative;
+ 	
+ 	
+ }
+/* /코트라로고 리스트 버튼 끝/*/
+
+/* 돋보기 버튼 */
+.searchBox {
+	position: absolute;
+    top: 75px;
+    right: 160px;
+    z-index: 1;
+    height: 40px;
+}
+
+.search {
+    font-size: 1px;
+    line-height: 1px;
+    float: left;
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+.btnSearch:before {
+	content: "";
+    background: url(../image/headIcon.png) #fff;
+    background-position: -148px -1px;
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+    line-height: 40px;
+    text-indent: 0;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+}
+
+/* 전체메뉴 버튼 */
+.allMenu {
+	margin: 0;
+    width: 1px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    float: right;
+    background: transparent !important;
+    top:75px;
+}
+
+.allmenuBtn {
+	display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    border: none;
+    background: #fff !important;
+    font-size: 1px;
+    overflow: hidden;
+    text-indent: -999px;
+    position: absolute;
+    top: -146px;
+    right: 113px;
+    z-index: 1;
+}
+
+.allmenuBtn:before {
+	content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 6px;
+    top: 8px;
+    background: url(../image/headIcon.png);
+    background-position-x: -87px;
+}
+
+
+/* HOME / 공사안내 / 공사안내 홈  */
+.menuCon {
+	text-align: left;
+    max-width: 100%;
+    padding: 0px 110px;
+    background: #f4f5f9;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+}
+
+.menuCon > ul {
+ 	background: #eeeeee;
+	width: 100%;
+	height: 10%;
+	background: #f4f5f9;
+}
+
+.menuCon > ul > li {
+	float: left;
+    padding: 0px 30px 0 20px;
+    min-width: 190px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    border-right: 1px solid #dcdde2;
+    max-width: calc(33% - 20px);
+    font-size: 14px;
+    background-size: 10px;
+    box-sizing: border-box;
+}
+
+.listCon > a {
+	width: 100%;
+	height: 50px;
+    float: left;
+    color: #333;
+    line-height: 50px;
+    letter-spacing: -1px;
+}
+
+.listCon > a:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+/*     display: inline-block; */
+    border: 1px solid #7b7e97;
+    border-width: 0 1px 1px 0;
+    transform: rotate(-45deg);
+    float: right;
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    margin-top: -2px;
+    color: #333;
+}
+
+.listHome {
+	height: 50px;
+    padding: 0 10px !important;
+    text-align: center;
+    float: left;
+    border-left: 1px solid #dcdde2;
+    box-sizing: border-box;
+    min-width: auto !important;
+}
+
+.listHome > a {
+	height: 50px;
+	color: #333;
+	line-height: 50px;
+	letter-spacing: -1px;
+}
+/* HOME / 공사안내 / 공사안내 홈 끝 */
+
+
+/* 7대 대국민 약속 문구 + 전경사진 */
+.topbox {
+    width: 100%;
+    height: 600px;
+    float: left;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.introbg {
+	padding-top: 0;
+	z-index: 0;
+	background: transparent;
+	overflow: hidden;
+	width: 100% !important;
+	position: relative;
+	
+}
+
+.introbg img {
+	max-height: 750px;
+	width: 100% !important;	
+}
+
+.phr {
+	position: absolute;
+	top: 46%;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+	padding: 50px 0;
+	background: rgba(0, 0, 0, 0.5);
+	margin-top: -100px;
+	letter-spacing: -1px;
+}
+
+.phr {
+    animation: topvisualFX linear 1s 1 normal forwards;
+}
+
+    @keyframes topvisualFX {
+      0% {opacity:0; top:70%;}
+      70% {top:45%;}
+      100% {opacity:1; top:46%;}
+    }
+
+
+.introphr {
+	font-size: 53px;
+	letter-spacing: -1px;
+	color: #fff;
+	line-height: 130%;
+	font-weight: 200;
+	width: 100%;
+	max-width: 1300px;
+	display: inline-block;
+	margin: 0 auto;
+	box-sizing: border-box;
+	text-align: left;
+	padding-left: 280px;
+}
+
+
+/* 파란색하얀색 메뉴박스 시작 */
+.menuBox {
+    width: 250px;
+    z-index: 100;
+    /* border: 1px solid #333; */
+    position: absolute;
+    margin: 8px 0 0 110px;
+    padding: 32px 29px 0 0;
+}
+.infoKotra > h3 {
+	font-size:24px;
+	font-weight: 470;
+	color: #333;
+	padding: 0 0 18px;
+	letter-spacing: -0.5px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.listSlider {
+	padding-left: 0 !important;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.sliderHome > a{
+	padding: 15px 40px 13px 20px;
+}
+
+.sliderHome > a > span{
+	color: #fff !important;
+    background: #004a98;
+    padding-bottom: 13px;
+}
+
+.listGroup> a > span:after {
+	content: "";
+    width: 5px;
+    height: 5px;
+    border: 1px solid #7b7e97;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    float: right;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -6px;
+    color: #333;
+}
+
+.listGroup > ul {
+	    width: 100%;
+    padding: 17px 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #eee;
+}
+
+.listSlider > li {
+	border: 1px solid #ccc;
+    border-width: 1px 1px 0px;
+    border-top-color: #eeeeee;
+    overflow: hidden;
+}
+.listSlider > li > a {
+	text-decoration: none;
+	color: #000;
+    line-height: 25px;
+    display: block;
+    text-transform: uppercase;
+    padding: 15px 55px 16px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    word-break: break-all;
+    font-weight: 600;
+    position: relative;
+    word-break: keep-all;
+    letter-spacing: -0.5px;
+}
+
+
+/* kotra 소개 */
+.title {
+    font-size: 46px;
+    line-height: 110%;
+    padding-bottom: 25px;
+/*     padding-top: 15px; */
+    font-weight: 700;
+    color: #000;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+
+/* 이미지+버튼 */
+
+.titleInner {
+    width: 100%;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    padding: 65px 0px 45px 0px;
+}
+.infoLinkBox {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    padding: 20px 5px;
+    padding-bottom: 65px;
+    position: relative;
+    margin: 0 auto;
+    vertical-align: middle;
+    justify-content: center;
+}
+.infoLink {
+    float: left;
+    width: 20%;
+    max-width: 260px;
+    text-align: center;
+    display: block;
+}
+	
+
+.infoLink a {
+	font-size: 18px;
+    font-weight: 500;
+    display: inline-block;
+    letter-spacing: -1px;
+    padding: 10px 0;
+    line-height: 20px;
+    color: #000;
+    vertical-align: middle;
+}
+
+.infoLink img {
+	width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+	
+.infoSpan:after {
+     content: "";
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    border: 1px solid #333;
+    transform: rotate(45deg);
+    border-width: 1px 1px 0 0;
+    vertical-align: middle;
+    margin-left: 6px;
+    margin-top: -3px;
+}
+/* KOTRA 소개 + 버튼 끝 */
+
+
+hr {
+	width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #cbcbcb;
+    border: none;
+    height: 1px;
+}
+
+
+/* 조직안내 및 오시는 길 */
+
+.infoIconBox {
+	width: 100%;
+    float: left;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    box-sizing: border-box;
+    display: block;
+    padding-top: 50px;
+}
+
+.titleContent {
+    width: 100%;
+    height: 100%;
+    float: left;
+    padding: 15px;
+    text-align: center;
+    background: white;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.content {
+    font-size: 18px;
+    letter-spacing: -1px;
+    line-height: 22px;
+    color: #666;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+/* 이미지 부분 */
+
+
+.infoButton .buttonImg {
+	float: left;
+	width: 25%;
+	text-align:center;
+}
+
+.infoButton {
+	width: 100%;
+    float: left;
+    height: 100%;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonImg{
+    width: 30% !important;
+    max-width: 340px;
+    height: 100%;
+    padding: 70px 0px 75px 0px;
+}
+
+.buttonImg ul {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 36%;
+    padding-top: 13px;
+}
+
+.buttonImg a{
+    width: 100%;
+    float: left;
+    line-height: 35px;
+    font-size: 15.5px;
+    color: #767676;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+
+.buttonTitle {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top:10px;
+}
+
+/* 개발자도구 참고 */
+.tit {
+	width: 100%;
+    display: block;
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+    word-break: keep-all;
+    float: left;
+    line-height: 130%;
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 6px;
+ }
+
+.tit:before {
+    content: "\b7";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+ }
+ 
+ .tit:after {
+ 	content: "";
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    border: 1px solid #333;
+    transform: rotate(45deg);
+    border-width: 1px 1px 0 0;
+    vertical-align: middle;
+    margin-left: 6px;
+    margin-top: -3px;
+ }
+ 
+ .tit:hover {
+ 	color: #000;
+ 	font-weight:600;
+ }
+/* 개발자도구 참고 */
+
+/* 바다 시작 */
+.footbox {
+	width: 100%;
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
+
+.footbox .footimgbox {
+	width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: normal;
+    padding: 70px 0;
+}
+
+.footimgbox > img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: auto;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.footbox .footphr {
+	width: 100%;
+	color: #fff;
+	overflow: hidden;
+	word-break: keep-all;
+	display: inline-block;
+	padding: 0 15px;
+	font-size: 30px;
+	font-weight: 200;
+	letter-spacing: -1px;
+	box-sizing: border-box;
+	line-height: 160%;
+	margin-top: 35px;
+	transition: font-size 0.5s;
+}
+/* 바다 끝 */
+
+
+/* 게시판 4개 시작 */
+
+.boardBox {
+	width: 100%;
+	float: left;
+}
+
+.boardInner {
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.boardtitleBox {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.boardTitle {
+	height: 100%;
+	float: left;
+	text-align: left;
+}
+
+.boardP {
+	padding: 0 0 20px 0;
+
+}
+
+/* 게시판 제목 글씨 */
+.boardP a {
+	font-size: 26px;
+	font-weight: 600;
+	color: #333333;
+	width: 20%;
+	margin: 0 0 3px 3px;
+	vertical-align: middle;
+}
+
+.contentList {
+	overflow: hidden;
+}
+
+.contentList > li {
+	width: 23%;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	margin-right: 25px;
+	box-sizing: border-box;
+	
+}
+
+.contentList > li > span {
+	float: right;
+	width: 100%;
+    display: block;
+    line-height: 140%;
+    margin: 15px 0 0;
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+}
+.contentList > li > p > a {
+	width: 100%;
+	height: 206px;
+	overflow: hidden;
+	text-align: left;
+    float: left;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.contentList > li > p> a:hover {
+	border-color: #0b70b9;
+}
+
+
+.contentList > li > p > a > span {
+	font-size: 16px;
+    line-height: 150%;
+    word-break: keep-all;
+    letter-spacing: -0.5px;
+    overflow: hidden;
+    width: 100%;
+    height: 78px;
+    float: left;
+    color: #666;
+    box-sizing: border-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    white-space: normal;
+    padding-top: 30px;
+    position: relative;
+}
+.contentList > li > p > a {
+	color: #004a98;
+	font-size: 22px;
+	font-weight: 600;
+}
+
+
+
+/* + 버튼 */
+.moreBtn {
+	top: -300px;
+    position: relative;
+    right: 40px;
+    width: 22px;
+    height: 59px;
+    float: right;
+}
+
+.moreBtn > a {
+	font-weight: 400;
+	font-size: 40px;
+	color: #333;
+}
+
+
+/* 홍보영상 */
+
+.boxGroup {
+	width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.titlebox {
+	padding: 20px 0 15px;
+}
+
+.titlebox > h5 > b{
+	font-size: 26px;
+	color: #333;
+	line-height: 120%;
+}
+
+.innerBoxZone {
+	padding-right: 15px;
+	width: 100%;
+	float: left;
+	box-sizing: border-box;
+}
+
+/* 동영상 사진 로고 부분 */
+.bgImgbox {
+	width: 100%;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 160px;
+    margin-bottom: 15px;
+}
+
+.bgImgbox > a {
+	width: 100%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.bgImgbox > a > img {
+	width: 100%;
+    display: inline-block;
+    position: relative;
+    margin: auto;
+}
+
+.videoLogo {
+	width: 100%;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 80px;
+}
+
+.videoLogo > a {
+	width: 100%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+.videoLogo > a > img {
+	width: 100%;
+    display: inline-block;
+    position: relative;
+    margin: auto;
+}
+
+/* ㄷㅐ국민 약속 */
+.promiseInner {
+	padding-right: 15px;
+    width: 100%;
+    float: left;
+    clear: both;
+    box-sizing: border-box;
+}
+.alinkBox {
+	width: 100%;
+    float: left;
+    background: #484848;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 257px;
+}
+
+.prmsImgBox {
+	width: 100%;
+    float: left;
+    background: #fff;
+    position: relative;
+    padding: 80px 0px 0px 0px;
+    box-sizing: border-box;
+    margin-bottom: 65px;
+}
+.prmsImg {
+	width: 30%;
+    right: 15px !important;
+    display: inline-block;
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    top: 16px;
+}
+
+.subContent {
+	color: #014a97;
+	font-size: 29px;
+	padding: 0 20px;
+	width: 100%;
+	font-weight: 600;
+	box-sizing: border-box;
+	letter-spacing: -1px;
+}
+.bIcon {
+	display: inline-block;
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.subPhr {
+	width: 100%;
+	color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -1px;
+    box-sizing: border-box;
+    display: block;
+    padding: 0 20px 20px;
+}
+
+.conBox {
+	width: 100%;
+	float: left;
+}
+
+.iicon {
+	width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    line-height: 90px;
+    background: #f1f1f1;
+    text-align: center;
+    position: relative;
+    float: left;
+}
+
+.iicon > img {
+    vertical-align: middle;
+    max-width: 65%;
+    max-height: 65%;
+    display: inline-block;
+    position: absolute;
+    left: 27.5%;
+    top: 23.5%;
+}
+
+.qbox {
+	text-align: left;
+	float: right;
+	width: calc(100% - 100px);
+}
+
+.qbox > p {
+    font-size: 16px;
+    color: #666;
+    line-height: 140%;
+    word-break: keep-all;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+.infohr {
+    width: 85%;
+    margin-left: 99px;
+    margin-bottom: 20px;
+}
+
+.bannerZone {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-left: 100px;
+    padding-bottom: 190px;
+}
+
+.bannerBtn {
+	width: 32%;
+	max-width: 169.75px;
+    margin-right: 2%;
+    float: left;
+    border: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    line-height: 30px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.bannerSpn {
+	float: left;
+    width: 100%;
+    color: #666;
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    padding: 5px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/* footer */
+.footer {
+	width: 100%;
+    overflow: hidden;
+    position: relative;
+    clear: both;
+    background: #efefef;
+    border-top: 1px solid #d3d6e1;
+}
+
+.footerTop .footerList {
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+@media (min-width: 800px) {
+	.footerTop .footerList  {
+    	padding-left: 368px;
+	}
+}
+
+.footerTop {
+	width: 100%;
+    font-size: 12px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}	
+
+.footerList {
+	width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.footerList > ul > li {
+	display: inline-block;
+	color: #333333;
+	line-height: 28px;
+}
+
+.footerList > ul > li > a {
+	float: left;
+	text-decoration: none;
+    color: #333;
+    padding: 0;
+    font-size: 16px;
+    line-height: 35px;
+    letter-spacing: -0.5px;
+}
+
+.footerList > ul > li:not(:last-child) > a > span:after {
+    content: "|";
+    padding: 0 10px;
+    float: right;
+    font-size: 11px;
+    line-height: 35px;
+    opacity: 0.7;
+    font-weight: 200;
+}
+
+
+.footerarea {
+	margin: 0px 0px 77px;
+	width: auto;
+	max-width: 900px;
+	float: left;
+	text-align: left;
+	box-sizing: border-box;
+}
+
+.footerimg img {
+	width: auto;
+    max-width: 250px;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 90%;
+}
+
+@media (min-width: 800px) {
+	.footerBtm .footerinner .footerimg {
+    	padding-right: 20px;
+    	margin-top: -40px;
+    }
+}
+
+.footerBtm .footerinner .footerimg {
+    float: left;
+    text-align: left;
+    box-sizing: border-box;
+    width: 260px;
+    display: inline-block;
+}
+
+@media (min-width: 800px) {
+.footerBtm .footerinner .footerarea  {
+  	  padding-left: 260px;
+  	  clear: both;
+    }
+}
+.footerBtm .footerinner .footerarea {
+	margin: 0px 0px 50px;
+    width: auto;
+    max-width: 900px;
+    float: left;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.footerarea > p {
+	color: #454545;
+    line-height: 150%;
+    font-size: 15px;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.footerarea > p > span {
+	font-size: 17px;
+    color: #004a98;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+.footerarea > p:last-child {
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+}
+.wamarkimg {
+    float: right;
+    margin-top: -35px;
+}
+
+/* 버튼 */
+
+.Btnset {
+    width: 50px;
+    height: 110px;
+    margin: 10px;
+    padding: 0;
+    z-index: 9999;
+    display: block !important;
+    bottom: 0;
+    right: 0px;
+    position: fixed !important;
+}
+.topBtn{
+	display: block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.topBtn > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-indent: -999px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 15%);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 100%;
+    background: #fff;
+}
+
+.topBtn > a:before {
+	content: "";
+    width: 23px;
+    height: 15px;
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../image/icon_set.png);
+    background-position: -36px;
+    background-size: 500px;
+}
+
+.topBtn > a:after {
+    content: "";
+    width: 20px;
+    height: 3px;
+    background: #acacac;
+    display: inline-block;
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btmBtn {
+	display: block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.btmBtn > a {
+	width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-indent: -999px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 15%);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 100%;
+    background: #fff;
+}
+
+.pageBottom:before {
+	content: "";
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    left: 21%;
+    bottom: 15%;
+    background: url(../image/icon_set.png);
+    background-position: 262px;
+    background-size: 500px;
+}
+
+.pageBottom:after {
+	content: "";
+    width: 20px;
+    height: 3px;
+    background: #acacac;
+    display: inline-block;
+    position: absolute;
+    top: 91px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.sitemore > a > span:after {
+	content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #333;
+    border-width: 1px 1px 0 0;
+    transform: rotate(135deg);
+    margin-left: 10px;
+    margin-bottom: 4px;
+}

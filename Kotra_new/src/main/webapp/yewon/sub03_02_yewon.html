@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+
+
+* {
+	font-family: 'Noto Sans KR'
+}
+
+ul {
+	list-style: none;
+}
+
+body, div, h1 {
+	margin: 0;
+	padding:0 ;
+	}
+
+/* header ----------------------------------------------- */
+.header {
+	width: 100%;
+	height: 45px;
+	background: #eeeeee;
+	border-bottom: 1px solid #dddddd;
+}
+
+
+/* 헤더 안에 컨텐츠 영역 */
+.headerInner {
+	max-width: 1380px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+
+/* 최상단 메뉴 왼쪽부분 영역 */
+.innerLeft {
+	width: 50%;
+	float: left;
+/*  	vertical-align: middle;  */
+}
+
+/* 텍스트 영역 */
+li.siteMore a {
+	font-size: 14px;
+	line-height: 45px; /* 겉에 div 길이만큼 */
+	color: #555;
+}
+
+
+/* 관리자에서 가져옴 더 공부할것!*/
+li.siteMore a:after {
+	content: "";
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border: 2px solid #333;
+	border-width: 1px 1px 0 0;
+	transform: rotate(135deg);
+	margin-left: 10px;
+	margin-bottom: 4px;
+}
+
+
+/* 최상단 메뉴 오른쪽부분 */
+ul.innerRight {
+	float: right;
+	height: 45px;
+	text-align: right;
+	width: 70%;
+	max-width: 50%;
+	box-sizing: border-box;
+}
+
+ul.innerRight li {
+	line-height: 45px;
+	font-size: 14px;
+	text-align: right;
+	display: inline-block;
+}
+
+/* ul.innerRight li a {
+	color: #666;
+	padding: 0px 10px;
+	float: right;
+} */
+
+/* a {
+	color: #000;
+	text-decoration: none;
+} */
+
+/*  end header ----------------------------------------------- */
+
+
+/*	start menu ----------------------------------------------- */
+
+.menu {
+/* 	width: 100%; */
+/* 	height: 100px; */
+	background: #fff;
+	position: sticky;
+	top: -32px;
+}
+
+
+/* inner 메뉴 */
+.menuinner {
+	max-width: 1300px;
+	width: 100%;
+	margin: 0 auto;
+/* 	line-height: 100px; */
+}
+
+/* --------------------------------- */
+
+/* 로고 부분 */
+.logo {
+	width: 20%;
+	float: left;
+	height: 100px;
+	line-height: 90px;
+	text-align: left;
+	box-sizing: border-box;
+}
+
+.menu .logo a img {
+	vertical-align: middle;
+}
+
+
+/* lnb부분 */
+.lnb {
+	width: 80%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	line-height: normal;
+	vertical-align: middle;
+	text-align: right;
+	padding-right: 150px;
+	display: inline-block;
+	position: relative; 
+	padding-bottom: 50px;
+}
+
+/* li  */
+.lnb>li {
+	width: auto !important;
+	vertical-align: middle;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+/* 텍스트에다가만 패딩 주기 */
+.bigMenu {
+	padding-left: 60px;
+}
+
+
+/* lnb 안에 li 안에 a 태그 텍스트들 */
+.lnb li a {
+	width: 100%;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 23px;
+	font-weight: 700;
+	display: inline-block;
+}
+
+/* inb 안 돋보기 img */
+.search {
+	height: 40px;
+	position: absolute;
+	right: 70px;
+} 
+
+.searchBtn {
+	width: 25px;
+	height: 25px;
+	background: url(https://www.kotra.or.kr/images/wzwg/site/kotra/headIcon.png); ;
+	background-position: -148px -1px;
+	position: absolute;
+	top: 6px;
+}
+
+/* inb 안 전체메뉴 img */
+.allmenu {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 28px;	
+}
+
+.allmn {
+	width: 25px;
+	height: 25px;
+	background: url(https://www.kotra.or.kr/images/wzwg/site/kotra/headIcon.png);
+	background-position: -85px -1px;
+	position: absolute;
+	top: 6px;
+}
+
+
+/* 버튼 부분 투명하게 ex) 그래야 위의 before만 도출된다 */
+button {
+	border: 0 none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+
+/*	end menu ----------------------------------------------- */
+
+/* 헤더 전체 끝! */
+
+/* --------------------------------------------------------------------------------------- */
+
+/* 바디 시작 */
+
+/* #body{
+	width: 100%;
+} */
+
+
+/* 서브 메뉴 시작~~*/
+
+.sbMenu {
+	width: 100%;
+	height: 50px;
+	background-color: #f4f5f9;
+	display: block;
+}
+
+.innerSbMenu {
+	max-width: 1340px;
+	width: 100%; 
+	margin: 0 auto;
+}
+
+.innerSbMenu li {
+	height: 50px;
+	float: left;
+	border-right: 1px solid #ddd;
+	padding: 0 30px 0 20px;
+	min-width: 140px;
+	position: relative;
+} 
+
+
+/* 관리자에서 가져옴 더 공부할것!*/
+li.liMenu a:after {
+	content: "";
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    border: 1px solid #7b7e97; 
+    border-width: 0 1px 1px 0;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    margin-top: -2px;
+    color: #333;
+}
+
+
+
+/* HOME 메뉴 */
+li.homemn {
+	height: 50px;
+	border-left: 1px solid #ddd;
+	padding: 0 10px;
+	min-width: auto; 
+}
+ 
+
+.innerSbMenu li a {
+	float: left;
+	line-height: 50px;
+	color: #333;
+	font-size: 14px;
+	text-align: center;
+}
+
+/*.boraBg {
+	width: 100%;
+	height: 500px;
+	background-color: #B5B2FF;	
+} */
+
+.headline {
+    font-size: 18px;
+    margin-top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    font-weight: 600;
+    float: left;
+    box-sizing: border-box;
+}
+
+.slidebar {
+	padding-left: 0 !important;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.slidebar li a {
+    text-decoration: none;
+    line-height: 25px;
+    display: block;
+    text-transform: uppercase;
+    padding: 15px 55px 16px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    word-break: break-all;
+    font-weight: 600;
+    position: relative;
+    word-break: keep-all;
+    letter-spacing: -0.5px;
+}
+
+h3.menuNm {
+    color: #333;
+    font-size: 24px;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
+    border-bottom: none;
+    position: relative;
+    font-weight: 500;
+}
+
+.subMenu {
+    color: #000;
+    font-family: 'Noto Sans KR';
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 250px;
+    box-sizing: border-box;
+    z-index: 1;
+    padding-right: 30px;
+    margin-bottom: 0 !important;
+    margin-top: 8px;
+    position: absolute;
+ }
+
+.subMenu .slidebar {
+    padding-left: 0 !important;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.slidebar>li.deepest>a {
+    color: #fff !important;
+    background: #004a98;
+    font-weight: 600;
+    padding-bottom: 13px;
+}
+    
+.bnrSlideTit {
+    font-size: 26px;
+    margin-bottom: 10px;
+    height: 43px;
+}
+
+.loginBtn {
+    display: block;
+    padding: 11px 17px;
+    margin-top: 30px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    color: #004a98;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #004a98;
+    border-radius: 10px;
+}
+
+.name {
+    font-size: 19px;
+    font-weight: 600;
+    width: 100%;
+    border-bottom: 2px solid #014a99;
+    padding: 15px 0;
+}
+
+.moduleTit {
+    font-size: 26px;
+    color: #333;
+    letter-spacing: -0.5px;
+}
+
+.boardArea {
+    margin-top: 30px;
+    width: 100%;
+    float: left;
+    margin-bottom: 60px;
+   }
+
+.boardArea .mainNew {
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+}
+
+.boardArea .linebrd li .newsTit {
+    width: calc(100% - 100px);
+    float: left;
+    color: #666;
+    font-size: 16px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul.linebrd {
+    width: 65%;
+    float: left;
+    padding-left: 0;
+}
+
+.linebrd li .newsdate {
+    font-size: 16px;
+    color: #666;
+    float: right;
+    letter-spacing: -0.5px;
+}    
+
+.rmybox {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+/* ------------------- grid ------------------ */
+.grid-container {
+/* 	padding-top: 200px; */
+	display: grid;
+	grid-template-columns: 320px 600px 300px;
+	grid-auto-rows: minmax(300px, auto);
+	row-gap: 150px;
+	column-gap: 40px;
+	justify-content: center;
+	align-content: start;
+	height: 100vh;
+}
+
+/* .grid-item { 
+ 	border: 1px solid #ccc; 
+ } */
+
+.grid-item-1 {
+	grid-column: span 1;
+}
+.grid-item-2 {
+	grid-row: span 1;
+}
+
+.grid-item-3 {
+	grid-row: span 1;
+}
+
+.grid-item-4 {
+	grid-column: span 2;
+	grid-row: span 1;
+}
+.grid-item-5 {
+	grid-row: span 1;
+}
+.grid-item-6 {
+	grid-column: span 2;
+	grid-row: span 1;
+}
+.grid-item-7 {
+	grid-row: span 1;
+}
+.grid-item-8 {
+	grid-column: span 2;
+	grid-row: span 1;
+}
+.grid-item-9 {
+	grid-row: span 1;
+}
+
+/* ------------------- grid end ------------------ */
+
+</style>
+</head>
+<body>
+
+<!-- 헤더 시작! -->
+<div class="header">
+	<div class="headerInner">
+		<!-- inner 왼쪽 부분 -->
+			
+		<ul class="innerLeft">
+			<li class="siteMore"><a id="moreBtn">KOTRA 사이트더보기</a></li>
+		</ul>
+			
+		<!-- inner 오른쪽 부분 -->
+		<ul class="innerRight">
+			<li><a href="주소 써야함"><span>로그인</span></a></li>
+			<li><a href="주소 써야함"><span>회원가입</span></a></li>
+			<li><a href="주소 써야함"><span>사이트맵</span></a></li>
+			<li><a href="주소 써야함"><span>ENGLISH</span></a></li>
+		</ul>
+
+	</div> <!-- headerInner end  -->
+</div> <!-- header end -->
+
+<!-- 헤더 끝! -->
+
+
+<!-- 메뉴 시작 -->
+
+<div class="menu">
+
+	<div class="menuinner">
+
+		<!-- 로고 -->
+		<h1 class="logo">
+			<a href="메인페이지 주소" title="로고"> <img src="https://www.kotra.or.kr/module/upload/file/selectImageView.do?atchFileId=20000012146&fileSn=0" alt="KOTRA무역투자24"></a>
+		</h1>
+
+		<!-- 큰 텍스트 메뉴들 -->
+		<ul class="lnb">
+			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">사업신청</a></li>
+
+			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">문의·상담</a></li>
+
+			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">해외정보</a></li>
+
+			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">사업소개</a></li>
+
+			<li class="bigMenu"><a href="서브페이지 주소 경로" id="gnb">공사안내</a></li>
+
+			<li class="search">
+				<button class="searchBtn" type="button" title="검색하기"></button>
+			</li>
+
+			<li class="allmenu">
+				<button class="allmn" type="button" title="전체메뉴"></button>
+			</li>
+
+		</ul>
+
+	</div> <!-- inner end -->
+		
+</div> <!-- menu end -->
+	
+<!-- 메뉴 끝! -->
+<!-- 헤더 전체 끝 -->
+
+<!--  ----------------------------------------------------------------------------------------------  -->
+
+
+<!-- body부분 시작! -->
+
+<!-- sub menu 시작~ -->
+
+<div class="sbMenu">
+
+		<ul class="innerSbMenu">
+			<li class="homemn"><a href="링크">HOME</a></li>
+			<li class="liMenu"><a href="링크">사업신청</a></li>
+			<li class="liMenu"><a href="링크">사업신청 홈</a></li>
+		</ul>
+
+</div>
+
+
+<!-- sub menu end-->
+
+<div class="grid-container">
+
+<!-- 바디 보라색 BG -->
+<!--   <div class="boraBg"> -->
+	<div class="grid-item grid-item-1">	
+	  <div class="subMenu">
+		<h3 class="menuNm">해외정보</h3>
+		<ul class="slidebar selected tendina" id="submainLeftMn">
+			<li class="deepest">
+				<a href="/subList/20000006759" data-href="menuLinkSeq" data-attr="menuNm" class="on">
+					해외정보 홈</a>               
+			</li>
+			<li>
+			 	<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=big" target="_blank" title="새창열림" data-href="menuLinkSeq" data-attr="menuNm">
+					트라이빅</a>
+			</li>
+			<li>
+			   	<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=kn" target="_blank" title="새창열림" data-href="menuLinkSeq" data-attr="menuNm">
+					해외시장뉴스 (해드림)</a>
+			</li>
+			<li>
+				<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=bk" target="_blank" title="새창열림" data-href="menuLinkSeq" data-attr="menuNm">
+					바잉오퍼 (BK)</a>
+			</li>
+			<li>
+			   	<a href="https://www.kotra.or.kr/siteUrlLink.do?siteName=gep" target="_blank" title="새창열림" data-href="menuLinkSeq" data-attr="menuNm">
+					해외전시회 (GEP)</a>
+			</li>
+			<li>
+			   	<a href="/subList/20000018754" data-href="menuLinkSeq" data-attr="menuNm">
+					무역자료실</a>
+			</li>
+		 </ul>
+	</div>
+	</div>
+					    
+	<div class="grid-item grid-item-2"><h4 class="bnrSlideTit">알림존</h4>
+		<img alt="전기차 허브로 도약하는 인도네시아" src="https://www.kotra.or.kr/module/upload/file/selectImageView.do?atchFileId=20000041986&fileSn=0">
+	</div>
+	
+	<div class="grid-item grid-item-3"><h4 class="name">KOTRA 지식정보</h4>
+		<p class="plzLogin pt30 wd100 fs15 word_kp iprInfo">
+             	로그인을 하시면 개인 맞춤형 (관심국가, 관심품목, 관심산업) 콘텐츠를 보실 수 있습니다.</p>
+        <a href="/loginForm.do" class="loginBtn">회원 로그인</a>
+    </div>							
+
+<!--   </div> boraBg end -->
+  
+
+	<div class="grid-item grid-item-4"><b class="moduleTit">해외시장뉴스</b>
+	 <div class="boardArea">
+	  <div class="mainNew">
+        <div class="imgbox"><img class="wd100" src="http://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=196275&amp;atFileSn=91824" alt="" width="200" height="150"></div>
+     	 <p class="headline"><a href="javascript:goToSSODreamKotra('http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=70&amp;CONTENTS_NO=1&amp;bbsGbn=00&amp;bbsSn=322&amp;pNttSn=196275');" title="새창열림">외국 경제단체의 눈을 통해 보는 대만의 사업환경</a></p>
+      </div>
+	  <ul class="linebrd">
+		<li>
+      	  <p class="newsTit"><a href="javascript:goToSSODreamKotra('http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=70&amp;CONTENTS_NO=1&amp;bbsGbn=00&amp;bbsSn=244&amp;pNttSn=196351');" title="새창열림">페루의 비관세장벽, 어떤 것들이 있을까?</a></p>
+     	  <span class="newsdate">2022-08-30</span>
+    	</li>       							          	  
+    	<li>
+       	  <p class="newsTit"><a href="javascript:goToSSODreamKotra('http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=70&amp;CONTENTS_NO=1&amp;bbsGbn=00&amp;bbsSn=245&amp;pNttSn=196294');" title="새창열림">세계 배터리 산업박람회를 통해 본 중국 배터리 산업 현황</a></p>
+       	  <span class="newsdate">2022-08-29</span>
+    	</li>
+     	<li>
+     	  <p class="newsTit"><a href="javascript:goToSSODreamKotra('http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=70&amp;CONTENTS_NO=1&amp;bbsGbn=00&amp;bbsSn=246&amp;pNttSn=196254');" title="새창열림">[기고] 중국에서 출자자본금 미납주주에 대한 강제집행</a></p>
+       	  <span class="newsdate">2022-08-29</span>
+    	</li>
+    	<li>
+      	  <p class="newsTit"><a href="javascript:goToSSODreamKotra('http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=70&amp;CONTENTS_NO=1&amp;bbsGbn=00&amp;bbsSn=246&amp;pNttSn=196320');" title="새창열림">[기고] 중국 법원, 채무자에 대한 강제집행 조치</a></p>
+      	  <span class="newsdate">2022-08-29</span>
+     	</li>
+     	<li>
+      	  <p class="newsTit"><a href="javascript:goToSSODreamKotra('http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=70&amp;CONTENTS_NO=1&amp;bbsGbn=00&amp;bbsSn=245&amp;pNttSn=196156');" title="새창열림">일본 배관자재 유통상사 인터뷰: 한국제품 진입 기회 기대</a></p>
+      	  <span class="newsdate">2022-08-29</span>
+     	</li>
+     </ul>
+   </div>
+   </div> 
+
+	<div class="grid-item grid-item-5">
+	 <div class="bbox box3 rmybox">
+	  <h4 class="titarea">
+              <b>관심국가</b>
+              <span>
+               <b class="selected">미국</b>
+              </span>
+            </h4>
+	 </div>
+	</div>
+	<div class="grid-item grid-item-6">바잉오퍼 Grid Item 6</div>
+	<div class="grid-item grid-item-7">관심품목Grid Item 7</div>
+	<div class="grid-item grid-item-8">전시회 정보 Grid Item 8</div>
+	<div class="grid-item grid-item-9">빅데이터 서비스Grid Item 9</div>
+
+</div>
+
+</body>
+</html>

@@ -1,32 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-
-
 <meta charset="UTF-8">
 <title>코트라 무역투자 24</title>
+
+<!-- slickslider 사이트 CSS -->
+<link rel="stylesheet" type="text/css"
+	href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+
 <style type="text/css">
 * {
-	font-family: 'Noto Sans KR'
+	font-family: 'Noto Sans KR';
+	box-sizing: border-box;
 }
 
 html, body {
 	width: 100vw;
+	/*    부모 상관없이 width 100%주는거라는데 적용이 안되는거같다.. */
 	margin-left: calc(-50vw + 50%);
+	margin: 0;
+	padding: 0;
+}
+
+/* ---------------------------------------------------------------- */
+body, div, ul, li, textarea {
+	margin: 0;
+	padding: 0;
 }
 
 .top-container {
-	background-color: #f1f1f1;
+	width: 100%;
+	height: 45px;
+	background: #eeeeee;
 	padding: 10px;
-	text-align: center;
+	border-bottom: 1px solid #dddddd;
 }
 
+/* 헤더 안에 컨텐츠 영역 */
+.headerInner {
+	max-width: 1300px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/* 텍스트 영역 */
+li.siteMore a {
+	font-size: 14px;
+	color: #555;
+}
+
+/* 관리자에서 가져옴 더 공부할것!*/
+li.siteMore a:after {
+	content: "";
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border: 2px solid #333;
+	border-width: 1px 1px 0 0;
+	transform: rotate(135deg);
+	margin-left: 10px;
+	margin-bottom: 4px;
+}
+
+ul.innerRight li {
+	line-height: 45px;
+	font-size: 14px;
+	text-align: right;
+	display: inline-block;
+}
+
+ul.innerRight li a {
+	color: #666;
+	padding: 0px 10px;
+	float: right;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+/* inner 메뉴 */
+.menuinner {
+	max-width: 1300px;
+	width: 100%;
+	margin: 0 auto;
+	line-height: 100px;
+}
+
+/* KOTRA 더보기 */
+.innerLeft {
+	width: 50%;
+	float: left;
+	vertical-align: middle;
+}
+
+/* 로그인 회원가입 사이트맵  */
+ul.innerRight {
+	float: right;
+	text-align: right;
+	/*    box-sizing: border-box; */
+}
+
+/* ----------------------------------------------------------- */
 .header {
-	padding: 10px 16px;
+	padding: 20px 378px;
 	background: white;
 	color: #f1f1f1;
-	/* 	헤더가 맨앞으로 */
+	/*    헤더가 맨앞으로 */
 	z-index: 1;
 }
 
@@ -41,51 +124,91 @@ html, body {
 	padding-top: 102px;
 }
 
-h1, p {
+p {
 	margin: 0;
 }
 
-body, html {
-	margin: 0;
-	height: 200%;
-}
+/* 사진 넘기는 버튼 */
+/* button { */
+/*    background-image: */
+/*       url(https://www.kotra.or.kr/sample/template/wide/kotra/img/mvArrowL.png); */
+/*    opacity: 1; */
+/* } */
 
-* {
-	box-sizing: border-box;
-}
-
-
+/* 돋보기랑 메창 테두리 투명 */
 button {
-	background-image:
-		url(https://www.kotra.or.kr/sample/template/wide/kotra/img/mvArrowL.png);
-	opacity: 1;
+	border: 0 none;
+	/*    배경색 없음 */
+	background-color: transparent;
+	/*    마우스올렸을때 손가락 모양으로 바뀜 */
+	cursor: pointer;
 }
 
-.slick-arrow {
-	position: absolute;
-}
-
-main {
-	padding: 32px;
-}
-
-.Inb_search {
-	position: relative;
-	clip: rect(0px, 70px, 0px, 30px);
+.searchBtn {
 	width: 25px;
 	height: 25px;
-	overflow: hidden;
+	background:
+		url(https://www.kotra.or.kr/images/wzwg/site/kotra/headIcon.png);
+	background-position: 73px 49px;
+	position: absolute;
+	top: 18px;
+	margin: 53px 39px;
 }
 
+.showMenu {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 28px;
+}
+
+.show {
+	width: 25px;
+	height: 25px;
+	background:
+		url(https://www.kotra.or.kr/images/wzwg/site/kotra/headIcon.png);
+	background-position: -85px -1px;
+	position: absolute;
+	top: 6px;
+	margin: -1px -219px;
+}
+
+/* 사업신청, 문의상담, 해외정보칸 사이즈 조절 */
 #wrap {
 	width: 1200px;
 	margin: 0 auto;
+}
+
+.arrow {
+	right: -48px;
+	position: relative;
+	top: -42px;
 }
 
 .bgImg {
 	position: absolute;
 	left: 0;
 	z-index: -999;
+}
+
+.previous {
+	position: absolute;
+	width: 50px;
+	background:
+		url(https://www.kotra.or.kr/sample/template/wide/kotra/img/mvArrowL.png);;
+	height: 97px;
+	bottom: 437px;
+	left: 264px;
+}
+
+.next {
+	position: absolute;
+	width: 50px;
+	background:
+		url(https://www.kotra.or.kr/sample/template/wide/kotra/img/mvArrowR.png);;
+	height: 97px;
+	bottom: 437px;
+	right: 264px;
 }
 
 .titlebox1 {
@@ -123,46 +246,44 @@ ul {
 	display: flex;
 }
 
-p {
-	list-style-type: none;
-}
-
-
-#notice{
-	padding: 10px 360px;
+#notice {
+	padding: 40px 328px;
 	font-size: 26px;
-	font-weight :800;
+	font-weight: 800;
 }
 
-
-#notice1{
+#notice1 {
 	font-size: 26px;
-	font-weight :800;
-}
-table{ 
-	border-spacing:0 20px;
-	margin-left: 361px;	
-	
+	font-weight: 800;
+	margin: -9px 84px;
 }
 
-.date{
-	padding: 114px;
-	
+table {
+	border-spacing: 0 28px;
+	margin-left: 327px;
 }
 
-.tit{
+.date {
+	padding: 73px;
+	font-size: 14px;
+}
+
+.tit {
 	font-size: 16px;
 	font-weight: 500;
 }
 
-.tit2{
+.tit2 {
 	font-size: 26px;
 }
+
+/* 사업신청, 문의상담, 해외정보를 감싸는 박스 */
 #bigBox1 {
 	/* 글자 앞부분 여백 */
 	padding: 40px;
 	font-size: 20px;
 	line-height: 150%;
+	z-index: 1;
 }
 
 .qTitle {
@@ -183,9 +304,9 @@ table{
 	/*    right: 0; */
 	bottom: 0;
 	top: -50px;
-	/* 	스크롤 움직일때 사진도 같이 움직임..ㅜ */
-	/* 	background-attachment: fixed; */
-	/*    display: inline-block; */
+	/*    스크롤 움직일때 사진도 같이 움직임..ㅜ */
+	/*    background-attachment: fixed;
+   /*    display: inline-block; */
 }
 
 #category3 {
@@ -208,68 +329,114 @@ li {
 	white-space: nowrap;
 	color: black;
 }
-/* ----------------------------------------------------------- */
-/* 이따 지우기 */
+
 nav {
-	display: inline-block;
 	vertical-align: middle;
 	float: right;
 }
 
-h1 {
-	display: inline-block;
-}
-
 /* ------------------------------------------------------------ */
-body {
-	width: 100%;
-	height: 100%;
-}
 
+/* 코트라 로고 옆 메뉴 */
 h3 {
 	width: 500;
 	font-size: 42px;
 	/*     white-space: nowrap; */
 	overflow: hidden;
+	/*    글자가 넘치면 ...으로 표현 */
 	text-overflow: ellipsis;
-	/*     color: #fff; */
-	position: relative;
+	/*    position: relative; */
 	text-align: top;
 }
 
-div {
-	/* 변경한 거 */
-	/*    display: inline-block; */
-	/*    position: absolute; */
-	/*    bottom: 0 ; */
-	
+/* ---------------------------buyKorea부분 슬라이더---------------------------------- */
+.gallery {
+	max-width: 1300px;
+	margin: 20px 292px;
 }
 
-html, body {
-	margin: 0;
-	padding: 0;
+.slick-prev {
+	margin: 30px -62px;
+	z-index: 100;
+	background:
+		url(https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/slideprev.png)
+		no-repeat 0 0;
+}
+
+.slick-next {
+	margin: -66px 1326px;
+	background:
+		url(https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/slidenext.png)
+		no-repeat 0 0;
+}
+
+.slick-arrow {
+	width: 15px;
+	height: 25px;
+	border: none;
+	text-indent: -9999px;
+	overflow: hidden;
+	position: absolute;
+}
+
+.v-line {
+	border-left: solid 1px gray;
+	height: 50px;
+}
+
+.footerLogo {
+	margin: 30px 71px;
 }
 
 footer {
 	border-top: 1px solid #d3d6e1;
-	width: 100%;
-	bottom: -558px;
-	position: absolute;
+	/*    width: 100%; */
+	/*    bottom: -558px; */
+	/* 바닥글 바닥에 고정 */
+	position: relative;
 	background-color: #E7E7E7;
-	width: 100%;
+	height: 200px;
 }
 
-footer {
-	/* 바닥글 바닥에 고정 */
+.footerWrite {
+	margin: -42px 584px;
+}
+
+.wa {
+	float: right;
+	margin: -56px 289px;
+}
+
+#ccategory {
+	top: 35px;
+}
+
+/* ---------------------------슬라이더 관련----------------------- */
+/* 이미지 슬라이더 박스 */
+#sliderbox {
+	width: 597px;
+	height: 290px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	/* 슬라이더 박스 위치 조절    */
+	margin: -13px;
+}
+
+#slider {
+	padding: 0;
+	margin: -88px;
+	list-style-type: none;
 	position: relative;
 }
 
-/* .kotra{ */
-/*    padding: left; */
-/*    text-align: left; */
-/* } */
-#ccategory {
-	top: 35px;
+#slider li {
+	position: absolute;
+}
+
+#slider li img {
+	width: 597px;
+	height: 290px;
+	margin: 87px;
 }
 </style>
 </head>
@@ -279,51 +446,67 @@ footer {
 
 
 
-<div class="top-container">
-	<span><a href="">KOTRA사이트더보기</a></span> <span>로그인</span> <span>회원가입</span>
-	<span>사이트맵</span> <span>ENGLISH</span>
-</div>
-
-<div class="header" id="myHeader">
-	<a href="" title="홈바로가기"> <img class="kotra"
-		src="https://www.kotra.or.kr/module/upload/file/selectImageView.do?atchFileId=20000012146&fileSn=0">
-	</a>
-	<nav>
-		<ul>
-			<li class="title">사업신청</li>
-			<li class="title">문의·상담</li>
-			<li class="title">해외정보</li>
-			<li class="title">사업소개</li>
-			<li class="title">공사안내</li>
-		</ul>
-	</nav>
-</div>
-<!-- 돋보기 태그 -->
-<div class="Inb_search">
-	<img src="https://www.kotra.or.kr/images/wzwg/site/kotra/headIcon.png">
-</div>
-<div class="showMenu">
-	<img src="https://www.kotra.or.kr/sample/templatestyle/img/menuBar.png">
-</div>
 <body>
+	<div class="top-container">
+		<div class="headerInner">
+			<!-- inner 왼쪽 부분 -->
+
+			<ul class="innerLeft">
+				<li class="siteMore"><a id="moreBtn">KOTRA 사이트더보기</a></li>
+			</ul>
+
+			<!-- inner 오른쪽 부분 -->
+			<ul class="innerRight">
+				<li><a href="https://www.kotra.or.kr/loginForm.do"><span>로그인</span></a></li>
+				<li><a
+					href="https://www.kotra.or.kr/cmm/mber/sbscrb/selectSbscrbUsrTy.do"><span>회원가입</span></a></li>
+				<li><a href="https://www.kotra.or.kr/sitemap.do"><span>사이트맵</span></a></li>
+				<li><a href="https://www.kotra.or.kr/english/index.do"><span>ENGLISH</span></a></li>
+			</ul>
+
+		</div>
+		<!-- headerInner end  -->
+	</div>
+	<div class="header" id="myHeader">
+		<a href="" title="홈바로가기"> <img class="kotra"
+			src="https://www.kotra.or.kr/module/upload/file/selectImageView.do?atchFileId=20000012146&fileSn=0">
+		</a>
+		<nav>
+			<ul>
+				<li class="title"><a
+					href="https://www.kotra.or.kr/subList/20000020753">사업신청</a></li>
+				<li class="title"><a
+					href="https://www.kotra.or.kr/subList/20000006014">문의·상담</a></li>
+				<li class="title"><a
+					href="https://www.kotra.or.kr/subList/20000006759">해외정보</a></li>
+				<li class="title"><a
+					href="https://www.kotra.or.kr/subList/20000005984">사업소개</a></li>
+				<li class="title"><a
+					href="https://www.kotra.or.kr/subList/20000006012">공사안내</a></li>
+				<!-- 돋보기 태그 -->
+				<li class="search"><button class="searchBtn" type="button"
+						title="검색하기"></button></li>
+				<li class="showMenu">
+					<button class="show" type="button" title="전체메뉴"></button>
+				</li>
+			</ul>
+		</nav>
+	</div>
 	<div class="more_box">
-		<a href="/subList/20000005961"
-			class="more_btn menuSeq bMoreTextColOnly bMoreBg circle_badge fs14 mt15 p0 box-border"
-			title="공지사항 더보기"></a>
+
+		<button class="previous" type="button" title="이전"></button>
+
 		<div id="wrap">
-
-
-
-
-
 			<img class="bgImg"
-				src="https://www.kotra.or.kr/sample/template/wide/kotra/img/main00.jpg""width:100%; height: 100%;">
-			<button class="slick-prev slick-arrow" aria-label="Previous"
-				type="button" style>Previous</button>
+				src="https://www.kotra.or.kr/sample/template/wide/kotra/img/main00.jpg">
 			<!-- 추가한 거  -->
+
+
 
 			<div class="titlebox1">
 				<h3 class="qTitle" style="color: white">사업신청</h3>
+				<img class="arrow"
+					src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/quick03_kotra/img/arrow.png">
 				<p id="bigBox1" style="color: white">
 					상담회 전시회 개최, 바이어발굴,<br> 해외시장조사, 해외지사 설치, <br> 맞춤형 수출지원 제공<br>
 					해외투자진출<br> 외국인투자유치 <br>글로벌협력
@@ -334,6 +517,8 @@ footer {
 
 			<div class="titlebox2">
 				<h3 class="qTitle" style="color: white">문의·상담</h3>
+				<img class="arrow"
+					src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/quick03_kotra/img/arrow.png">
 				<p id="bigBox1" style="color: white">
 					관세, 통관, 해외인증, 법인설립 등 <br> 수출·투자 실무 문의 <br> KOTRA 사업 관련 문의
 					<br>
@@ -344,6 +529,8 @@ footer {
 
 			<div class="titlebox3">
 				<h3 class="qTitle" style="color: white">해외정보</h3>
+				<img class="arrow"
+					src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/quick03_kotra/img/arrow.png">
 				<div class="innerbox">
 					<p id="bigBox1" style="color: white">
 						수출 및 해외투자 <br> 외국인직접투자(FDI)정보제공 <br> 유망품목 / 유망시장 정보제공 <br>
@@ -351,6 +538,7 @@ footer {
 					</p>
 					<img id="category3"
 						src="https://www.kotra.or.kr/images/wzwg/site/kotra/mainMVIcon03.png">
+					<button class="next" type="button" title="다음"></button>
 				</div>
 			</div>
 			<!-- 추가한 거  -->
@@ -358,148 +546,231 @@ footer {
 			<div style="clear: both;"></div>
 
 		</div>
-		<!--          옆으로 넘기는 버튼 -->
-		<button class="slick-next slick-arrow" aria-label="Next" type="button"
-			style>Next</button>
-<br><br><br>
-
-		<!-- 공지사항 내용 -->
-		<table style="float:left">
-		<p id="notice">공지사항 | 보도자료</p>
-		<tr>
-			<td><a href=""><p class="tit">홈페이지 서비스 일시중지 안내(8.27.
-						10:00~18:00)</p></td>
-			<td><span class="date">2022-08-26</span>
-			</a>
-			</td>
-		</tr>
-
-		<tr>
-			<td><a href=""><p class="tit">IKP건물 복구작업에 따른 투자종합상담실 업무
-						안내</p></td>
-			<td><span class="date">2022-08-25</span></a></td>
-		</tr>
-		<tr>
-
-			<td><a href=""><p class="tit">IP-DESK(해외지식재산센터)지업 사원 종료
-						안내</p></td>
-			<td><span class="date">2022-08-16</span></a></td>
-		</tr>
-		<tr>
-
-			<td><a href=""><p class="tit">대한무역투자진흥공사 2021년 부패방지 의무교육
-						실적공개</p></td>
-			<td><span class="date">2022-08-12</span></a></td>
-		</tr>
-		<tr>
-
-			<td><a href=""><p class="tit">IKP건물 지하 복구작업에 따른 재택근무 실시
-						안내</p></td>
-			<td><span class="date">2022-08-10</span></a></td>
-		</tr>
-		
-		<tr>
-			<td><a href=""><p class="tit">부패 공익신고자 보호제도 안내</p>
-			</td>
-			<td><span class="date">2022-08-09</span></a></td>
-		</tr>
 
 
-	</table>
+		<div class="middle">
+			<!-- 공지사항 내용 -->
+			<table style="float: left">
+				<p id="notice">공지사항 | 보도자료</p>
+				<tr>
+					<td><a href=""><p class="tit">홈페이지 서비스 일시중지 안내(8.27.
+								10:00~18:00)</p></td>
+					<td><span class="date">2022-08-26</span> </a></td>
+				</tr>
 
-	<table style="float: left">
-	<p id="notice1">알림존</p>
-	
-	</table>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<tr>
+					<td><a href=""><p class="tit">IKP건물 복구작업에 따른 투자종합상담실
+								업무 안내</p></td>
+					<td><span class="date">2022-08-25</span></a></td>
+				</tr>
+				<tr>
+
+					<td><a href=""><p class="tit">IP-DESK(해외지식재산센터)지업 사원
+								종료 안내</p></td>
+					<td><span class="date">2022-08-16</span></a></td>
+				</tr>
+				<tr>
+
+					<td><a href=""><p class="tit">대한무역투자진흥공사 2021년 부패방지
+								의무교육 실적공개</p></td>
+					<td><span class="date">2022-08-12</span></a></td>
+				</tr>
+				<tr>
+
+					<td><a href=""><p class="tit">IKP건물 지하 복구작업에 따른 재택근무
+								실시 안내</p></td>
+					<td><span class="date">2022-08-10</span></a></td>
+				</tr>
+
+				<tr>
+					<td><a href=""><p class="tit">부패 공익신고자 보호제도 안내</p></td>
+					<td><span class="date">2022-08-09</span></a></td>
+				</tr>
 
 
-		<hr>
-		<div>
-			<button class="slick-prev slick-arrow" aria-label="Previous"
-				type="button" style>Previous</button>
+			</table>
+			<p id="notice1">알림존</p>
 
-			<p class="tit fs26 fw600 bTitle">알림존</p>
-			<img
-				src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy03.png">
-			buyKOREA <img
-				src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy04.png">
-			글로벌전시포털(GEP) <img
-				src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy05.png">
-			수출지원기반활용사업(수출바우처/지사화) <img
-				src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy06.png">
-			외국인투자유치플랫폼(IKMP) <img
-				src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy07.png">
-			(해외시장조사)수출24글로벌대행서비스 <img src="/resources/image/무역자료실아이콘.png">
-			무역자료실 <img
-				src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy01.png">
-			빅데이터서비스 <img
-				src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy08.png">
-			해외경제정보Dream
-			<button class="slick-next slick-arrow" aria-label="Next"
-				type="button" style>Next</button>
-			<img src="">
+			<table>
+				<div id="sliderbox">
+
+					<ul id="slider">
+						<li><img src="../image/sub00_01.jpg"></li>
+						<li><img src="../image/sub00_02.jpg"></li>
+						<li><img src="../image/sub00_03.png"></li>
+						<li><img src="../image/sub00_04.png"></li>
+						<li><img src="../image/sub00_05.jpg"></li>
+					</ul>
+
+				</div>
+			</table>
+			<br> <br> <br> <br> <br>
+
+			<hr>
+		</div>
+		<div class="gallery">
+
+			<div data-slick='{"slidesToShow": 7, "slidesToScroll": 1}'
+				class="miniSlide">
+				<div>
+					<img
+						src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy03.png">
+					<p>buyKOREA</p>
+				</div>
+				<div>
+					<img
+						src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy04.png">
+					<p>
+						글로벌전시포털<br>(GEP)
+					</p>
+				</div>
+				<div>
+					<img
+						src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy05.png">
+					<p>
+						수출지원기반활용사업<br>(수출바우처/지사화)
+					</p>
+				</div>
+				<div>
+					<img
+						src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy06.png">
+					<p>
+						외국인투자유치플랫폼<br>(IKMP)
+					</p>
+				</div>
+				<div>
+					<img
+						src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy07.png">
+					<p>
+						(해외시장조사)<br>수출24글로벌대행서비스
+					</p>
+				</div>
+				<div>
+					<img src="/resources/image/무역자료실아이콘.png">
+					<p>무역자료실</p>
+				</div>
+				<div>
+					<img
+						src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy01.png">
+					<p>빅데이터서비스</p>
+				</div>
+				<div>
+					<img
+						src="https://www.kotra.or.kr/sample/layout/widgetKotra/quick/widequick01_slide_kotra/img/icon_dummy08.png">
+					<p>해외경제정보Dream</p>
+				</div>
+			</div>
 		</div>
 
 
 
-		<!--reading-glasses-->
-		<span class="reading-glasses"> <span
-			class="reading-glasses__circle"></span> <span
-			class="reading-glasses__line"></span>
-		</span>
-		<!--reading glasses-->
 		<footer>
 			<div class="footerLogo">
 				<img
 					src="https://www.kotra.or.kr/module/upload/file/selectImageView.do?atchFileId=20000012147&fileSn=0">
 			</div>
-			<div class="footer" id="footer">
-				<ul class="data">
-
-					<li><a href=""><span>이용약관</span></a></li>
-					<li><a href=""><span>저작권정책</span></a></li>
-					<li><a href="" style="font-weight: bolder;"><span>개인정보처리방침</span></a></li>
-					<li><a href=""><span>정보공개</span></a></li>
-					<li><a href=""><span>사이트맵</span></a></li>
-					<li><a href=""><span>관련사이트</span></a></li>
-					<li><a href=""><span>개인정보처리방침</span></a><br></li>
-				</ul>
+			<div class="footerWrite">
+				<div>이용약관 | 저작권정책 | 개인정보처리방침 | 정보공개 | 사이트맵 | 관련사이트</div>
+				<div>서울시 서초구 헌릉로13 | 사업자등록번호: 120-82-00275 | 대표자명 : 유정열</div>
+				<div>COPYRIGHT(c)2021 KOTRA.ALL RIGHTS RESERVED 대한무역투자진흥공사</div>
 			</div>
-			<div class="p_wrap">
-				<p data-attr="adres">서울시 서초구 헌릉로13 | 사업자등록번호: 120-82-00275 |
-					대표자명 : 유정열</p>
-				<p>
-					<span data-attr="tel">TEL. 1600-7199</span> <span data-attr="fax">FAX.
-						(02)5129-2977</span>
-				</p>
-				<p data-attr="cprythCn">COPYRIGHT(c)2021 KOTRA.ALL RIGHTS
-					RESERVED 대한무역투자진흥공사</p>
+			<div>
+				<img class="wa"
+					src="https://www.kotra.or.kr/images/wamark_20220608.png">
 			</div>
-			<ul class="ftrImg">
-				<li class="wa"><a title="새창열림"
-					href="http://www.wa.or.kr/board/list.asp?BoardID=0006"
-					target="_blank"></a> <img class="wa"
-					src="https://www.kotra.or.kr/images/wamark_20220608.png"></li>
-			</ul>
 		</footer>
 	</div>
+
+	<!--    이미지 안넘어가던게 CDN안넣어서..! -->
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript">
-		window.onscroll = function() {
-			myFunction()
-		};
+      window.onscroll = function() {
+         myFunction()
+      };
 
-		var header = document.getElementById("myHeader");
-		var sticky = header.offsetTop;
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
 
-		function myFunction() {
-			if (window.pageYOffset > sticky) {
-				header.classList.add("sticky");
-			} else {
-				header.classList.remove("sticky");
-			}
-		}
-	</script>
+      function myFunction() {
+         if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+         } else {
+            header.classList.remove("sticky");
+         }
+      };
+   </script>
 
+	<script type="text/javascript">
+      $(document).ready(
+            function() {
+
+               var $slider_list = $("#slider li")
+               console.log($slider_list)
+
+               //모든 이미지를 안보이도록 오른쪽에 배치
+               //    $slider_list.css("left", "600px")
+               $slider_list.css("left", $("#sliderbox").css("width"))
+
+               //----------------------------------------------------------------
+
+               //새로고침했을 때 보여질 첫번째 이미지 설정
+               $slider_list.eq(0).css("left", 0)
+
+               //----------------------------------------------------------------
+
+               //#sliderbox에 클릭 이벤트를 발생시키는 함수
+               var sliderClick = function() {
+                  $("#sliderbox").click();
+               }
+
+               //3초마다 #sliderbox 에 클릭이벤트 발생시키기
+               var tid = setInterval(sliderClick, 3000);
+
+               //----------------------------------------------------------------
+
+               //현재 보여지는 슬라이드의 인덱스
+               var curSlide = 0;
+
+               $("#sliderbox").click(
+                     function() {
+
+                        //tid를 가진 타이머객체를 종료시킨다
+                        clearInterval(tid)
+
+                        //3초마다 클릭이벤트 발생시키기
+                        tid = setInterval(sliderClick, 3000);
+
+                        //   -> 마우스를 클릭할 때마다 타이머의 시간을 3초로 갱신한다
+
+                        //--------------------------------------------------------
+
+                        //다음에 보여지는 슬라이드의 인덱스
+                        var nextSlide = curSlide + 1;
+                        nextSlide %= $slider_list.length;
+
+                        console.log(curSlide, ":", nextSlide)
+
+                        $slider_list.eq(curSlide).css("left",
+                              $("#sliderbox").css("width"))
+                        $slider_list.eq(nextSlide).css("left", 0)
+
+                        //증가식
+                        curSlide++;
+                        curSlide %= $slider_list.length;
+                     })
+
+            })
+   </script>
+
+	<!-- slickslider사이트 JS -->
+	<script type="text/javascript"
+		src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript">
+      $(function() {
+         $('.miniSlide').slick();
+         
+      })
+   </script>
 </body>
 </html>
